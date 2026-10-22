@@ -237,7 +237,6 @@ OHT_CURVE_SPEED = OHT_CURVE_SPEED_MPS * UNIT_PER_METER
 OHT_ACCEL = OHT_ACCEL_MPS2 * UNIT_PER_METER       # 도면단위 / 초^2
 OHT_DECEL = OHT_DECEL_MPS2 * UNIT_PER_METER
 MIN_FOLLOW_DISTANCE = MIN_FOLLOW_DISTANCE_M * UNIT_PER_METER
-FOLLOW_DISTANCE_CHECK_BEFORE_OCCUPANCY = True  # 비교 실험용: 범위 밖 노드는 차단 검사 제외
 
 # [길 비켜주기 - 근본원인 탐색 범위] MIN_FOLLOW_DISTANCE와는 목적이 다르다.
 # MIN_FOLLOW_DISTANCE는 "실제로 이만큼 떨어져야 주행 가능"이라는 물리적
@@ -3613,10 +3612,7 @@ class OHT(sim.Component):
         blocked = False
         while j < len(path) - 1 and cum < MIN_FOLLOW_DISTANCE:
             a, b = path[j], path[j + 1]
-            next_cum = cum + edge_length(a, b)
-            if next_cum > MIN_FOLLOW_DISTANCE:
-                break
-            cum = next_cum
+            cum += edge_length(a, b)
             holder = NODE_HOLDER.get(b)
             if holder not in (None, self) and not blocked:
                 blocked = True
