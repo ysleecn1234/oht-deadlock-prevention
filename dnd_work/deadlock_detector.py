@@ -30,7 +30,7 @@ detectDeadlock() 과 같다.
 
     OHT_COUNT                   OHT 대수                  기본 400
     SPAWN_INTERVAL_SECONDS      로트 투입 간격(초)         기본 0.45 (= 8,000건/시간)
-    SIMULATION_HOURS            시뮬레이션 시간 상한(시간)  기본 2
+    SIMULATION_HOURS            시뮬레이션 시간 상한(시간)  기본 6
     CHECK_INTERVAL_SECONDS      점검 주기(시뮬 초)         기본 1
     APPLY_FIXES                 1이면 수정 적용, 0이면 원문 기본 1
     ENABLE_RING_CONTROL         베이 고리 진입 제어 0/1    기본 유지
@@ -57,7 +57,7 @@ def _environment_value(name, cast, default):
 
 OHT_COUNT              = _environment_value("OHT_COUNT", int, 400)
 SPAWN_INTERVAL_SECONDS = _environment_value("SPAWN_INTERVAL_SECONDS", float, 0.45)
-SIMULATION_HOURS       = _environment_value("SIMULATION_HOURS", float, 2.0)
+SIMULATION_HOURS       = _environment_value("SIMULATION_HOURS", float, 6.0)
 CHECK_INTERVAL_SECONDS = _environment_value("CHECK_INTERVAL_SECONDS", float, 1.0)
 APPLY_FIXES            = _environment_value("APPLY_FIXES", lambda v: v != "0", True)
 STOP_AFTER_SECONDS     = _environment_value("STOP_AFTER_SECONDS", float, 600.0)
