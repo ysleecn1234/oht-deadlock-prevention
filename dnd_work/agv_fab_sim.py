@@ -263,6 +263,15 @@ FOLLOW_DISTANCE_CHECK_BEFORE_OCCUPANCY = True
 # 반납해서, 주행 중 점유를 1칸으로 줄이고 뒤차가 바로 따라붙게 한다.
 RELEASE_PREV_AT_SAFE_DISTANCE = True
 
+# [막힘 정지 시 사전감속] 원문은 앞이 막혀 설 때 self._cur_speed = 0.0 으로
+# 속도를 즉시 0으로 대입한다. H/W Spec 감속도(3.0 m/s^2) 기준으로 3.5m/s
+# 에서 정지까지 2,042mm, 약 1.17초가 필요한데 그 거리와 시간이 모델에
+# 없다. 원문에도 같은 목적의 기구가 있지만(_reroute_stop_limit), 재탐색
+# 때문에 서야 하는 분기점만 보고 앞차 때문에 서는 경우는 보지 않는다.
+# True이면 제동거리 안에 다른 OHT가 점유한 노드가 있을 때 그 직전 노드에
+# 설 수 있도록 미리 감속한다.
+PREDECEL_FOR_BLOCKED_NODE = True
+
 # [길 비켜주기 - 근본원인 탐색 범위] MIN_FOLLOW_DISTANCE와는 목적이 다르다.
 # MIN_FOLLOW_DISTANCE는 "실제로 이만큼 떨어져야 주행 가능"이라는 물리적
 # 안전거리(H/W Spec 기반)라, 이 값을 키우면 주행 물리 자체가 바뀐다(실측:
@@ -3692,6 +3701,42 @@ class OHT(sim.Component):
                 j += 1
         return False
 
+    def _traffic_stop_limit(self, path, idx, cur_li):
+        """앞쪽 경로에 다른 OHT가 점유한 노드가 있으면, 그 직전 노드에서
+        정지할 수 있도록 지금 구간의 탈출속도 상한을 돌려준다.
+
+        _reroute_stop_limit()과 방식은 같고 정지 지점만 다르다. 그쪽은
+        재탐색 때문에 서야 하는 분기점을 찾고, 여기서는 다른 OHT가
+        점유한 노드를 찾는다. 제동거리(2,042mm)만큼 앞을 훑는 이유도
+        같다 - 링크 길이 중앙값이 1,700mm라 한 링크만 보고 감속하면
+        제때 못 선다.
+
+        [한계] 예측이므로 완전하지 않다. 감속을 시작한 뒤 앞이 뚫리면
+        불필요하게 느려지고(실제 차량도 마찬가지다), 진입한 뒤에 새로
+        막히면 여전히 즉시 정지가 일어난다. 발생 빈도를 줄이는
+        완화책이지 원인 제거가 아니다.
+
+        반환 inf는 제동거리 안에 막힌 노드가 없다는 뜻이다."""
+        max_brake_dist = OHT_MAX_SPEED * OHT_MAX_SPEED / (2.0 * OHT_DECEL)
+        d_ahead = 0.0   # path[idx]부터 path[j]까지의 거리
+        d_prev = 0.0    # path[idx]부터 '설 수 있는 마지막 노드'까지의 거리
+        j = idx
+        while j < len(path) and d_ahead <= max_brake_dist:
+            holder = NODE_HOLDER.get(path[j])
+            if holder is not None and holder is not self:
+                # path[j]에는 못 들어간다. 그 직전 노드에서 서야 하므로
+                # 남은 거리 d_prev 안에 0으로 줄일 수 있어야 한다.
+                return math.sqrt(2.0 * OHT_DECEL * d_prev)
+            d_prev = d_ahead
+            if j >= len(path) - 1:
+                break
+            li = EDGE_LINK_IDX.get((path[j], path[j + 1]))
+            if li is None:
+                break
+            d_ahead += LINK_LEN[li]
+            j += 1
+        return math.inf
+
     def _goto(self, target):
         """target 노드까지 주행한다. 재탐색 트리거가 걸리면 지금 위치에서
         경로를 다시 잡아 이어간다. 도착하면 True.
@@ -4021,6 +4066,11 @@ class OHT(sim.Component):
                 if ENABLE_JUNCTION_REROUTE:
                     target_v = min(
                         target_v, self._reroute_stop_limit(path, idx, cur_li))
+                # [막힘 정지 사전감속] 앞차 때문에 서야 하는 경우도 미리
+                # 감속한다. 원문은 이 경우 감속 없이 즉시 정지시켰다.
+                if PREDECEL_FOR_BLOCKED_NODE:
+                    target_v = min(
+                        target_v, self._traffic_stop_limit(path, idx, cur_li))
             prof = self._segment_profile(self._cur_speed, target_v, cap_v, dist)
 
             self._seg_profile = prof
