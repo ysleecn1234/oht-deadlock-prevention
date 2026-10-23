@@ -238,6 +238,15 @@ OHT_ACCEL = OHT_ACCEL_MPS2 * UNIT_PER_METER       # 도면단위 / 초^2
 OHT_DECEL = OHT_DECEL_MPS2 * UNIT_PER_METER
 MIN_FOLLOW_DISTANCE = MIN_FOLLOW_DISTANCE_M * UNIT_PER_METER
 
+# [차간거리 검사 범위 수정] 아래 _path_clear_ahead()의 lookahead 루프는 원래
+# 링크 길이를 "먼저 더하고" 그 끝 노드의 점유를 검사했다. 그래서 기준 거리가
+# 300mm여도 링크 길이(중앙값 1,700mm)만큼 건너뛴 뒤의 노드까지 비어 있어야
+# 전진할 수 있었다 - 즉 선언된 300mm가 아니라 "다음 링크 하나를 통째로"
+# 보는 것과 같았다. True이면 기준 거리를 넘어서는 노드는 검사 대상에서
+# 제외한다(선언된 값대로 동작). False이면 기존(원문) 동작을 그대로 쓴다.
+# 팀원 브랜치(dongwoo/distance-fixed)와 같은 이름을 쓴다.
+FOLLOW_DISTANCE_CHECK_BEFORE_OCCUPANCY = True
+
 # [길 비켜주기 - 근본원인 탐색 범위] MIN_FOLLOW_DISTANCE와는 목적이 다르다.
 # MIN_FOLLOW_DISTANCE는 "실제로 이만큼 떨어져야 주행 가능"이라는 물리적
 # 안전거리(H/W Spec 기반)라, 이 값을 키우면 주행 물리 자체가 바뀐다(실측:
@@ -3612,7 +3621,12 @@ class OHT(sim.Component):
         blocked = False
         while j < len(path) - 1 and cum < MIN_FOLLOW_DISTANCE:
             a, b = path[j], path[j + 1]
-            cum += edge_length(a, b)
+            next_cum = cum + edge_length(a, b)
+            if FOLLOW_DISTANCE_CHECK_BEFORE_OCCUPANCY \
+                    and next_cum > MIN_FOLLOW_DISTANCE:
+                # b는 기준 거리 밖이다. 거리를 더하기 전에 멈춘다.
+                break
+            cum = next_cum
             holder = NODE_HOLDER.get(b)
             if holder not in (None, self) and not blocked:
                 blocked = True
