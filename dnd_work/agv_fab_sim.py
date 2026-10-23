@@ -224,7 +224,13 @@ OHT_STOP_GAP_MM = 300.0     # 정지 시 OHT 간(범퍼-범퍼 기준) 최소 �
 # 위의 "점"(노드 위치)으로 취급해서, 차체 길이(OHT_LENGTH_MM)까지 더하지
 # 않으면 점 모델에서는 850mm짜리 차체 2대가 이론상 겹칠 수 있는 여지가
 # 있다는 점은 참고로 남겨둔다 - 다만 이 값으로 가는 것으로 확정됨.
-MIN_FOLLOW_DISTANCE_M = OHT_STOP_GAP_MM / 1000.0  # = 0.3m
+#
+# [수정] 아래 RELEASE_PREV_AT_SAFE_DISTANCE(주행 중 출발 노드 조기 반납)를
+# 켜면 뒤차가 이 거리만큼만 떨어져도 출발 노드로 진입한다. 그러면 위에서
+# "이론상"이라고 남겨둔 차체 겹침이 상시 발생한다(간격 300mm에 차체 850mm
+# -> 범퍼 기준 -550mm). 그래서 차체 길이를 포함한 값으로 올린다.
+# 원문 값으로 되돌리려면 OHT_STOP_GAP_MM / 1000.0 으로 바꾸면 된다.
+MIN_FOLLOW_DISTANCE_M = (OHT_LENGTH_MM + OHT_STOP_GAP_MM) / 1000.0  # = 1.15m
 
 # --- Load/Unload 시간 (H/W Spec) ---
 OHT_LOAD_UNLOAD_TIME = 8.0  # 초. OHT가 포트(버퍼/설비)에서 자재를 싣거나
@@ -237,6 +243,34 @@ OHT_CURVE_SPEED = OHT_CURVE_SPEED_MPS * UNIT_PER_METER
 OHT_ACCEL = OHT_ACCEL_MPS2 * UNIT_PER_METER       # 도면단위 / 초^2
 OHT_DECEL = OHT_DECEL_MPS2 * UNIT_PER_METER
 MIN_FOLLOW_DISTANCE = MIN_FOLLOW_DISTANCE_M * UNIT_PER_METER
+
+# [차간거리 검사 범위 수정] 아래 _path_clear_ahead()의 lookahead 루프는 원래
+# 링크 길이를 "먼저 더하고" 그 끝 노드의 점유를 검사했다. 그래서 기준 거리가
+# 300mm여도 링크 길이(중앙값 1,700mm)만큼 건너뛴 뒤의 노드까지 비어 있어야
+# 전진할 수 있었다 - 즉 선언된 300mm가 아니라 "다음 링크 하나를 통째로"
+# 보는 것과 같았다. True이면 기준 거리를 넘어서는 노드는 검사 대상에서
+# 제외한다(선언된 값대로 동작). False이면 기존(원문) 동작을 그대로 쓴다.
+# 팀원 브랜치(dongwoo/distance-fixed)와 같은 이름을 쓴다.
+FOLLOW_DISTANCE_CHECK_BEFORE_OCCUPANCY = True
+
+# [주행 중 출발 노드 조기 반납] 원문은 링크를 다 건너 도착한 뒤에야 출발
+# 노드의 락을 놓았다(_travel_path 끝의 release(prev_node)). 그래서 주행 중인
+# OHT 한 대가 항상 노드 2칸(출발+도착)을 점유했고, 뒤차는 앞차가 완전히
+# 도착할 때까지 출발조차 못 했다. 3.5m/s, 링크 1,700mm 기준으로 0.49초를
+# 통째로 기다린다. 무리가 붙어서 함께 움직이는 tailgate group이 구조적으로
+# 생길 수 없었다.
+# True이면 안전거리(MIN_FOLLOW_DISTANCE)만큼 전진한 시점에 출발 노드를
+# 반납해서, 주행 중 점유를 1칸으로 줄이고 뒤차가 바로 따라붙게 한다.
+RELEASE_PREV_AT_SAFE_DISTANCE = True
+
+# [막힘 정지 시 사전감속] 원문은 앞이 막혀 설 때 self._cur_speed = 0.0 으로
+# 속도를 즉시 0으로 대입한다. H/W Spec 감속도(3.0 m/s^2) 기준으로 3.5m/s
+# 에서 정지까지 2,042mm, 약 1.17초가 필요한데 그 거리와 시간이 모델에
+# 없다. 원문에도 같은 목적의 기구가 있지만(_reroute_stop_limit), 재탐색
+# 때문에 서야 하는 분기점만 보고 앞차 때문에 서는 경우는 보지 않는다.
+# True이면 제동거리 안에 다른 OHT가 점유한 노드가 있을 때 그 직전 노드에
+# 설 수 있도록 미리 감속한다.
+PREDECEL_FOR_BLOCKED_NODE = True
 
 # [길 비켜주기 - 근본원인 탐색 범위] MIN_FOLLOW_DISTANCE와는 목적이 다르다.
 # MIN_FOLLOW_DISTANCE는 "실제로 이만큼 떨어져야 주행 가능"이라는 물리적
@@ -3229,6 +3263,34 @@ class OHT(sim.Component):
         return d + v_pk * td - 0.5 * OHT_DECEL * td * td
 
     @staticmethod
+    def _profile_time(prof, d):
+        """_profile_distance의 역함수. 거리 d까지 가는 데 걸리는 시간.
+        가속/순항/감속 중 d가 어느 구간에 떨어지는지 찾아 그 구간 식을
+        뒤집는다(등가속 구간은 이차방정식, 순항 구간은 일차). d가 구간
+        전체 거리보다 크면 전체 소요시간을 돌려준다."""
+        v0, v_pk = prof["v0"], prof["v_peak"]
+        t_acc, t_cru, t_dec = prof["t_acc"], prof["t_cruise"], prof["t_dec"]
+        if d <= 0.0:
+            return 0.0
+        # 1) 가속 구간:  d = v0*t + 0.5*a*t^2
+        d_acc = v0 * t_acc + 0.5 * OHT_ACCEL * t_acc * t_acc
+        if d <= d_acc:
+            if OHT_ACCEL <= 0.0:
+                return d / v0 if v0 > 1e-9 else 0.0
+            return (math.sqrt(max(v0 * v0 + 2.0 * OHT_ACCEL * d, 0.0))
+                    - v0) / OHT_ACCEL
+        # 2) 순항 구간:  등속
+        d_cru = v_pk * t_cru
+        if d <= d_acc + d_cru:
+            return t_acc + ((d - d_acc) / v_pk if v_pk > 1e-9 else 0.0)
+        # 3) 감속 구간:  d_r = v_pk*t - 0.5*b*t^2
+        d_r = d - d_acc - d_cru
+        disc = v_pk * v_pk - 2.0 * OHT_DECEL * d_r
+        if disc <= 0.0 or OHT_DECEL <= 0.0:
+            return t_acc + t_cru + t_dec
+        return t_acc + t_cru + (v_pk - math.sqrt(disc)) / OHT_DECEL
+
+    @staticmethod
     def _segment_profile(v0, v_end_target, cap, dist):
         """길이 dist인 링크를 v0로 진입해 v_end_target으로 빠져나가는
         사다리꼴 프로파일. 속도상한 cap을 절대 넘지 않는다.
@@ -3612,7 +3674,12 @@ class OHT(sim.Component):
         blocked = False
         while j < len(path) - 1 and cum < MIN_FOLLOW_DISTANCE:
             a, b = path[j], path[j + 1]
-            cum += edge_length(a, b)
+            next_cum = cum + edge_length(a, b)
+            if FOLLOW_DISTANCE_CHECK_BEFORE_OCCUPANCY \
+                    and next_cum > MIN_FOLLOW_DISTANCE:
+                # b는 기준 거리 밖이다. 거리를 더하기 전에 멈춘다.
+                break
+            cum = next_cum
             holder = NODE_HOLDER.get(b)
             if holder not in (None, self) and not blocked:
                 blocked = True
@@ -3633,6 +3700,42 @@ class OHT(sim.Component):
                     request_yield(b, self)
                 j += 1
         return False
+
+    def _traffic_stop_limit(self, path, idx, cur_li):
+        """앞쪽 경로에 다른 OHT가 점유한 노드가 있으면, 그 직전 노드에서
+        정지할 수 있도록 지금 구간의 탈출속도 상한을 돌려준다.
+
+        _reroute_stop_limit()과 방식은 같고 정지 지점만 다르다. 그쪽은
+        재탐색 때문에 서야 하는 분기점을 찾고, 여기서는 다른 OHT가
+        점유한 노드를 찾는다. 제동거리(2,042mm)만큼 앞을 훑는 이유도
+        같다 - 링크 길이 중앙값이 1,700mm라 한 링크만 보고 감속하면
+        제때 못 선다.
+
+        [한계] 예측이므로 완전하지 않다. 감속을 시작한 뒤 앞이 뚫리면
+        불필요하게 느려지고(실제 차량도 마찬가지다), 진입한 뒤에 새로
+        막히면 여전히 즉시 정지가 일어난다. 발생 빈도를 줄이는
+        완화책이지 원인 제거가 아니다.
+
+        반환 inf는 제동거리 안에 막힌 노드가 없다는 뜻이다."""
+        max_brake_dist = OHT_MAX_SPEED * OHT_MAX_SPEED / (2.0 * OHT_DECEL)
+        d_ahead = 0.0   # path[idx]부터 path[j]까지의 거리
+        d_prev = 0.0    # path[idx]부터 '설 수 있는 마지막 노드'까지의 거리
+        j = idx
+        while j < len(path) and d_ahead <= max_brake_dist:
+            holder = NODE_HOLDER.get(path[j])
+            if holder is not None and holder is not self:
+                # path[j]에는 못 들어간다. 그 직전 노드에서 서야 하므로
+                # 남은 거리 d_prev 안에 0으로 줄일 수 있어야 한다.
+                return math.sqrt(2.0 * OHT_DECEL * d_prev)
+            d_prev = d_ahead
+            if j >= len(path) - 1:
+                break
+            li = EDGE_LINK_IDX.get((path[j], path[j + 1]))
+            if li is None:
+                break
+            d_ahead += LINK_LEN[li]
+            j += 1
+        return math.inf
 
     def _goto(self, target):
         """target 노드까지 주행한다. 재탐색 트리거가 걸리면 지금 위치에서
@@ -3963,6 +4066,11 @@ class OHT(sim.Component):
                 if ENABLE_JUNCTION_REROUTE:
                     target_v = min(
                         target_v, self._reroute_stop_limit(path, idx, cur_li))
+                # [막힘 정지 사전감속] 앞차 때문에 서야 하는 경우도 미리
+                # 감속한다. 원문은 이 경우 감속 없이 즉시 정지시켰다.
+                if PREDECEL_FOR_BLOCKED_NODE:
+                    target_v = min(
+                        target_v, self._traffic_stop_limit(path, idx, cur_li))
             prof = self._segment_profile(self._cur_speed, target_v, cap_v, dist)
 
             self._seg_profile = prof
@@ -3971,7 +4079,19 @@ class OHT(sim.Component):
             self._seg_end_xy = (sx(x1), sy_screen(y1))
             self._seg_dist = dist
 
-            yield self.hold(prof["dur"])
+            # [조기 반납] 안전거리만큼 전진한 시점에 출발 노드를 놓아
+            # 뒤차가 따라붙을 수 있게 한다. 링크가 안전거리보다 짧으면
+            # 도착이 먼저이므로 원문대로 한 번에 건넌다.
+            t_clear = None
+            if RELEASE_PREV_AT_SAFE_DISTANCE and dist > MIN_FOLLOW_DISTANCE:
+                t_clear = self._profile_time(prof, MIN_FOLLOW_DISTANCE)
+            if t_clear is not None and 0.0 < t_clear < prof["dur"]:
+                yield self.hold(t_clear)
+                # self.node는 아직 출발 노드다. 락만 먼저 놓는다.
+                release(self.node, self, self.env.now())
+                yield self.hold(prof["dur"] - t_clear)
+            else:
+                yield self.hold(prof["dur"])
             self._job_travel += prof["dur"]
             self.total_distance += dist
 
