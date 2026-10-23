@@ -224,7 +224,13 @@ OHT_STOP_GAP_MM = 300.0     # 정지 시 OHT 간(범퍼-범퍼 기준) 최소 �
 # 위의 "점"(노드 위치)으로 취급해서, 차체 길이(OHT_LENGTH_MM)까지 더하지
 # 않으면 점 모델에서는 850mm짜리 차체 2대가 이론상 겹칠 수 있는 여지가
 # 있다는 점은 참고로 남겨둔다 - 다만 이 값으로 가는 것으로 확정됨.
-MIN_FOLLOW_DISTANCE_M = OHT_STOP_GAP_MM / 1000.0  # = 0.3m
+#
+# [수정] 아래 RELEASE_PREV_AT_SAFE_DISTANCE(주행 중 출발 노드 조기 반납)를
+# 켜면 뒤차가 이 거리만큼만 떨어져도 출발 노드로 진입한다. 그러면 위에서
+# "이론상"이라고 남겨둔 차체 겹침이 상시 발생한다(간격 300mm에 차체 850mm
+# -> 범퍼 기준 -550mm). 그래서 차체 길이를 포함한 값으로 올린다.
+# 원문 값으로 되돌리려면 OHT_STOP_GAP_MM / 1000.0 으로 바꾸면 된다.
+MIN_FOLLOW_DISTANCE_M = (OHT_LENGTH_MM + OHT_STOP_GAP_MM) / 1000.0  # = 1.15m
 
 # --- Load/Unload 시간 (H/W Spec) ---
 OHT_LOAD_UNLOAD_TIME = 8.0  # 초. OHT가 포트(버퍼/설비)에서 자재를 싣거나
@@ -246,6 +252,16 @@ MIN_FOLLOW_DISTANCE = MIN_FOLLOW_DISTANCE_M * UNIT_PER_METER
 # 제외한다(선언된 값대로 동작). False이면 기존(원문) 동작을 그대로 쓴다.
 # 팀원 브랜치(dongwoo/distance-fixed)와 같은 이름을 쓴다.
 FOLLOW_DISTANCE_CHECK_BEFORE_OCCUPANCY = True
+
+# [주행 중 출발 노드 조기 반납] 원문은 링크를 다 건너 도착한 뒤에야 출발
+# 노드의 락을 놓았다(_travel_path 끝의 release(prev_node)). 그래서 주행 중인
+# OHT 한 대가 항상 노드 2칸(출발+도착)을 점유했고, 뒤차는 앞차가 완전히
+# 도착할 때까지 출발조차 못 했다. 3.5m/s, 링크 1,700mm 기준으로 0.49초를
+# 통째로 기다린다. 무리가 붙어서 함께 움직이는 tailgate group이 구조적으로
+# 생길 수 없었다.
+# True이면 안전거리(MIN_FOLLOW_DISTANCE)만큼 전진한 시점에 출발 노드를
+# 반납해서, 주행 중 점유를 1칸으로 줄이고 뒤차가 바로 따라붙게 한다.
+RELEASE_PREV_AT_SAFE_DISTANCE = True
 
 # [길 비켜주기 - 근본원인 탐색 범위] MIN_FOLLOW_DISTANCE와는 목적이 다르다.
 # MIN_FOLLOW_DISTANCE는 "실제로 이만큼 떨어져야 주행 가능"이라는 물리적
@@ -3238,6 +3254,34 @@ class OHT(sim.Component):
         return d + v_pk * td - 0.5 * OHT_DECEL * td * td
 
     @staticmethod
+    def _profile_time(prof, d):
+        """_profile_distance의 역함수. 거리 d까지 가는 데 걸리는 시간.
+        가속/순항/감속 중 d가 어느 구간에 떨어지는지 찾아 그 구간 식을
+        뒤집는다(등가속 구간은 이차방정식, 순항 구간은 일차). d가 구간
+        전체 거리보다 크면 전체 소요시간을 돌려준다."""
+        v0, v_pk = prof["v0"], prof["v_peak"]
+        t_acc, t_cru, t_dec = prof["t_acc"], prof["t_cruise"], prof["t_dec"]
+        if d <= 0.0:
+            return 0.0
+        # 1) 가속 구간:  d = v0*t + 0.5*a*t^2
+        d_acc = v0 * t_acc + 0.5 * OHT_ACCEL * t_acc * t_acc
+        if d <= d_acc:
+            if OHT_ACCEL <= 0.0:
+                return d / v0 if v0 > 1e-9 else 0.0
+            return (math.sqrt(max(v0 * v0 + 2.0 * OHT_ACCEL * d, 0.0))
+                    - v0) / OHT_ACCEL
+        # 2) 순항 구간:  등속
+        d_cru = v_pk * t_cru
+        if d <= d_acc + d_cru:
+            return t_acc + ((d - d_acc) / v_pk if v_pk > 1e-9 else 0.0)
+        # 3) 감속 구간:  d_r = v_pk*t - 0.5*b*t^2
+        d_r = d - d_acc - d_cru
+        disc = v_pk * v_pk - 2.0 * OHT_DECEL * d_r
+        if disc <= 0.0 or OHT_DECEL <= 0.0:
+            return t_acc + t_cru + t_dec
+        return t_acc + t_cru + (v_pk - math.sqrt(disc)) / OHT_DECEL
+
+    @staticmethod
     def _segment_profile(v0, v_end_target, cap, dist):
         """길이 dist인 링크를 v0로 진입해 v_end_target으로 빠져나가는
         사다리꼴 프로파일. 속도상한 cap을 절대 넘지 않는다.
@@ -3985,7 +4029,19 @@ class OHT(sim.Component):
             self._seg_end_xy = (sx(x1), sy_screen(y1))
             self._seg_dist = dist
 
-            yield self.hold(prof["dur"])
+            # [조기 반납] 안전거리만큼 전진한 시점에 출발 노드를 놓아
+            # 뒤차가 따라붙을 수 있게 한다. 링크가 안전거리보다 짧으면
+            # 도착이 먼저이므로 원문대로 한 번에 건넌다.
+            t_clear = None
+            if RELEASE_PREV_AT_SAFE_DISTANCE and dist > MIN_FOLLOW_DISTANCE:
+                t_clear = self._profile_time(prof, MIN_FOLLOW_DISTANCE)
+            if t_clear is not None and 0.0 < t_clear < prof["dur"]:
+                yield self.hold(t_clear)
+                # self.node는 아직 출발 노드다. 락만 먼저 놓는다.
+                release(self.node, self, self.env.now())
+                yield self.hold(prof["dur"] - t_clear)
+            else:
+                yield self.hold(prof["dur"])
             self._job_travel += prof["dur"]
             self.total_distance += dist
 
