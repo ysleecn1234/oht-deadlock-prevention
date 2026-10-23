@@ -114,7 +114,7 @@ def main():
     print("전체 %.0f분 소요" % ((time.time() - started_at) / 60))
     print("")
     print("%-6s %7s %7s %7s %9s %8s %6s %9s %7s"
-          % ("대수", "부하율", "실동률", "대기율", "반송완료", "로트환산",
+          % ("대수", "부하율", "실동률", "대기율", "반송완료", "로트완료",
              "순환수", "최장(초)", "600초↑"))
     rows = []
     for condition in sorted(finished, key=lambda c: c["oht_count"]):

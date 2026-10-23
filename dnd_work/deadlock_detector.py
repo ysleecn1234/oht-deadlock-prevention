@@ -430,8 +430,8 @@ def main():
         "simulated_seconds": round(simulated_seconds, 1),
         "wall_seconds": round(wall_seconds, 1),
         "realtime_factor": round(simulated_seconds / wall_seconds, 1) if wall_seconds else None,
-        "completed_transfers": len(simulator.JOB_STATS),   # 반송(leg) 단위
-        "completed_lots": len(simulator.LOT_STATS),        # 로트 단위
+        "completed_transfers": len(simulator.JOB_STATS),   # 반송 1건 = 한 포트에서 싣고 다른 포트에 내려놓기
+        "completed_lots": len(simulator.LOT_STATS),        # 로트 1건 = STK 출발~가공~STK 복귀 전부 완료
         "pending_job_limit": PENDING_JOB_LIMIT,
         "pending_jobs_at_end": len(simulator.PENDING_JOBS),
         "injection_skipped_backlog_full": INJECTION_SKIPPED["backlog_full"],
@@ -463,7 +463,7 @@ def main():
              result["jobs_still_in_flight"]))
     print("시뮬 %.0f초를 실제 %.0f초에 실행 (%.1f배속)"
           % (simulated_seconds, wall_seconds, result["realtime_factor"] or 0))
-    print("반송 완료 %d건 (로트 환산 %d건) / 대기 차량 최대 %d대 / 순환 최대 %d대"
+    print("반송 완료 %d건 / 로트 완료 %d건 / 대기 차량 최대 %d대 / 순환 최대 %d대"
           % (result["completed_transfers"], result["completed_lots"],
              watcher.peak_waiting, watcher.peak_cycle_size))
     print("대기열 상한 %d건 / 종료 시점 대기 %d건 / 투입 건너뜀 %d회(상한) %d회(재고소진)"
