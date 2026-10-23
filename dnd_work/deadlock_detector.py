@@ -159,6 +159,36 @@ def find_cycles(wait_for):
     return cycles
 
 
+def measure_utilization(vehicles, elapsed_seconds):
+    """OHT 부하율. 본체 run_headless_sim() 과 같은 식으로 계산한다.
+
+    가동률  작업을 배정받고 있던 시간의 비율. 대기 시간도 포함되므로
+            정체가 심해질수록 올라간다(원본 주석이 이 역설을 인정한다).
+            교수님이 말씀하신 "부하율 80 85 90 95" 가 이 값이다.
+    실동률  그중 실제로 주행/가공/싣고내리기에 쓴 시간만.
+    대기율  그중 노드락·설비 대기로 멈춰 있던 시간.
+
+    완료된 작업(JOB_STATS)과 종료 시점에 아직 진행 중이던 작업을 함께
+    더한다. 진행 중인 것을 빼면, 혼잡이 심해 완료가 0에 가까울 때
+    "다들 꽉 막혀 바쁜" 상태가 오히려 0%로 계산되는 문제가 생긴다.
+    """
+    if not vehicles or elapsed_seconds <= 0:
+        return 0.0, 0.0, 0.0
+    denominator = len(vehicles) * elapsed_seconds
+    in_flight = [v for v in vehicles
+                 if v.job is not None and v.job_start_t is not None]
+
+    busy = (sum(v.total_busy for v in vehicles)
+            + sum(elapsed_seconds - v.job_start_t for v in in_flight))
+    active = (sum(j["travel"] + j["process"] + j["loadunload"]
+                  for j in simulator.JOB_STATS)
+              + sum(v._job_travel + v._job_process + v._job_loadunload
+                    for v in in_flight))
+    waiting = (sum(j["wait"] for j in simulator.JOB_STATS)
+               + sum(v._job_wait for v in in_flight))
+    return busy / denominator, active / denominator, waiting / denominator
+
+
 def all_lots_finished():
     """투입할 로트를 다 꺼냈고, 진행 중인 작업도 전부 끝났는가.
 
@@ -313,6 +343,7 @@ def main():
     wall_seconds = time.time() - started_at
     simulated_seconds = environment.now()
 
+    utilization, active, stalled = measure_utilization(vehicles, simulated_seconds)
     records = watcher.all_records(simulated_seconds)
     lifetimes = [r["held_seconds"] for r in records]
     counts = {("over_%ds" % int(t)): sum(1 for v in lifetimes if v >= t)
@@ -340,6 +371,9 @@ def main():
         "wall_seconds": round(wall_seconds, 1),
         "realtime_factor": round(simulated_seconds / wall_seconds, 1) if wall_seconds else None,
         "completed_jobs": len(simulator.JOB_STATS),
+        "utilization_percent": round(utilization * 100, 1),
+        "active_percent": round(active * 100, 1),
+        "stall_percent": round(stalled * 100, 1),
         "peak_waiting_vehicles": watcher.peak_waiting,
         "peak_cycle_size": watcher.peak_cycle_size,
         "cycle_count": len(records),
@@ -364,6 +398,9 @@ def main():
           % (simulated_seconds, wall_seconds, result["realtime_factor"] or 0))
     print("반송 완료 %d건 / 대기 차량 최대 %d대 / 순환 최대 %d대"
           % (result["completed_jobs"], watcher.peak_waiting, watcher.peak_cycle_size))
+    print("부하율(가동률) %.1f%%  /  실동률 %.1f%%  /  대기 %.1f%%"
+          % (result["utilization_percent"], result["active_percent"],
+             result["stall_percent"]))
     print("순환 %d건 발생, 최장 %.0f초" % (len(records), result["longest_cycle_seconds"]))
     for threshold in REPORT_THRESHOLDS_SECONDS:
         print("   %4.0f초 이상 지속: %d건" % (threshold, counts["over_%ds" % int(threshold)]))

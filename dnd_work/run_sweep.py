@@ -66,7 +66,9 @@ def build_condition(oht_count):
 
 
 def main():
-    conditions = [build_condition(n) for n in OHT_COUNT_LIST]
+    # 대수가 클수록 오래 걸리므로 큰 것부터 띄운다. 그래야 마지막에
+    # 느린 조건 하나만 남아 전체가 늘어지는 일이 줄어든다.
+    conditions = [build_condition(n) for n in sorted(OHT_COUNT_LIST, reverse=True)]
     print("조건 %d개를 최대 %d개씩 동시에 실행한다." % (len(conditions), PARALLEL_PROCESSES))
     print("투입 %.2f초(= %.0f건/시간) / 시뮬 상한 %.1f시간 / %s"
           % (SPAWN_INTERVAL_SECONDS, 3600 / SPAWN_INTERVAL_SECONDS,
@@ -103,21 +105,22 @@ def main():
     print("")
     print("전체 %.0f분 소요" % ((time.time() - started_at) / 60))
     print("")
-    print("%-8s %-28s %8s %8s %8s %8s"
-          % ("대수", "종료 사유", "완료건", "순환수", "최장(초)", "600초↑"))
+    print("%-6s %7s %7s %8s %-22s %6s %8s %7s"
+          % ("대수", "부하율", "실동률", "완료건", "종료 사유", "순환수", "최장(초)", "600초↑"))
     rows = []
     for condition in sorted(finished, key=lambda c: c["oht_count"]):
         try:
             with open(condition["result_path"], encoding="utf-8") as handle:
                 result = json.load(handle)
         except OSError:
-            print("%-8d %-28s  (결과 파일 없음 - 로그 확인)"
-                  % (condition["oht_count"], "실패"))
+            print("%-6d  (결과 파일 없음 - %s 확인)"
+                  % (condition["oht_count"], os.path.basename(condition["log_path"])))
             continue
-        print("%-8d %-28s %8d %8d %8.0f %8d"
-              % (condition["oht_count"], result["stop_reason"],
-                 result["completed_jobs"], result["cycle_count"],
-                 result["longest_cycle_seconds"],
+        print("%-6d %6.1f%% %6.1f%% %8d %-22s %6d %8.0f %7d"
+              % (condition["oht_count"],
+                 result["utilization_percent"], result["active_percent"],
+                 result["completed_jobs"], result["stop_reason"],
+                 result["cycle_count"], result["longest_cycle_seconds"],
                  result["cycles_over_threshold"]["over_600s"]))
         rows.append(result)
 
