@@ -225,7 +225,7 @@ OHT_STOP_GAP_MM = 300.0     # 정지 시 OHT 간(범퍼-범퍼 기준) 최소 �
 # 않으면 점 모델에서는 850mm짜리 차체 2대가 이론상 겹칠 수 있는 여지가
 # 있다는 점은 참고로 남겨둔다 - 다만 이 값으로 가는 것으로 확정됨.
 #
-# [수정] 아래 RELEASE_PREV_AT_SAFE_DISTANCE(주행 중 출발 노드 조기 반납)를
+# [수정] 아래 RELEASE_PREVIOUS_NODE_AT_SAFE_DISTANCE(주행 중 출발 노드 조기 반납)를
 # 켜면 뒤차가 이 거리만큼만 떨어져도 출발 노드로 진입한다. 그러면 위에서
 # "이론상"이라고 남겨둔 차체 겹침이 상시 발생한다(간격 300mm에 차체 850mm
 # -> 범퍼 기준 -550mm). 그래서 차체 길이를 포함한 값으로 올린다.
@@ -261,7 +261,7 @@ FOLLOW_DISTANCE_CHECK_BEFORE_OCCUPANCY = True
 # 생길 수 없었다.
 # True이면 안전거리(MIN_FOLLOW_DISTANCE)만큼 전진한 시점에 출발 노드를
 # 반납해서, 주행 중 점유를 1칸으로 줄이고 뒤차가 바로 따라붙게 한다.
-RELEASE_PREV_AT_SAFE_DISTANCE = True
+RELEASE_PREVIOUS_NODE_AT_SAFE_DISTANCE = True
 
 # [막힘 정지 시 사전감속] 원문은 앞이 막혀 설 때 self._cur_speed = 0.0 으로
 # 속도를 즉시 0으로 대입한다. H/W Spec 감속도(3.0 m/s^2) 기준으로 3.5m/s
@@ -270,7 +270,7 @@ RELEASE_PREV_AT_SAFE_DISTANCE = True
 # 때문에 서야 하는 분기점만 보고 앞차 때문에 서는 경우는 보지 않는다.
 # True이면 제동거리 안에 다른 OHT가 점유한 노드가 있을 때 그 직전 노드에
 # 설 수 있도록 미리 감속한다.
-PREDECEL_FOR_BLOCKED_NODE = True
+DECELERATE_BEFORE_BLOCKED_NODE = True
 
 # [길 비켜주기 - 근본원인 탐색 범위] MIN_FOLLOW_DISTANCE와는 목적이 다르다.
 # MIN_FOLLOW_DISTANCE는 "실제로 이만큼 떨어져야 주행 가능"이라는 물리적
@@ -3701,7 +3701,7 @@ class OHT(sim.Component):
                 j += 1
         return False
 
-    def _traffic_stop_limit(self, path, idx, cur_li):
+    def _blocked_node_stop_limit(self, path, idx, cur_li):
         """앞쪽 경로에 다른 OHT가 점유한 노드가 있으면, 그 직전 노드에서
         정지할 수 있도록 지금 구간의 탈출속도 상한을 돌려준다.
 
@@ -4068,9 +4068,9 @@ class OHT(sim.Component):
                         target_v, self._reroute_stop_limit(path, idx, cur_li))
                 # [막힘 정지 사전감속] 앞차 때문에 서야 하는 경우도 미리
                 # 감속한다. 원문은 이 경우 감속 없이 즉시 정지시켰다.
-                if PREDECEL_FOR_BLOCKED_NODE:
+                if DECELERATE_BEFORE_BLOCKED_NODE:
                     target_v = min(
-                        target_v, self._traffic_stop_limit(path, idx, cur_li))
+                        target_v, self._blocked_node_stop_limit(path, idx, cur_li))
             prof = self._segment_profile(self._cur_speed, target_v, cap_v, dist)
 
             self._seg_profile = prof
@@ -4083,7 +4083,7 @@ class OHT(sim.Component):
             # 뒤차가 따라붙을 수 있게 한다. 링크가 안전거리보다 짧으면
             # 도착이 먼저이므로 원문대로 한 번에 건넌다.
             t_clear = None
-            if RELEASE_PREV_AT_SAFE_DISTANCE and dist > MIN_FOLLOW_DISTANCE:
+            if RELEASE_PREVIOUS_NODE_AT_SAFE_DISTANCE and dist > MIN_FOLLOW_DISTANCE:
                 t_clear = self._profile_time(prof, MIN_FOLLOW_DISTANCE)
             if t_clear is not None and 0.0 < t_clear < prof["dur"]:
                 yield self.hold(t_clear)
