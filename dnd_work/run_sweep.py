@@ -14,6 +14,8 @@
     APPLY_FIXES             1이면 수정 적용, 0이면 원문  기본 1
     PARALLEL_PROCESSES      동시에 돌릴 개수      기본 CPU 코어 수 - 1
     RESULT_DIRECTORY        결과 저장 폴더        기본 ../runs
+    CASE_DIRECTORY          시드 케이스 폴더 (generate_case_files.py 로 만든다)
+    PENDING_JOB_LIMIT       대기열 상한(건). 넘으면 투입을 건너뛴다
     ENABLE_RING_CONTROL     베이 고리 진입 제어
     RING_CAPACITY_MARGIN    고리 정원 = 노드수//2 - 이 값
 """
@@ -45,8 +47,14 @@ os.makedirs(RESULT_DIRECTORY, exist_ok=True)
 FIX_LABEL = "fix_on" if APPLY_FIXES else "fix_off"
 
 
+CASE_LABEL = ""
+if os.environ.get("CASE_DIRECTORY"):
+    CASE_LABEL = os.path.basename(os.path.abspath(os.environ["CASE_DIRECTORY"])) + "_"
+
+
 def build_condition(oht_count):
-    name = "oht%d_interval%.2f_%s" % (oht_count, SPAWN_INTERVAL_SECONDS, FIX_LABEL)
+    name = "%soht%d_interval%.2f_%s" % (
+        CASE_LABEL, oht_count, SPAWN_INTERVAL_SECONDS, FIX_LABEL)
     environment = dict(os.environ)
     environment.update(
         OHT_COUNT=str(oht_count),
@@ -105,8 +113,9 @@ def main():
     print("")
     print("전체 %.0f분 소요" % ((time.time() - started_at) / 60))
     print("")
-    print("%-6s %7s %7s %8s %-22s %6s %8s %7s"
-          % ("대수", "부하율", "실동률", "완료건", "종료 사유", "순환수", "최장(초)", "600초↑"))
+    print("%-6s %7s %7s %7s %9s %8s %6s %9s %7s"
+          % ("대수", "부하율", "실동률", "대기율", "반송완료", "로트환산",
+             "순환수", "최장(초)", "600초↑"))
     rows = []
     for condition in sorted(finished, key=lambda c: c["oht_count"]):
         try:
@@ -116,12 +125,14 @@ def main():
             print("%-6d  (결과 파일 없음 - %s 확인)"
                   % (condition["oht_count"], os.path.basename(condition["log_path"])))
             continue
-        print("%-6d %6.1f%% %6.1f%% %8d %-22s %6d %8.0f %7d"
+        print("%-6d %6.1f%% %6.1f%% %6.1f%% %9d %8d %6d %9.0f %7d%s"
               % (condition["oht_count"],
                  result["utilization_percent"], result["active_percent"],
-                 result["completed_jobs"], result["stop_reason"],
+                 result["stall_percent"],
+                 result["completed_transfers"], result["completed_lots"],
                  result["cycle_count"], result["longest_cycle_seconds"],
-                 result["cycles_over_threshold"]["over_600s"]))
+                 result["cycles_over_threshold"]["over_600s"],
+                 "  <-- 교착" if result["held_over_limit_count"] else ""))
         rows.append(result)
 
     found = [r for r in rows if r["held_over_limit_count"] > 0]

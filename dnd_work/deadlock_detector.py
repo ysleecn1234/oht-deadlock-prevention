@@ -37,6 +37,8 @@ detectDeadlock() 과 같다.
     RING_CAPACITY_MARGIN        고리 정원 = 노드수//2 - 이 값
     STOP_AFTER_SECONDS          순환이 이 시간 이상 지속되면 교착으로 보고 종료  기본 600
     STOP_WHEN_ALL_LOTS_DONE     로트를 전부 투입하고 전부 완료하면 종료  기본 1
+    PENDING_JOB_LIMIT           대기열 상한(건). 넘으면 투입을 건너뛴다. 0이면 무제한
+    CASE_DIRECTORY              시드 케이스 폴더. 생략하면 현재 폴더의 파일을 쓴다
     RESULT_JSON_PATH            결과 저장 경로
 """
 import os
@@ -45,7 +47,20 @@ import json
 import time
 
 sys.argv = ["agv_fab_sim.py", "--analyze"]        # pygame 창 없이 불러오기
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+SCRIPT_DIRECTORY = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, SCRIPT_DIRECTORY)
+
+# [시드 케이스] 본체는 데이터 파일을 파일명만으로 연다(= 현재 작업 폴더 기준).
+# 그래서 케이스 폴더로 옮겨간 뒤에 불러오면 그 폴더의 시작위치/로트 스케줄을
+# 쓰게 된다. 폴더마다 독립이라 여러 시드를 동시에 돌려도 서로 간섭하지 않는다.
+# 결과 경로는 폴더를 옮기기 전에 절대경로로 바꿔둔다.
+CASE_DIRECTORY = os.environ.get("CASE_DIRECTORY", "")
+if os.environ.get("RESULT_JSON_PATH"):
+    os.environ["RESULT_JSON_PATH"] = os.path.abspath(os.environ["RESULT_JSON_PATH"])
+if CASE_DIRECTORY:
+    CASE_DIRECTORY = os.path.abspath(CASE_DIRECTORY)
+    os.chdir(CASE_DIRECTORY)
+
 import agv_fab_sim as simulator
 import salabim as sim
 
@@ -157,6 +172,40 @@ def find_cycles(wait_for):
         for member in chain:
             visit_state[member] = 2
     return cycles
+
+
+PENDING_JOB_LIMIT = _environment_value("PENDING_JOB_LIMIT", int, 2000)
+
+# [투입 제어] 원본 Manager 는 SPAWN_INTERVAL 마다 조건 없이 로트를 꺼낸다.
+# 그래서 두 가지 문제가 있다.
+#
+#   1) 로트 재고가 바닥나면 next_lot_entry() 가 ValueError 를 던지고
+#      실행이 통째로 죽는다. 결과 파일도 안 남는다.
+#   2) 투입(8,000건/시간)이 처리 능력(약 950 로트/시간)보다 훨씬 많아서,
+#      그냥 두면 대기열에 수십만 건이 쌓인다. 그 숫자는 실험에 아무
+#      정보도 주지 않으면서 메모리만 먹는다.
+#
+# 그래서 대기열이 가득 차면 그 회차 투입을 건너뛴다. 교수님 시뮬레이터도
+# 같은 방식이다(jobs.length > 800 이면 생성 건너뜀). 포화 상태에서는
+# 투입이 곧 완료 속도에 맞춰지므로 실질적인 물동량은 달라지지 않는다.
+#
+# 본체(agv_fab_sim.py)는 건드리지 않는다. 모델 수정이 아니라 실험 조건이라
+# 실험 스크립트 쪽에 두는 것이 맞다.
+INJECTION_SKIPPED = {"backlog_full": 0, "schedule_empty": 0}
+_original_create_job = simulator.Manager.create_job
+
+
+def _create_job_with_backlog_limit(self):
+    if simulator._JOB_SCHEDULE_IDX[0] >= len(simulator.JOB_SCHEDULE):
+        INJECTION_SKIPPED["schedule_empty"] += 1
+        return None
+    if 0 < PENDING_JOB_LIMIT <= len(simulator.PENDING_JOBS):
+        INJECTION_SKIPPED["backlog_full"] += 1
+        return None
+    return _original_create_job(self)
+
+
+simulator.Manager.create_job = _create_job_with_backlog_limit
 
 
 def measure_utilization(vehicles, elapsed_seconds):
@@ -370,7 +419,13 @@ def main():
         "simulated_seconds": round(simulated_seconds, 1),
         "wall_seconds": round(wall_seconds, 1),
         "realtime_factor": round(simulated_seconds / wall_seconds, 1) if wall_seconds else None,
-        "completed_jobs": len(simulator.JOB_STATS),
+        "completed_transfers": len(simulator.JOB_STATS),   # 반송(leg) 단위
+        "completed_lots": len(simulator.LOT_STATS),        # 로트 단위
+        "pending_job_limit": PENDING_JOB_LIMIT,
+        "pending_jobs_at_end": len(simulator.PENDING_JOBS),
+        "injection_skipped_backlog_full": INJECTION_SKIPPED["backlog_full"],
+        "injection_skipped_schedule_empty": INJECTION_SKIPPED["schedule_empty"],
+        "case_directory": CASE_DIRECTORY or os.getcwd(),
         "utilization_percent": round(utilization * 100, 1),
         "active_percent": round(active * 100, 1),
         "stall_percent": round(stalled * 100, 1),
@@ -396,8 +451,12 @@ def main():
              result["jobs_still_in_flight"]))
     print("시뮬 %.0f초를 실제 %.0f초에 실행 (%.1f배속)"
           % (simulated_seconds, wall_seconds, result["realtime_factor"] or 0))
-    print("반송 완료 %d건 / 대기 차량 최대 %d대 / 순환 최대 %d대"
-          % (result["completed_jobs"], watcher.peak_waiting, watcher.peak_cycle_size))
+    print("반송 완료 %d건 (로트 환산 %d건) / 대기 차량 최대 %d대 / 순환 최대 %d대"
+          % (result["completed_transfers"], result["completed_lots"],
+             watcher.peak_waiting, watcher.peak_cycle_size))
+    print("대기열 상한 %d건 / 종료 시점 대기 %d건 / 투입 건너뜀 %d회(상한) %d회(재고소진)"
+          % (PENDING_JOB_LIMIT, result["pending_jobs_at_end"],
+             INJECTION_SKIPPED["backlog_full"], INJECTION_SKIPPED["schedule_empty"]))
     print("부하율(가동률) %.1f%%  /  실동률 %.1f%%  /  대기 %.1f%%"
           % (result["utilization_percent"], result["active_percent"],
              result["stall_percent"]))
