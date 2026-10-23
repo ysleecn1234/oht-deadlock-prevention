@@ -38,6 +38,7 @@ sys.path.insert(0, SCRIPT_DIRECTORY)
 os.chdir(SCRIPT_DIRECTORY)
 import agv_fab_sim as simulator
 
+MANIFEST_FILE = "case_info.json"
 SHARED_MAP_FILES = ["track_segments.json", "agv_graph.json",
                     "equipment.json", "section_regions.json"]
 CASE_FILES = ["oht_park_positions.json", "oht_lot_schedule.json"]
@@ -98,8 +99,34 @@ def write_base_case():
     link_shared_map_files(case_directory)
     positions = json.load(open(os.path.join(case_directory, CASE_FILES[0])))
     schedule = json.load(open(os.path.join(case_directory, CASE_FILES[1])))
+    write_manifest(case_directory, 0, 0, 1, len(positions), len(schedule),
+                   note="원본 파일 복사. 새로 뽑지 않음(과거 실험 대조용)")
     print("s00  (현재 파일 복사)   시작위치 %d개 / 로트 %d건"
           % (len(positions), len(schedule)))
+
+
+def write_manifest(case_directory, case_number, park_seed, lot_seed,
+                   position_count, schedule_count, note=""):
+    """이 케이스가 어떤 시드로 만들어졌는지 폴더 안에 남긴다.
+
+    결과만 보고도 "어느 시드에서 난 데드락인지" 추적할 수 있어야 한다.
+    유휴 지터 시드는 바꾸지 않는다. 그것까지 변하면 데드락의 원인을
+    "시작 배치와 로트 조합" 으로 귀속시킬 수 없고, 같은 케이스를 다시
+    돌렸을 때 똑같이 재현되지도 않는다.
+    """
+    manifest = {
+        "case_name": "s%02d" % case_number,
+        "case_number": case_number,
+        "park_position_seed": park_seed,     # 시작 위치를 뽑은 난수 시드
+        "lot_schedule_seed": lot_seed,       # 로트 사양을 뽑은 난수 시드
+        "idle_jitter_seed": 2,               # 유휴 지터 - 전 케이스 공통 고정
+        "park_position_count": position_count,
+        "lot_schedule_count": schedule_count,
+        "note": note,
+    }
+    with open(os.path.join(case_directory, MANIFEST_FILE), "w",
+              encoding="utf-8") as handle:
+        json.dump(manifest, handle, ensure_ascii=False, indent=1)
 
 
 def write_case(case_number):
@@ -125,6 +152,8 @@ def write_case(case_number):
         json.dump(schedule, handle)
 
     link_shared_map_files(case_directory)
+    write_manifest(case_directory, case_number, 100 + case_number,
+                   200 + case_number, len(positions), len(schedule))
     urgent = sum(1 for entry in schedule if entry["priority"])
     print("s%02d  시드 %d/%d   시작위치 %d개 / 로트 %d건 (긴급 %d건, %.1f%%)"
           % (case_number, 100 + case_number, 200 + case_number,

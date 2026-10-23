@@ -61,6 +61,13 @@ if CASE_DIRECTORY:
     CASE_DIRECTORY = os.path.abspath(CASE_DIRECTORY)
     os.chdir(CASE_DIRECTORY)
 
+# 케이스 명세(어떤 시드로 만든 폴더인지)를 읽어둔다. 결과만 보고도
+# "어느 시드에서 난 데드락인지" 추적할 수 있어야 한다.
+CASE_INFO = {}
+if os.path.exists("case_info.json"):
+    with open("case_info.json", encoding="utf-8") as _handle:
+        CASE_INFO = json.load(_handle)
+
 import agv_fab_sim as simulator
 import salabim as sim
 
@@ -381,6 +388,10 @@ def main():
     simulator.IdleDistributor()
     watcher = DeadlockWatcher()
 
+    if CASE_INFO:
+        print("케이스 %s (시작위치 시드 %s / 로트 시드 %s)"
+              % (CASE_INFO.get("case_name"), CASE_INFO.get("park_position_seed"),
+                 CASE_INFO.get("lot_schedule_seed")))
     print("대수 %d / 투입 %.2f초(= %.0f건/시간) / 수정 %s / 차간 %.0fmm / 고리제어 %s"
           % (OHT_COUNT, SPAWN_INTERVAL_SECONDS, 3600 / SPAWN_INTERVAL_SECONDS,
              "적용" if APPLY_FIXES else "원문",
@@ -426,6 +437,7 @@ def main():
         "injection_skipped_backlog_full": INJECTION_SKIPPED["backlog_full"],
         "injection_skipped_schedule_empty": INJECTION_SKIPPED["schedule_empty"],
         "case_directory": CASE_DIRECTORY or os.getcwd(),
+        "case_info": CASE_INFO,
         "utilization_percent": round(utilization * 100, 1),
         "active_percent": round(active * 100, 1),
         "stall_percent": round(stalled * 100, 1),
