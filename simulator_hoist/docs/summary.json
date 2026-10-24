@@ -1,0 +1,77 @@
+{
+  "commit": "f71735e4871edede5cab82e3b3506b9a003b8439",
+  "nodes": 6983,
+  "central_nodes": 2936,
+  "central_buffer_ports": 3217,
+  "central_buffer_access_nodes": 874,
+  "schedule_lots": 20000,
+  "scheduled_nodes": 3224,
+  "excluded_port_nodes": 23045,
+  "geometric_candidates": 913,
+  "eligible": 296,
+  "chosen": [
+    {
+      "node": "017192",
+      "corridor": 2,
+      "x_mm": 233898.4,
+      "y_mm": 52550.0,
+      "incoming_mm": 1222.0,
+      "outgoing_mm": 1222.0,
+      "upstream_clearance_mm": 9776.0,
+      "downstream_clearance_mm": 9776.0,
+      "min_clearance_mm": 9776.0,
+      "upstream_boundary": "016836",
+      "downstream_boundary": "016835",
+      "turn_degrees": 0.0,
+      "buffer_ports": 0,
+      "buffer_port_ids": "",
+      "other_port_kinds": ""
+    },
+    {
+      "node": "016911",
+      "corridor": 2,
+      "x_mm": 42314.7,
+      "y_mm": 52550.0,
+      "incoming_mm": 2175.0,
+      "outgoing_mm": 2175.0,
+      "upstream_clearance_mm": 8700.0,
+      "downstream_clearance_mm": 8700.0,
+      "min_clearance_mm": 8700.0,
+      "upstream_boundary": "016819",
+      "downstream_boundary": "016818",
+      "turn_degrees": 0.0,
+      "buffer_ports": 0,
+      "buffer_port_ids": "",
+      "other_port_kinds": ""
+    },
+    {
+      "node": "017024",
+      "corridor": 2,
+      "x_mm": 116396.7,
+      "y_mm": 52550.0,
+      "incoming_mm": 1968.0,
+      "outgoing_mm": 1968.0,
+      "upstream_clearance_mm": 9840.0,
+      "downstream_clearance_mm": 8268.0,
+      "min_clearance_mm": 8268.0,
+      "upstream_boundary": "016826",
+      "downstream_boundary": "017006",
+      "turn_degrees": 0.0,
+      "buffer_ports": 0,
+      "buffer_port_ids": "",
+      "other_port_kinds": ""
+    }
+  ],
+  "assumptions": {
+    "max_turn_degrees": 10,
+    "min_clearance_mm": 3000,
+    "selection": "Exclude all port node/transfer_node IDs and all schedule endpoint nodes. Recommend corridor 2 in physical map center. Rank by clearance, keep 15m spatial separation. No traffic or deadlock outcome used."
+  },
+  "sha256": {
+    "agv_fab_sim.py": "3be093fe92e35a9c2fbb12e744d27ffe849ecd4743092b97097dcf83fbe74fec",
+    "agv_graph.json": "136115709283a0c12239c5bbe577507485c0b96788edb40272f297f1cc442da0",
+    "equipment.json": "50f61c973532ba5358b0b4cf0704804497aef34f59f1a7e03dd317e1cd32df6b",
+    "oht_lot_schedule.json": "bcfe668a9a6125f1a53b84dd939b6fc3451d0bd6d9a86d8d64b963c3902d9de4",
+    "section_regions.json": "f6b717d7b92daef546a04f9b1006398b1f94b18dbc947034e5701c91b016bb15"
+  }
+}
