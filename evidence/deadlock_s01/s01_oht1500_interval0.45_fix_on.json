@@ -1,0 +1,5578 @@
+{
+ "oht_count": 1500,
+ "spawn_interval_seconds": 0.45,
+ "lots_per_hour": 8000,
+ "simulation_hours": 24.0,
+ "apply_fixes": true,
+ "min_follow_distance_mm": 1150.0,
+ "ring_control_enabled": true,
+ "ring_capacity_margin": 2,
+ "stop_reason": "deadlock_held_over_limit",
+ "stopped_early": true,
+ "lots_injected": 6749,
+ "lots_in_schedule": 60000,
+ "jobs_still_in_flight": 3504,
+ "simulated_seconds": 9777.0,
+ "wall_seconds": 4435.4,
+ "realtime_factor": 2.2,
+ "completed_transfers": 12202,
+ "completed_lots": 3239,
+ "pending_job_limit": 2000,
+ "pending_jobs_at_end": 2000,
+ "injection_skipped_backlog_full": 14978,
+ "injection_skipped_schedule_empty": 0,
+ "case_directory": "/Users/leejisuk/학부연구생/dnd_work/oht-deadlock-prevention/cases/s01",
+ "case_info": {
+  "case_name": "s01",
+  "case_number": 1,
+  "park_position_seed": 101,
+  "lot_schedule_seed": 201,
+  "idle_jitter_seed": 2,
+  "park_position_count": 3000,
+  "lot_schedule_count": 60000,
+  "note": ""
+ },
+ "utilization_percent": 75.6,
+ "active_percent": 46.5,
+ "stall_percent": 23.3,
+ "peak_waiting_vehicles": 845,
+ "peak_cycle_size": 25,
+ "cycle_count": 132,
+ "longest_cycle_seconds": 600.8,
+ "cycles_over_threshold": {
+  "over_15s": 2,
+  "over_60s": 2,
+  "over_300s": 1,
+  "over_600s": 1
+ },
+ "held_over_limit_count": 1,
+ "open_at_run_end_count": 0,
+ "stop_after_seconds": 600.0,
+ "cycles": [
+  {
+   "started_second": 302.0,
+   "ended_second": 511.0,
+   "ended_reason": "resolved",
+   "held_seconds": 70.0,
+   "cycle_size": 6,
+   "affected_vehicles": 4,
+   "oht_ids": [
+    284,
+    940,
+    1115,
+    341,
+    731,
+    792
+   ],
+   "nodes": [
+    "008536",
+    "007765",
+    "008385",
+    "007805",
+    "007763",
+    "008564"
+   ],
+   "bay_ids": [],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 510.0
+  },
+  {
+   "started_second": 822.0,
+   "ended_second": 833.0,
+   "ended_reason": "resolved",
+   "held_seconds": 2.0,
+   "cycle_size": 6,
+   "affected_vehicles": 1,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    743,
+    930
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 832.0
+  },
+  {
+   "started_second": 834.0,
+   "ended_second": 835.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 3,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    743,
+    930
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 834.0
+  },
+  {
+   "started_second": 836.0,
+   "ended_second": 837.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 3,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    743,
+    930
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 836.0
+  },
+  {
+   "started_second": 838.0,
+   "ended_second": 839.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 3,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    743,
+    930
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 838.0
+  },
+  {
+   "started_second": 840.0,
+   "ended_second": 842.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 3,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    743,
+    930
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 841.0
+  },
+  {
+   "started_second": 843.0,
+   "ended_second": 844.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 3,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    743,
+    930
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 843.0
+  },
+  {
+   "started_second": 845.0,
+   "ended_second": 847.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 3,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    743,
+    930
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 846.0
+  },
+  {
+   "started_second": 848.0,
+   "ended_second": 849.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 3,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    743,
+    930
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 848.0
+  },
+  {
+   "started_second": 850.0,
+   "ended_second": 852.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 3,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    743,
+    930
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 851.0
+  },
+  {
+   "started_second": 853.0,
+   "ended_second": 854.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 7,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    743,
+    930
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 853.0
+  },
+  {
+   "started_second": 855.0,
+   "ended_second": 857.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 7,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    743,
+    930
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 856.0
+  },
+  {
+   "started_second": 861.0,
+   "ended_second": 872.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 1,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    1416,
+    743
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 871.0
+  },
+  {
+   "started_second": 873.0,
+   "ended_second": 874.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 5,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    1416,
+    743
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 873.0
+  },
+  {
+   "started_second": 875.0,
+   "ended_second": 877.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 5,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    1416,
+    743
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 876.0
+  },
+  {
+   "started_second": 878.0,
+   "ended_second": 879.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 5,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    1416,
+    743
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 878.0
+  },
+  {
+   "started_second": 882.0,
+   "ended_second": 893.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 1,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    1184,
+    1416
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 892.0
+  },
+  {
+   "started_second": 894.0,
+   "ended_second": 895.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 7,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    1184,
+    1416
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 894.0
+  },
+  {
+   "started_second": 896.0,
+   "ended_second": 898.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    1184,
+    1416
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 897.0
+  },
+  {
+   "started_second": 899.0,
+   "ended_second": 900.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    95,
+    954,
+    847,
+    1304,
+    1184,
+    1416
+   ],
+   "nodes": [
+    "007359",
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 899.0
+  },
+  {
+   "started_second": 1113.0,
+   "ended_second": 1121.0,
+   "ended_reason": "resolved",
+   "held_seconds": 7.3,
+   "cycle_size": 7,
+   "affected_vehicles": 1,
+   "oht_ids": [
+    173,
+    222,
+    334,
+    471,
+    909,
+    289,
+    475
+   ],
+   "nodes": [
+    "007763",
+    "008564",
+    "008536",
+    "007764",
+    "007765",
+    "008385",
+    "007805"
+   ],
+   "bay_ids": [],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 1120.0
+  },
+  {
+   "started_second": 1343.0,
+   "ended_second": 1344.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 7,
+   "affected_vehicles": 3,
+   "oht_ids": [
+    206,
+    625,
+    1431,
+    284,
+    921,
+    1159,
+    299
+   ],
+   "nodes": [
+    "007762",
+    "007763",
+    "008564",
+    "008536",
+    "007765",
+    "008385",
+    "007805"
+   ],
+   "bay_ids": [],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 1343.0
+  },
+  {
+   "started_second": 1476.0,
+   "ended_second": 1487.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 1,
+   "oht_ids": [
+    413,
+    1340,
+    1188,
+    1453,
+    1402,
+    851
+   ],
+   "nodes": [
+    "007344",
+    "007360",
+    "007359",
+    "006210",
+    "006223",
+    "006227"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1486.0
+  },
+  {
+   "started_second": 1488.0,
+   "ended_second": 1489.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 3,
+   "oht_ids": [
+    413,
+    1340,
+    1188,
+    1453,
+    1402,
+    851
+   ],
+   "nodes": [
+    "007344",
+    "007360",
+    "007359",
+    "006210",
+    "006223",
+    "006227"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1488.0
+  },
+  {
+   "started_second": 1490.0,
+   "ended_second": 1492.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 3,
+   "oht_ids": [
+    413,
+    1340,
+    1188,
+    1453,
+    1402,
+    851
+   ],
+   "nodes": [
+    "007344",
+    "007360",
+    "007359",
+    "006210",
+    "006223",
+    "006227"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1491.0
+  },
+  {
+   "started_second": 1493.0,
+   "ended_second": 1494.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 3,
+   "oht_ids": [
+    413,
+    1340,
+    1188,
+    1453,
+    1402,
+    851
+   ],
+   "nodes": [
+    "007344",
+    "007360",
+    "007359",
+    "006210",
+    "006223",
+    "006227"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1493.0
+  },
+  {
+   "started_second": 1495.0,
+   "ended_second": 1497.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 4,
+   "oht_ids": [
+    413,
+    1340,
+    1188,
+    1453,
+    1402,
+    851
+   ],
+   "nodes": [
+    "007344",
+    "007360",
+    "007359",
+    "006210",
+    "006223",
+    "006227"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1496.0
+  },
+  {
+   "started_second": 1498.0,
+   "ended_second": 1499.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 4,
+   "oht_ids": [
+    413,
+    1340,
+    1188,
+    1453,
+    1402,
+    851
+   ],
+   "nodes": [
+    "007344",
+    "007360",
+    "007359",
+    "006210",
+    "006223",
+    "006227"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1498.0
+  },
+  {
+   "started_second": 1513.0,
+   "ended_second": 1514.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 7,
+   "oht_ids": [
+    411,
+    413,
+    1188,
+    1453,
+    1402,
+    851
+   ],
+   "nodes": [
+    "007344",
+    "007360",
+    "007359",
+    "006210",
+    "006223",
+    "006227"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1513.0
+  },
+  {
+   "started_second": 1515.0,
+   "ended_second": 1516.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 9,
+   "oht_ids": [
+    1453,
+    1402,
+    851,
+    411,
+    413,
+    1188
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1515.0
+  },
+  {
+   "started_second": 1518.0,
+   "ended_second": 1519.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 7,
+   "oht_ids": [
+    1453,
+    1402,
+    851,
+    411,
+    413,
+    1188
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1518.0
+  },
+  {
+   "started_second": 1520.0,
+   "ended_second": 1521.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 7,
+   "oht_ids": [
+    1453,
+    1402,
+    851,
+    411,
+    413,
+    1188
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1520.0
+  },
+  {
+   "started_second": 1523.0,
+   "ended_second": 1524.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 12,
+   "oht_ids": [
+    1453,
+    1402,
+    851,
+    411,
+    413,
+    1188
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1523.0
+  },
+  {
+   "started_second": 1525.0,
+   "ended_second": 1526.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 12,
+   "oht_ids": [
+    1453,
+    1402,
+    851,
+    411,
+    413,
+    1188
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1525.0
+  },
+  {
+   "started_second": 1531.0,
+   "ended_second": 1542.0,
+   "ended_reason": "resolved",
+   "held_seconds": 2.0,
+   "cycle_size": 6,
+   "affected_vehicles": 8,
+   "oht_ids": [
+    1453,
+    1402,
+    851,
+    611,
+    411,
+    1188
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1541.0
+  },
+  {
+   "started_second": 1543.0,
+   "ended_second": 1544.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 15,
+   "oht_ids": [
+    1453,
+    1402,
+    851,
+    611,
+    411,
+    1188
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1543.0
+  },
+  {
+   "started_second": 1545.0,
+   "ended_second": 1546.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 15,
+   "oht_ids": [
+    1453,
+    1402,
+    851,
+    611,
+    411,
+    1188
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1545.0
+  },
+  {
+   "started_second": 1547.0,
+   "ended_second": 1548.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 13,
+   "oht_ids": [
+    1453,
+    1402,
+    851,
+    611,
+    411,
+    1188
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1547.0
+  },
+  {
+   "started_second": 1549.0,
+   "ended_second": 1551.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 13,
+   "oht_ids": [
+    1453,
+    1402,
+    851,
+    611,
+    411,
+    1188
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1550.0
+  },
+  {
+   "started_second": 1552.0,
+   "ended_second": 1553.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 17,
+   "oht_ids": [
+    1453,
+    1402,
+    851,
+    611,
+    411,
+    1188
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1552.0
+  },
+  {
+   "started_second": 1557.0,
+   "ended_second": 1568.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 13,
+   "oht_ids": [
+    1453,
+    1402,
+    851,
+    645,
+    611,
+    1188
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1567.0
+  },
+  {
+   "started_second": 1569.0,
+   "ended_second": 1570.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 16,
+   "oht_ids": [
+    1453,
+    1402,
+    851,
+    645,
+    611,
+    1188
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1569.0
+  },
+  {
+   "started_second": 1571.0,
+   "ended_second": 1573.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 15,
+   "oht_ids": [
+    1453,
+    1402,
+    851,
+    645,
+    611,
+    1188
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1572.0
+  },
+  {
+   "started_second": 1574.0,
+   "ended_second": 1575.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 15,
+   "oht_ids": [
+    1453,
+    1402,
+    851,
+    645,
+    611,
+    1188
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1574.0
+  },
+  {
+   "started_second": 1576.0,
+   "ended_second": 1578.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 15,
+   "oht_ids": [
+    1453,
+    1402,
+    851,
+    645,
+    611,
+    1188
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1577.0
+  },
+  {
+   "started_second": 1581.0,
+   "ended_second": 1591.0,
+   "ended_reason": "resolved",
+   "held_seconds": 9.3,
+   "cycle_size": 6,
+   "affected_vehicles": 13,
+   "oht_ids": [
+    1453,
+    1402,
+    851,
+    1140,
+    645,
+    1188
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1590.0
+  },
+  {
+   "started_second": 1601.0,
+   "ended_second": 1607.0,
+   "ended_reason": "resolved",
+   "held_seconds": 6.0,
+   "cycle_size": 6,
+   "affected_vehicles": 0,
+   "oht_ids": [
+    748,
+    1453,
+    1402,
+    851,
+    1253,
+    1188
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1606.0
+  },
+  {
+   "started_second": 1815.0,
+   "ended_second": 1826.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 0,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1825.0
+  },
+  {
+   "started_second": 1827.0,
+   "ended_second": 1828.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 5,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1827.0
+  },
+  {
+   "started_second": 1829.0,
+   "ended_second": 1831.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 6,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1830.0
+  },
+  {
+   "started_second": 1832.0,
+   "ended_second": 1833.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1832.0
+  },
+  {
+   "started_second": 1834.0,
+   "ended_second": 1836.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1835.0
+  },
+  {
+   "started_second": 1837.0,
+   "ended_second": 1838.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1837.0
+  },
+  {
+   "started_second": 1839.0,
+   "ended_second": 1841.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1840.0
+  },
+  {
+   "started_second": 1842.0,
+   "ended_second": 1843.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1842.0
+  },
+  {
+   "started_second": 1844.0,
+   "ended_second": 1846.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1845.0
+  },
+  {
+   "started_second": 1847.0,
+   "ended_second": 1848.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1847.0
+  },
+  {
+   "started_second": 1849.0,
+   "ended_second": 1851.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1850.0
+  },
+  {
+   "started_second": 1852.0,
+   "ended_second": 1853.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1852.0
+  },
+  {
+   "started_second": 1854.0,
+   "ended_second": 1856.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1855.0
+  },
+  {
+   "started_second": 1857.0,
+   "ended_second": 1858.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1857.0
+  },
+  {
+   "started_second": 1859.0,
+   "ended_second": 1861.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1860.0
+  },
+  {
+   "started_second": 1862.0,
+   "ended_second": 1863.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1862.0
+  },
+  {
+   "started_second": 1864.0,
+   "ended_second": 1866.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1865.0
+  },
+  {
+   "started_second": 1867.0,
+   "ended_second": 1868.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1867.0
+  },
+  {
+   "started_second": 1869.0,
+   "ended_second": 1871.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1870.0
+  },
+  {
+   "started_second": 1872.0,
+   "ended_second": 1873.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1872.0
+  },
+  {
+   "started_second": 1874.0,
+   "ended_second": 1931.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1930.0
+  },
+  {
+   "started_second": 1941.0,
+   "ended_second": 1961.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 4,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1960.0
+  },
+  {
+   "started_second": 1971.0,
+   "ended_second": 1991.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 1990.0
+  },
+  {
+   "started_second": 2001.0,
+   "ended_second": 2021.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 4,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2020.0
+  },
+  {
+   "started_second": 2031.0,
+   "ended_second": 2051.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2050.0
+  },
+  {
+   "started_second": 2061.0,
+   "ended_second": 2081.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 12,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2080.0
+  },
+  {
+   "started_second": 2111.0,
+   "ended_second": 2121.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2120.0
+  },
+  {
+   "started_second": 2131.0,
+   "ended_second": 2141.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2140.0
+  },
+  {
+   "started_second": 2151.0,
+   "ended_second": 2161.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2160.0
+  },
+  {
+   "started_second": 2171.0,
+   "ended_second": 2181.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 4,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2180.0
+  },
+  {
+   "started_second": 2201.0,
+   "ended_second": 2211.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 4,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2210.0
+  },
+  {
+   "started_second": 2221.0,
+   "ended_second": 2231.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 4,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2230.0
+  },
+  {
+   "started_second": 2241.0,
+   "ended_second": 2251.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2250.0
+  },
+  {
+   "started_second": 2261.0,
+   "ended_second": 2271.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2270.0
+  },
+  {
+   "started_second": 2281.0,
+   "ended_second": 2301.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2300.0
+  },
+  {
+   "started_second": 2311.0,
+   "ended_second": 2331.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 4,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2330.0
+  },
+  {
+   "started_second": 2341.0,
+   "ended_second": 2361.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2360.0
+  },
+  {
+   "started_second": 2371.0,
+   "ended_second": 2391.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 17,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2390.0
+  },
+  {
+   "started_second": 2401.0,
+   "ended_second": 2421.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2420.0
+  },
+  {
+   "started_second": 2407.0,
+   "ended_second": 2409.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.9,
+   "cycle_size": 22,
+   "affected_vehicles": 14,
+   "oht_ids": [
+    931,
+    1156,
+    1104,
+    712,
+    93,
+    583,
+    817,
+    722,
+    648,
+    625,
+    323,
+    1425,
+    656,
+    1309,
+    1208,
+    396,
+    387,
+    801,
+    1006,
+    450,
+    308,
+    1475
+   ],
+   "nodes": [
+    "016765",
+    "017066",
+    "015095",
+    "017083",
+    "015094",
+    "017082",
+    "016856",
+    "017086",
+    "016700",
+    "016829",
+    "017079",
+    "017077",
+    "017078",
+    "017067",
+    "017070",
+    "017068",
+    "017069",
+    "016828",
+    "017058",
+    "016808",
+    "017061",
+    "016846"
+   ],
+   "bay_ids": [],
+   "corridor_ids": [
+    2
+   ],
+   "merge_ids": [
+    134,
+    152
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2408.0
+  },
+  {
+   "started_second": 2431.0,
+   "ended_second": 2451.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 4,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2450.0
+  },
+  {
+   "started_second": 2461.0,
+   "ended_second": 2481.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2480.0
+  },
+  {
+   "started_second": 2491.0,
+   "ended_second": 2511.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 4,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2510.0
+  },
+  {
+   "started_second": 2521.0,
+   "ended_second": 2541.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2540.0
+  },
+  {
+   "started_second": 2551.0,
+   "ended_second": 2571.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 12,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2570.0
+  },
+  {
+   "started_second": 2581.0,
+   "ended_second": 2601.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2600.0
+  },
+  {
+   "started_second": 2611.0,
+   "ended_second": 2631.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 4,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2630.0
+  },
+  {
+   "started_second": 2641.0,
+   "ended_second": 2661.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2660.0
+  },
+  {
+   "started_second": 2671.0,
+   "ended_second": 2691.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 23,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2690.0
+  },
+  {
+   "started_second": 2701.0,
+   "ended_second": 2721.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2720.0
+  },
+  {
+   "started_second": 2731.0,
+   "ended_second": 2751.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 4,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2750.0
+  },
+  {
+   "started_second": 2761.0,
+   "ended_second": 2781.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2780.0
+  },
+  {
+   "started_second": 2791.0,
+   "ended_second": 2811.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 4,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2810.0
+  },
+  {
+   "started_second": 2821.0,
+   "ended_second": 2841.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2840.0
+  },
+  {
+   "started_second": 2851.0,
+   "ended_second": 2871.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 19,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2870.0
+  },
+  {
+   "started_second": 2881.0,
+   "ended_second": 2901.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2900.0
+  },
+  {
+   "started_second": 2911.0,
+   "ended_second": 2931.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 4,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2930.0
+  },
+  {
+   "started_second": 2941.0,
+   "ended_second": 2961.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2960.0
+  },
+  {
+   "started_second": 2971.0,
+   "ended_second": 2991.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 19,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 2990.0
+  },
+  {
+   "started_second": 3001.0,
+   "ended_second": 3011.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 3010.0
+  },
+  {
+   "started_second": 3021.0,
+   "ended_second": 3051.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 6,
+   "affected_vehicles": 32,
+   "oht_ids": [
+    3,
+    530,
+    1200,
+    827,
+    851,
+    285
+   ],
+   "nodes": [
+    "006210",
+    "006223",
+    "006227",
+    "007344",
+    "007360",
+    "007359"
+   ],
+   "bay_ids": [
+    87
+   ],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [
+    84,
+    87
+   ],
+   "detected_ring_ids": [],
+   "last_seen_second": 3050.0
+  },
+  {
+   "started_second": 8499.0,
+   "ended_second": 8500.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    1,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446
+   ],
+   "nodes": [
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689",
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8499.0
+  },
+  {
+   "started_second": 8501.0,
+   "ended_second": 8502.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    1,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446
+   ],
+   "nodes": [
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689",
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8501.0
+  },
+  {
+   "started_second": 8504.0,
+   "ended_second": 8505.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    1,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446
+   ],
+   "nodes": [
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689",
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8504.0
+  },
+  {
+   "started_second": 8506.0,
+   "ended_second": 8507.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    1,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446
+   ],
+   "nodes": [
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689",
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8506.0
+  },
+  {
+   "started_second": 8509.0,
+   "ended_second": 8510.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    1,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446
+   ],
+   "nodes": [
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689",
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8509.0
+  },
+  {
+   "started_second": 8511.0,
+   "ended_second": 8512.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    1,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446
+   ],
+   "nodes": [
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689",
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8511.0
+  },
+  {
+   "started_second": 8514.0,
+   "ended_second": 8515.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    1,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446
+   ],
+   "nodes": [
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689",
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8514.0
+  },
+  {
+   "started_second": 8516.0,
+   "ended_second": 8517.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    1,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446
+   ],
+   "nodes": [
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689",
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8516.0
+  },
+  {
+   "started_second": 8519.0,
+   "ended_second": 8520.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    1,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446
+   ],
+   "nodes": [
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689",
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8519.0
+  },
+  {
+   "started_second": 8521.0,
+   "ended_second": 8522.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    1,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446
+   ],
+   "nodes": [
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689",
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8521.0
+  },
+  {
+   "started_second": 8524.0,
+   "ended_second": 8525.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    1,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446
+   ],
+   "nodes": [
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689",
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8524.0
+  },
+  {
+   "started_second": 8526.0,
+   "ended_second": 8527.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    1,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446
+   ],
+   "nodes": [
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689",
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8526.0
+  },
+  {
+   "started_second": 8557.0,
+   "ended_second": 8558.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    242,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164
+   ],
+   "nodes": [
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656",
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8557.0
+  },
+  {
+   "started_second": 8559.0,
+   "ended_second": 8560.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    242,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164
+   ],
+   "nodes": [
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656",
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8559.0
+  },
+  {
+   "started_second": 8562.0,
+   "ended_second": 8563.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    242,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164
+   ],
+   "nodes": [
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656",
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8562.0
+  },
+  {
+   "started_second": 8564.0,
+   "ended_second": 8565.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    242,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164
+   ],
+   "nodes": [
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656",
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8564.0
+  },
+  {
+   "started_second": 8567.0,
+   "ended_second": 8568.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    242,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164
+   ],
+   "nodes": [
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656",
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8567.0
+  },
+  {
+   "started_second": 8569.0,
+   "ended_second": 8570.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    242,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164
+   ],
+   "nodes": [
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656",
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8569.0
+  },
+  {
+   "started_second": 8572.0,
+   "ended_second": 8573.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    242,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164
+   ],
+   "nodes": [
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656",
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8572.0
+  },
+  {
+   "started_second": 8574.0,
+   "ended_second": 8575.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    242,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164
+   ],
+   "nodes": [
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656",
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8574.0
+  },
+  {
+   "started_second": 8577.0,
+   "ended_second": 8578.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    242,
+    900,
+    997,
+    1218,
+    222,
+    676,
+    1484,
+    111,
+    850,
+    952,
+    1004,
+    1446,
+    910,
+    114,
+    1290,
+    178,
+    1021,
+    1462,
+    1101,
+    1409,
+    143,
+    1240,
+    1142,
+    564,
+    164
+   ],
+   "nodes": [
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656",
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 8577.0
+  },
+  {
+   "started_second": 9177.0,
+   "ended_second": 9777.0,
+   "ended_reason": "held_over_limit",
+   "held_seconds": 600.8,
+   "cycle_size": 6,
+   "affected_vehicles": 0,
+   "oht_ids": [
+    83,
+    1282,
+    1368,
+    300,
+    291,
+    370
+   ],
+   "nodes": [
+    "008536",
+    "007765",
+    "008385",
+    "007805",
+    "007763",
+    "008564"
+   ],
+   "bay_ids": [],
+   "corridor_ids": [
+    1
+   ],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 9777.0
+  },
+  {
+   "started_second": 9694.0,
+   "ended_second": 9695.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    64,
+    99,
+    644,
+    323,
+    1049,
+    1290,
+    134,
+    498,
+    912,
+    1214,
+    71,
+    1410,
+    805,
+    127,
+    1251,
+    1498,
+    991,
+    536,
+    1091,
+    111,
+    1260,
+    888,
+    94,
+    211,
+    666
+   ],
+   "nodes": [
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689",
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 9694.0
+  },
+  {
+   "started_second": 9696.0,
+   "ended_second": 9697.0,
+   "ended_reason": "resolved",
+   "held_seconds": 1.0,
+   "cycle_size": 25,
+   "affected_vehicles": 2,
+   "oht_ids": [
+    64,
+    99,
+    644,
+    323,
+    1049,
+    1290,
+    134,
+    498,
+    912,
+    1214,
+    71,
+    1410,
+    805,
+    127,
+    1251,
+    1498,
+    991,
+    536,
+    1091,
+    111,
+    1260,
+    888,
+    94,
+    211,
+    666
+   ],
+   "nodes": [
+    "015742",
+    "015739",
+    "015738",
+    "015669",
+    "015672",
+    "015670",
+    "015674",
+    "015661",
+    "015743",
+    "015660",
+    "015665",
+    "015663",
+    "015667",
+    "015689",
+    "015736",
+    "015702",
+    "015701",
+    "015696",
+    "015695",
+    "015698",
+    "015697",
+    "015712",
+    "015737",
+    "015668",
+    "015656"
+   ],
+   "bay_ids": [
+    60
+   ],
+   "corridor_ids": [],
+   "merge_ids": [],
+   "detected_ring_ids": [],
+   "last_seen_second": 9696.0
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "case_name": "s01",
+ "case_number": 1,
+ "park_position_seed": 101,
+ "lot_schedule_seed": 201,
+ "idle_jitter_seed": 2,
+ "park_position_count": 3000,
+ "lot_schedule_count": 60000,
+ "note": ""
+}

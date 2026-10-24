@@ -219,3 +219,6 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 cases/
+
+# 교착 증거는 추적한다
+!evidence/
