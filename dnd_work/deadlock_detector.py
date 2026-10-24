@@ -36,6 +36,7 @@ detectDeadlock() 과 같다.
     ENABLE_RING_CONTROL         베이 고리 진입 제어 0/1    기본 유지
     RING_CAPACITY_MARGIN        고리 정원 = 노드수//2 - 이 값
     STOP_AFTER_SECONDS          순환이 이 시간 이상 지속되면 교착으로 보고 종료  기본 600
+                                0 이면 멈추지 않고 끝까지 관찰한다(영구성 확인용)
     STOP_WHEN_ALL_LOTS_DONE     로트를 전부 투입하고 전부 완료하면 종료  기본 1
     PENDING_JOB_LIMIT           대기열 상한(건). 넘으면 투입을 건너뛴다. 0이면 무제한
     CASE_DIRECTORY              시드 케이스 폴더. 생략하면 현재 폴더의 파일을 쓴다
@@ -302,12 +303,19 @@ class DeadlockWatcher(sim.Component):
                 record["last_seen_second"] = round(now, 1)
                 record["held_seconds"] = round(held_seconds, 1)
 
-                if held_seconds >= STOP_AFTER_SECONDS:
+                if 0 < STOP_AFTER_SECONDS <= held_seconds:
                     print("  >>> %.0f초 이상 지속. 교착으로 보고 실행을 멈춘다. "
                           "(t=%.0f초, 순환 %d대)" % (STOP_AFTER_SECONDS, now, len(cycle)),
                           flush=True)
                     self.stopped_early = True
-                    self._close_all(now, "held_over_limit")
+                    # 한계를 넘긴 것은 이 순환 하나다. 그 순간 같이 열려
+                    # 있던 다른 순환까지 교착으로 찍으면 건수가 부풀려진다
+                    # (실측: 89초짜리가 600초 교착과 같이 묶였다).
+                    record["ended_second"] = round(now, 1)
+                    record["ended_reason"] = "held_over_limit"
+                    self.closed_cycles.append(record)
+                    del self.open_cycles[key]
+                    self._close_all(now, "run_ended")
                     self.env.main().activate()
                     return
 
