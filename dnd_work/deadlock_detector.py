@@ -87,6 +87,19 @@ STOP_AFTER_SECONDS     = _environment_value("STOP_AFTER_SECONDS", float, 600.0)
 STOP_WHEN_ALL_LOTS_DONE = _environment_value(
     "STOP_WHEN_ALL_LOTS_DONE", lambda v: v != "0", True)
 RESULT_JSON_PATH       = os.environ.get("RESULT_JSON_PATH", "")
+TRACE_AFTER_SECONDS    = _environment_value("TRACE_AFTER_SECONDS", float, 60.0)
+# 구조 판정(C1~C3)으로 교착이 확정되면 그 자리에서 실행을 멈출지 여부.
+# 0 으로 두면 끝까지 돌면서 교착을 여러 건 모은다.
+STOP_ON_STRUCTURAL_DEADLOCK = _environment_value(
+    "STOP_ON_STRUCTURAL_DEADLOCK", lambda v: v != "0", True)
+# 진행 상황을 이 간격(시뮬 초)마다 한 줄 찍는다. 0 이면 끄기.
+# 이게 없으면 순환이 없는 구간에서 로그가 멈춰 보여 살았는지 알 수 없다.
+HEARTBEAT_SECONDS      = _environment_value("HEARTBEAT_SECONDS", float, 600.0)
+# [투입 중단 실험] 교착 후보를 찾는 순간 로트 투입을 0으로 끊고 계속 관찰한다.
+# 현업의 정의 그대로다 - 부하를 없애도 풀리지 않으면 교착, 풀리면 정체.
+# 시간 기준(15초/600초)을 쓰지 않고 실험으로 가른다.
+STOP_INJECTION_ON_DETECT = _environment_value(
+    "STOP_INJECTION_ON_DETECT", lambda v: v != "0", False)
 
 # 보고용 구간. 교수님 기준(15초)을 포함시켜 같은 조건으로 비교할 수 있게 한다.
 REPORT_THRESHOLDS_SECONDS = (15.0, 60.0, 300.0, 600.0)
@@ -145,6 +158,150 @@ def find_blocking_vehicle(vehicle, next_node):
     return None
 
 
+def judge_structural_deadlock(cycle, wait_for, vehicle_by_id):
+    """시간을 쓰지 않는 교착 판정.
+
+    본체 agv_fab_sim.py 를 전수 조사해 얻은 조건이다. 차량의 위치가 바뀌는
+    코드는 단 한 곳(self.node = nxt)뿐이고, 거기 도달하려면 두 관문을 모두
+    통과해야 한다.
+
+        (가) try_acquire(nxt)      다음 노드의 락이 비어 있을 것
+        (나) _path_clear_ahead()   다음 노드 기준 1,150mm 안에 앞차가 없을 것
+
+    그리고 서 있는 차가 쥔 노드는 release() 세 곳 모두 "그 차가 움직여야"
+    풀린다. 따라서 (가)(나)는 고리 내 다른 차량의 선행 이동을 요구한다.
+
+    조건은 네 가지다. C1~C3 는 모두 성립해야 하고, 영구성은 C4a 또는 C4b
+    둘 중 하나로 보장된다.
+
+      C1  닫힌 대기 고리. 각 차를 막는 차가 다시 고리 안에 있다.
+      C2  각 차가 선 노드의 나가는 링크가 1개. 지도 성질이라 불변이며,
+          분기점 재라우팅의 alt_free 가 항상 False 가 되는 근거다.
+      C3  고리 진입 제어 대상이 아니다.
+      C4  영구성. 유휴 차량만 쓸 수 있는 길 비켜주기(_yield_step)가
+          영원히 닫혀 있음을 보장한다.
+            C4a 전원 적재 중(JOB_CARRYING). 적재 작업은 재할당 불가이고
+                (reassignable 은 JOB_ASSIGNED 만 참), 완료하려면 목적지에
+                도착해야 하므로, 이동 없이 유휴가 될 수 없다.
+            C4b 전원의 다음 노드를 고리 내 다른 차량이 점유하고 있다.
+                _yield_step 은 비어 있는 인접 노드로만 움직이므로, 유휴가
+                되더라도 갈 곳이 없다.
+
+    "전원 작업 중"만 보던 예전 기준은 느슨했다. 픽업 전(JOB_ASSIGNED)
+    차량은 작업을 뺏겨 유휴가 될 수 있고, 그 차의 다음 노드가 비어 있으면
+    비켜주기로 빠져나간다. 그 경우는 교착이 아니라 정체다.
+    """
+    members = [vehicle_by_id[m] for m in cycle]
+    inside = set(cycle)
+    member_set = set(members)
+
+    # --- C1 ---
+    c1 = all(wait_for.get(m) in inside for m in cycle)
+
+    # --- C2 ---
+    out_degrees = {v.oht_id: len(simulator.ADJ.get(v.node, ())) for v in members}
+    c2 = all(degree == 1 for degree in out_degrees.values())
+
+    # --- C3 ---
+    rings = sorted({r for v in members for r in simulator.NODE_RINGS.get(v.node, ())})
+    c3 = not rings
+
+    # --- C4a : 전원 적재 중인가 ---
+    job_states = {}
+    for v in members:
+        job_states[v.oht_id] = getattr(v.job, "state", None)
+    c4a = all(state == simulator.JOB_CARRYING for state in job_states.values())
+
+    # --- C4b : 전원의 다음 노드를 고리 내 차량이 점유했는가 ---
+    # 자기 자신이 예약만 해둔 노드는 제외한다(막힌 차는 release 로 도로
+    # 반납하므로 일시적으로 자기 이름이 올라가 있을 수 있다).
+    block_kinds = {}
+    c4b = True
+    for v in members:
+        nxt = getattr(v, "_stall_next", None)
+        holder = simulator.NODE_HOLDER.get(nxt)
+        locked_by_member = holder is not None and holder is not v and holder in member_set
+        block_kinds[v.oht_id] = "node_lock" if locked_by_member else "follow_distance"
+        if not locked_by_member:
+            c4b = False
+
+    if c4a and c4b:
+        basis = "C4a 전원 적재 중 + C4b 전원 노드락 차단"
+    elif c4a:
+        basis = "C4a 전원 적재 중 (재할당 불가 -> 유휴 전환 불가)"
+    elif c4b:
+        basis = "C4b 전원 노드락 차단 (유휴가 되어도 갈 노드 없음)"
+    else:
+        basis = None
+
+    verdict = bool(c1 and c2 and c3 and (c4a or c4b))
+    return {
+        "verdict": verdict,
+        "permanence_basis": basis,
+        "c1_closed_wait_cycle": c1,
+        "c2_single_exit_all": c2,
+        "c2_out_degrees": out_degrees,
+        "c3_outside_ring_control": c3,
+        "c4a_all_carrying": c4a,
+        "c4b_all_node_locked": c4b,
+        "job_states": job_states,
+        "block_kinds": block_kinds,
+        "ring_ids_touched": rings,
+        # 참고용. 판정에는 쓰지 않는다 - C4a/C4b 가 더 강한 조건이다.
+        "all_vehicles_busy": all(
+            v.job is not None or v.state != simulator.OHT_IDLE for v in members),
+        "reassignable_count": sum(
+            1 for st in job_states.values() if st != simulator.JOB_CARRYING),
+        "no_preemption_in_model": True,
+    }
+
+
+def describe_members(cycle, wait_for, vehicle_by_id):
+    """교착에 걸린 차량 한 대씩의 상황. 보고서에 그대로 쓸 수 있게 적는다."""
+    rows = []
+    for key in sorted(cycle):
+        vehicle = vehicle_by_id[key]
+        blocker = vehicle_by_id.get(wait_for.get(key))
+        job = vehicle.job
+        x, y = simulator.NODE_XY.get(vehicle.node, (None, None))
+        rows.append({
+            "oht_id": vehicle.oht_id,
+            "node": vehicle.node,
+            "node_xy_mm": [x, y],
+            "wants_node": getattr(vehicle, "_stall_next", None),
+            "exits_from_node": sorted(simulator.ADJ.get(vehicle.node, ())),
+            "blocked_by_oht_id": blocker.oht_id if blocker else None,
+            # 막힘의 종류를 구별해 둔다. 다음 노드에 차가 있으면 node_lock,
+            # 비어 있는데 차간거리 때문이면 follow_distance 다.
+            "next_node_holder_oht_id": getattr(
+                simulator.NODE_HOLDER.get(getattr(vehicle, "_stall_next", None)),
+                "oht_id", None),
+            "block_kind": ("node_lock"
+                           if simulator.NODE_HOLDER.get(
+                               getattr(vehicle, "_stall_next", None)) is not None
+                           else "follow_distance"),
+            "stopped_since_second": getattr(vehicle, "_stall_start", None),
+            "state": vehicle.state,
+            # 픽업 전(assigned) 작업은 다른 차량으로 재할당될 수 있다. 그러면
+            # 이 차는 유휴가 되어 C3("전원 작업 중")가 깨진다. 적재 후
+            # (carrying)는 재할당 불가라 그 경로가 없다.
+            "job_state": getattr(job, "state", None),
+            "reassignable": (getattr(job, "state", None)
+                             != simulator.JOB_CARRYING),
+            "carrying_material": vehicle.state in (simulator.OHT_TO_DEST,
+                                                   simulator.OHT_LOADING),
+            "job_id": getattr(job, "job_id", None),
+            "job_from_node": getattr(job, "from_node", None),
+            "job_to_node": getattr(job, "to_node", None),
+            "lot_id": getattr(job, "lot_id", None),
+            "leg_index": getattr(job, "leg_index", None),
+            "bay_id": simulator.NODE_TO_BAY_ID.get(vehicle.node),
+            "corridor_id": simulator.NODE_TO_CORRIDOR_ID.get(vehicle.node),
+            "is_merge_node": bool(simulator.NODE_TO_MERGE_ID.get(vehicle.node)),
+        })
+    return rows
+
+
 def build_wait_graph():
     """{막힌 차 -> 나를 막는 차} 와 {막힌 차 -> 멈춘 시각} 을 만든다."""
     wait_for, stopped_since = {}, {}
@@ -199,11 +356,15 @@ PENDING_JOB_LIMIT = _environment_value("PENDING_JOB_LIMIT", int, 2000)
 #
 # 본체(agv_fab_sim.py)는 건드리지 않는다. 모델 수정이 아니라 실험 조건이라
 # 실험 스크립트 쪽에 두는 것이 맞다.
-INJECTION_SKIPPED = {"backlog_full": 0, "schedule_empty": 0}
+INJECTION_SKIPPED = {"backlog_full": 0, "schedule_empty": 0, "halted_for_drain": 0}
+INJECTION_HALTED = [False]      # 투입 중단 실험이 시작되면 True
 _original_create_job = simulator.Manager.create_job
 
 
 def _create_job_with_backlog_limit(self):
+    if INJECTION_HALTED[0]:
+        INJECTION_SKIPPED["halted_for_drain"] += 1
+        return None
     if simulator._JOB_SCHEDULE_IDX[0] >= len(simulator.JOB_SCHEDULE):
         INJECTION_SKIPPED["schedule_empty"] += 1
         return None
@@ -263,6 +424,10 @@ class DeadlockWatcher(sim.Component):
 
     def setup(self):
         self.open_cycles = {}        # frozenset(멤버) -> 기록
+        self.structural_deadlocks = 0   # 구조 판정(C1~C3)으로 확정된 건수
+        self.last_heartbeat = 0.0
+        self.injection_stopped_second = None   # 투입을 끊은 시각
+        self.drain_timeline = []               # 투입 중단 뒤 잔여 작업 추이
         self.closed_cycles = []      # 풀린 순환의 생애 기록
         self.peak_waiting = 0
         self.peak_cycle_size = 0
@@ -283,6 +448,27 @@ class DeadlockWatcher(sim.Component):
                 self.env.main().activate()
                 return
 
+            if (HEARTBEAT_SECONDS > 0
+                    and now - self.last_heartbeat >= HEARTBEAT_SECONDS):
+                self.last_heartbeat = now
+                if self.injection_stopped_second is None:
+                    print("  [진행] t=%.0f / %.0f초   순환누적 %d건   교착후보 %d건"
+                          % (now, SIMULATION_HOURS * 3600.0,
+                             len(self.closed_cycles) + len(self.open_cycles),
+                             self.structural_deadlocks), flush=True)
+                else:
+                    alive = sum(1 for r in self.open_cycles.values()
+                                if r.get("structural"))
+                    pending = len(simulator.PENDING_JOBS)
+                    inflight = len(simulator.JOB_POOL)
+                    self.drain_timeline.append({
+                        "second": round(now, 1), "pending_jobs": pending,
+                        "jobs_in_flight": inflight, "deadlock_cycles_alive": alive})
+                    print("  [투입중단 %.0f초 경과] 남은작업 대기 %d / 진행 %d   "
+                          "교착 고리 생존 %d건"
+                          % (now - self.injection_stopped_second,
+                             pending, inflight, alive), flush=True)
+
             wait_for, stopped_since = build_wait_graph()
             self.peak_waiting = max(self.peak_waiting, len(wait_for))
 
@@ -302,6 +488,92 @@ class DeadlockWatcher(sim.Component):
                     self.open_cycles[key] = record
                 record["last_seen_second"] = round(now, 1)
                 record["held_seconds"] = round(held_seconds, 1)
+                record["max_held_seconds"] = max(
+                    record["max_held_seconds"], round(held_seconds, 1))
+                # [추적] held_seconds 는 노드 진입뿐 아니라 재탐색(_replan)
+                # 으로도 0부터 다시 시작한다. 그래서 "정말 한 칸이라도
+                # 움직였는가"는 멤버의 노드를 직접 비교해야만 알 수 있다.
+                if now - record["started_second"] >= TRACE_AFTER_SECONDS:
+                    ordered = sorted(cycle)
+                    current = [vehicle_by_id[m].node for m in ordered]
+                    previous = record.get("trace_nodes")
+                    if previous is None:
+                        record["trace_oht_ids"] = [
+                            vehicle_by_id[m].oht_id for m in ordered]
+                    elif current != previous:
+                        record["node_trace"].append({
+                            "second": round(now, 1),
+                            "before": previous, "after": current})
+                    before_held = record.get("trace_held")
+                    if before_held is not None and held_seconds < before_held - 0.5:
+                        record["clock_resets"].append({
+                            "second": round(now, 1),
+                            "from": before_held, "to": round(held_seconds, 1),
+                            "node_changed": previous is not None and current != previous})
+                    record["trace_nodes"] = current
+                    record["trace_held"] = round(held_seconds, 1)
+
+                # ---- [구조 판정] 시간을 쓰지 않는 교착 확정 ----
+                # 확정 뒤에도 매 점검마다 다시 본다. 한 번 찍고 안 보면
+                # 나중에 조건이 깨져도 교착 기록이 그대로 남는다.
+                judged = judge_structural_deadlock(
+                    cycle, wait_for, vehicle_by_id)
+                if (record.get("structural") is not None
+                        and not judged["verdict"]
+                        and record.get("structural_broken_second") is None):
+                    record["structural_broken_second"] = round(now, 1)
+                    record["structural_broken"] = judged
+                    broken = [k for k in ("c1_closed_wait_cycle",
+                                          "c2_single_exit_all",
+                                          "c3_outside_ring_control",
+                                          "c4a_all_carrying",
+                                          "c4b_all_node_locked")
+                              if not judged[k]]
+                    print("  >>> [조건 깨짐] t=%.0f초, 교착 조건이 더 이상 "
+                          "성립하지 않는다: %s" % (now, ", ".join(broken)),
+                          flush=True)
+                if record.get("structural") is None:
+                    if judged["verdict"]:
+                        record["structural"] = judged
+                        record["detected_second"] = round(now, 1)
+                        record["members"] = describe_members(
+                            cycle, wait_for, vehicle_by_id)
+                        self.structural_deadlocks += 1
+                        print("  >>> [교착 확정] t=%.0f초  %d대  "
+                              "C1 닫힌고리 / C2 출구1개 / C3 고리제어밖 성립"
+                              % (now, len(cycle)), flush=True)
+                        print("        영구성 근거: %s"
+                              % judged["permanence_basis"], flush=True)
+                        for row in record["members"]:
+                            print("        OHT %-5s 노드 %s -> %s  출구 %d개  "
+                                  "%s에 막힘  상태 %s%s"
+                                  % (row["oht_id"], row["node"],
+                                     row["wants_node"],
+                                     len(row["exits_from_node"]),
+                                     row["blocked_by_oht_id"], row["state"],
+                                     " (자재 적재)" if row["carrying_material"]
+                                     else ""), flush=True)
+                        # [투입 중단 실험] 부하를 0으로 만들고도 풀리지
+                        # 않는지 본다. 풀리면 정체, 안 풀리면 교착이다.
+                        if (STOP_INJECTION_ON_DETECT
+                                and self.injection_stopped_second is None):
+                            INJECTION_HALTED[0] = True
+                            self.injection_stopped_second = round(now, 1)
+                            record["injection_stopped_second"] = round(now, 1)
+                            print("  >>> [투입 중단] t=%.0f초부터 로트 투입을 끊는다. "
+                                  "대기 %d건 / 진행 중 %d건이 남아 있다."
+                                  % (now, len(simulator.PENDING_JOBS),
+                                     len(simulator.JOB_POOL)), flush=True)
+                        self.save_checkpoint(now)
+                        if STOP_ON_STRUCTURAL_DEADLOCK:
+                            record["ended_second"] = round(now, 1)
+                            record["ended_reason"] = "structural_deadlock"
+                            self.closed_cycles.append(record)
+                            del self.open_cycles[key]
+                            self.stopped_early = True
+                            self._close_all(now, "run_ended")
+                            self.env.main().activate()
+                            return
 
                 if 0 < STOP_AFTER_SECONDS <= held_seconds:
                     print("  >>> %.0f초 이상 지속. 교착으로 보고 실행을 멈춘다. "
@@ -324,6 +596,13 @@ class DeadlockWatcher(sim.Component):
                 record = self.open_cycles.pop(key)
                 record["ended_second"] = round(now, 1)
                 record["ended_reason"] = "resolved"      # 스스로 풀렸다
+                if record.get("structural") and self.injection_stopped_second is not None:
+                    record["drain_verdict"] = "resolved_after_drain"
+                    record["seconds_after_injection_stop"] = round(
+                        now - self.injection_stopped_second, 1)
+                    print("  >>> [정체로 판정] 투입 중단 %.0f초 뒤 고리가 풀렸다. "
+                          "(t=%.0f초)"
+                          % (now - self.injection_stopped_second, now), flush=True)
                 self.closed_cycles.append(record)
 
     def _new_record(self, now, cycle, wait_for, vehicle_by_id):
@@ -350,6 +629,15 @@ class DeadlockWatcher(sim.Component):
             "ended_second": None,
             "ended_reason": None,
             "held_seconds": 0.0,
+            "max_held_seconds": 0.0,
+            "structural": None,        # 구조 판정 결과(C1~C3). None 이면 미확정
+            "detected_second": None,   # 구조 판정으로 교착이 확정된 시각
+            "members": [],             # 확정 시점의 차량별 상황
+            "injection_stopped_second": None,  # 이 고리 때문에 투입을 끊은 시각
+            "drain_verdict": None,     # survived_drain(교착) / resolved_after_drain(정체)
+            "seconds_after_injection_stop": None,
+            "node_trace": [],
+            "clock_resets": [],
             "cycle_size": len(cycle),
             "affected_vehicles": affected,
             "oht_ids": [m.oht_id for m in members],
@@ -374,9 +662,45 @@ class DeadlockWatcher(sim.Component):
             record["ended_reason"] = reason
             self.closed_cycles.append(record)
 
+    def save_checkpoint(self, now):
+        """교착이 확정될 때마다 지금까지의 기록을 파일로 내려둔다.
+
+        컴퓨터가 꺼지거나 실행이 끊겨도 확정된 교착은 남는다. 예전에는
+        결과를 맨 끝에 한 번만 써서, 81%까지 돌린 실행이 통째로 날아갔다.
+        """
+        if not RESULT_JSON_PATH:
+            return
+        path = RESULT_JSON_PATH + ".partial"
+        snapshot = {
+            "note": "실행 중 중간 저장. 정상 완주하면 최종 결과 파일이 따로 생긴다.",
+            "saved_at_simulated_second": round(now, 1),
+            "oht_count": OHT_COUNT,
+            "spawn_interval_seconds": SPAWN_INTERVAL_SECONDS,
+            "apply_fixes": APPLY_FIXES,
+            "min_follow_distance_mm": simulator.MIN_FOLLOW_DISTANCE,
+            "ring_control_enabled": simulator.ENABLE_RING_CONTROL,
+            "case_directory": CASE_DIRECTORY or os.getcwd(),
+            "case_info": CASE_INFO,
+            "structural_deadlock_count": self.structural_deadlocks,
+            "structural_deadlocks": [
+                record for record in
+                (self.closed_cycles + list(self.open_cycles.values()))
+                if record.get("structural")],
+        }
+        try:
+            with open(path, "w", encoding="utf-8") as handle:
+                json.dump(snapshot, handle, ensure_ascii=False, indent=1)
+        except OSError as error:
+            print("  (중간 저장 실패: %s)" % error, flush=True)
+
     def all_records(self, now):
         # 시뮬이 끝나는 시점에 남아 있던 순환은 "풀렸는지 모른다"로 적는다.
-        # 더 돌렸으면 풀렸을 수도 있으므로 교착으로 단정하지 않는다.
+        # 다만 투입을 끊은 뒤에도 끝까지 살아남았다면 그것은 교착이다.
+        for record in self.open_cycles.values():
+            if record.get("structural") and self.injection_stopped_second is not None:
+                record["drain_verdict"] = "survived_drain"
+                record["seconds_after_injection_stop"] = round(
+                    now - self.injection_stopped_second, 1)
         self._close_all(now, "run_ended")
         return sorted(self.closed_cycles, key=lambda r: r["started_second"])
 
@@ -428,7 +752,8 @@ def main():
         "min_follow_distance_mm": simulator.MIN_FOLLOW_DISTANCE,
         "ring_control_enabled": simulator.ENABLE_RING_CONTROL,
         "ring_capacity_margin": simulator.RING_CAP_MARGIN,
-        "stop_reason": ("deadlock_held_over_limit" if watcher.stopped_early
+        "stop_reason": ("structural_deadlock" if watcher.structural_deadlocks
+                        else "deadlock_held_over_limit" if watcher.stopped_early
                         else "all_lots_completed" if watcher.finished_all_lots
                         else "time_limit_reached"),
         "stopped_early": watcher.stopped_early,
@@ -457,15 +782,28 @@ def main():
         "held_over_limit_count": len(held_over_limit),
         "open_at_run_end_count": len(open_at_end),
         "stop_after_seconds": STOP_AFTER_SECONDS,
+        # ---- 구조 판정(C1~C3) 결과. 이것이 교착의 공식 집계다 ----
+        "structural_deadlock_count": watcher.structural_deadlocks,
+        "structural_deadlocks": [r for r in records if r.get("structural")],
+        # ---- 투입 중단 실험. 이것이 교착/정체의 최종 판정이다 ----
+        "stop_injection_on_detect": STOP_INJECTION_ON_DETECT,
+        "injection_stopped_second": watcher.injection_stopped_second,
+        "injection_skipped_halted_for_drain": INJECTION_SKIPPED["halted_for_drain"],
+        "drain_timeline": watcher.drain_timeline,
+        "survived_drain_count": sum(
+            1 for r in records if r.get("drain_verdict") == "survived_drain"),
+        "resolved_after_drain_count": sum(
+            1 for r in records if r.get("drain_verdict") == "resolved_after_drain"),
         "cycles": records,
     }
 
     print("")
     print("종료 사유: %s" % {
+        "structural_deadlock": "구조 판정(C1~C3)으로 교착 확정",
         "deadlock_held_over_limit": "순환이 한계시간을 넘겨 교착으로 판정",
         "all_lots_completed": "로트 전부 완료 (정상 완주)",
         "time_limit_reached": "시뮬 시간 상한 도달",
-    }[result["stop_reason"]])
+    }.get(result["stop_reason"], result["stop_reason"]))
     print("로트 투입 %d / %d건, 아직 진행 중인 작업 %d건"
           % (result["lots_injected"], result["lots_in_schedule"],
              result["jobs_still_in_flight"]))
@@ -483,6 +821,19 @@ def main():
     print("순환 %d건 발생, 최장 %.0f초" % (len(records), result["longest_cycle_seconds"]))
     for threshold in REPORT_THRESHOLDS_SECONDS:
         print("   %4.0f초 이상 지속: %d건" % (threshold, counts["over_%ds" % int(threshold)]))
+    print("[구조 판정] C1~C3 모두 성립한 교착 후보: %d건"
+          % watcher.structural_deadlocks)
+    if STOP_INJECTION_ON_DETECT:
+        if watcher.injection_stopped_second is None:
+            print("[투입 중단 실험] 교착 후보가 없어 투입을 끊지 않았다.")
+        else:
+            print("[투입 중단 실험] t=%.0f초부터 투입 중단 (이후 %d건 건너뜀)"
+                  % (watcher.injection_stopped_second,
+                     INJECTION_SKIPPED["halted_for_drain"]))
+            print("   투입을 끊고도 풀리지 않음 (교착): %d건"
+                  % result["survived_drain_count"])
+            print("   투입을 끊자 풀림 (정체): %d건"
+                  % result["resolved_after_drain_count"])
     print("한계시간(%.0f초) 초과로 교착 판정: %d건" % (STOP_AFTER_SECONDS, len(held_over_limit)))
     print("시뮬 종료 시점에 열려 있던 순환(판정 보류): %d건" % len(open_at_end))
     if RESULT_JSON_PATH:
