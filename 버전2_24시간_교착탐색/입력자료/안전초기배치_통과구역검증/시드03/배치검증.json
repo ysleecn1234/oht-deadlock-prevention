@@ -1,0 +1,77 @@
+[
+  {
+    "is_valid": true,
+    "vehicle_count": 500,
+    "minimum_center_distance_mm": 1208.0,
+    "closest_node_pair": [
+      "010053",
+      "010069"
+    ],
+    "required_center_distance_mm": 1150.0,
+    "duplicate_position_count": 0,
+    "controlled_point_multiple_occupancy_count": 0,
+    "controlled_point_maximum_occupancy": 1,
+    "distance_rule": "연결 레일의 양방향 최단거리",
+    "scope": "초기 정지 배치만 검사. 실제 전환기 구역 형상·주행 중 안전 검증은 별도"
+  },
+  {
+    "is_valid": true,
+    "vehicle_count": 750,
+    "minimum_center_distance_mm": 1189.0,
+    "closest_node_pair": [
+      "018005",
+      "052370"
+    ],
+    "required_center_distance_mm": 1150.0,
+    "duplicate_position_count": 0,
+    "controlled_point_multiple_occupancy_count": 0,
+    "controlled_point_maximum_occupancy": 1,
+    "distance_rule": "연결 레일의 양방향 최단거리",
+    "scope": "초기 정지 배치만 검사. 실제 전환기 구역 형상·주행 중 안전 검증은 별도"
+  },
+  {
+    "is_valid": true,
+    "vehicle_count": 1000,
+    "minimum_center_distance_mm": 1163.0,
+    "closest_node_pair": [
+      "017534",
+      "017938"
+    ],
+    "required_center_distance_mm": 1150.0,
+    "duplicate_position_count": 0,
+    "controlled_point_multiple_occupancy_count": 0,
+    "controlled_point_maximum_occupancy": 1,
+    "distance_rule": "연결 레일의 양방향 최단거리",
+    "scope": "초기 정지 배치만 검사. 실제 전환기 구역 형상·주행 중 안전 검증은 별도"
+  },
+  {
+    "is_valid": true,
+    "vehicle_count": 1250,
+    "minimum_center_distance_mm": 1157.0,
+    "closest_node_pair": [
+      "043052",
+      "043286"
+    ],
+    "required_center_distance_mm": 1150.0,
+    "duplicate_position_count": 0,
+    "controlled_point_multiple_occupancy_count": 0,
+    "controlled_point_maximum_occupancy": 1,
+    "distance_rule": "연결 레일의 양방향 최단거리",
+    "scope": "초기 정지 배치만 검사. 실제 전환기 구역 형상·주행 중 안전 검증은 별도"
+  },
+  {
+    "is_valid": true,
+    "vehicle_count": 1500,
+    "minimum_center_distance_mm": 1157.0,
+    "closest_node_pair": [
+      "043052",
+      "043286"
+    ],
+    "required_center_distance_mm": 1150.0,
+    "duplicate_position_count": 0,
+    "controlled_point_multiple_occupancy_count": 0,
+    "controlled_point_maximum_occupancy": 1,
+    "distance_rule": "연결 레일의 양방향 최단거리",
+    "scope": "초기 정지 배치만 검사. 실제 전환기 구역 형상·주행 중 안전 검증은 별도"
+  }
+]

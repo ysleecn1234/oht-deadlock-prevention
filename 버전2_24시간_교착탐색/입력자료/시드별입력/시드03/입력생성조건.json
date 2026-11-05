@@ -1,0 +1,20 @@
+{
+  "basis": "제공 버전 2",
+  "case_number": 3,
+  "created_at": "2026-11-01T11:17:49+09:00",
+  "starting_position_random_seed": 103,
+  "lot_schedule_random_seed": 203,
+  "idle_jitter_random_seed": 2,
+  "park_position_count": 1500,
+  "lot_schedule_count": 200000,
+  "demand_distribution": "제공 기본 분포",
+  "ordered_node_list_sha256": "c16c966e6597b2276cf0aaed3fc2eee9480279d05ada681a97c5e87341abecee",
+  "input_file_sha256": {
+    "agv_graph.json": "dfcc6c9b7ffd3cd3080a1fcef08a645d112bdb4e006527a1cee0d492cfc7e20b",
+    "equipment.json": "d07007f3ed42bd16df0a65c71d01a87b93b29c0bc64f64ad7edc4b17e6133d29",
+    "section_regions.json": "f6b717d7b92daef546a04f9b1006398b1f94b18dbc947034e5701c91b016bb15",
+    "track_segments.json": "743541b2a9c65d9d4d73fbcf7ad847a64391ec646bbfb0ff0202acce9c940332",
+    "oht_park_positions.json": "c6d625335b8ce526b2f891eb9da84e534f4b4c9b19d4590628d3b7e59aec8030",
+    "oht_lot_schedule.json": "09807495a1cb48358192702ac804e89ed970478173aa1f36e7b336edf6f7ab39"
+  }
+}

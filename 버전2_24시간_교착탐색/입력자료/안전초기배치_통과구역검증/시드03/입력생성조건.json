@@ -1,0 +1,39 @@
+{
+  "basis": "제공 버전 2",
+  "case_number": 3,
+  "starting_position_random_seed": 103,
+  "lot_schedule_random_seed": 203,
+  "idle_jitter_random_seed": 2,
+  "lot_schedule_count": 200000,
+  "demand_distribution": "제공 기본 분포",
+  "created_at": "2026-11-06T01:52:06+09:00",
+  "generation_rule_version": "2026-11-06-track-distance-and-control-clearance-2",
+  "generator_sha256": "d21f37fac4cd32b19abf0e514192db399455d3a649020aac8015016dc2ec321e",
+  "simulator_sha256": "5085bc2875ab56ccda0c19a761acc77eb6d121856be4d0b319631bf97f33efdf",
+  "reference_input_directory": "/Users/leejisuk/학부연구생/버전2_24시간_교착탐색/입력자료/시드별입력/시드03",
+  "reference_input_file_sha256": {
+    "agv_graph.json": "dfcc6c9b7ffd3cd3080a1fcef08a645d112bdb4e006527a1cee0d492cfc7e20b",
+    "equipment.json": "d07007f3ed42bd16df0a65c71d01a87b93b29c0bc64f64ad7edc4b17e6133d29",
+    "section_regions.json": "f6b717d7b92daef546a04f9b1006398b1f94b18dbc947034e5701c91b016bb15",
+    "track_segments.json": "743541b2a9c65d9d4d73fbcf7ad847a64391ec646bbfb0ff0202acce9c940332",
+    "oht_park_positions.json": "c6d625335b8ce526b2f891eb9da84e534f4b4c9b19d4590628d3b7e59aec8030",
+    "oht_lot_schedule.json": "09807495a1cb48358192702ac804e89ed970478173aa1f36e7b336edf6f7ab39"
+  },
+  "ordered_node_list_sha256": "c16c966e6597b2276cf0aaed3fc2eee9480279d05ada681a97c5e87341abecee",
+  "park_position_count": 1500,
+  "safety_parameters": {
+    "OHT_LENGTH_MM": 850.0,
+    "OHT_STOP_GAP_MM": 300.0,
+    "FOLLOW_CENTER_GAP_MM": 1150.0
+  },
+  "rejected_candidate_count": 36,
+  "prefix_rule": "대수별로 동일한 최대 배치의 앞 N개 사용",
+  "input_file_sha256": {
+    "agv_graph.json": "dfcc6c9b7ffd3cd3080a1fcef08a645d112bdb4e006527a1cee0d492cfc7e20b",
+    "equipment.json": "d07007f3ed42bd16df0a65c71d01a87b93b29c0bc64f64ad7edc4b17e6133d29",
+    "section_regions.json": "f6b717d7b92daef546a04f9b1006398b1f94b18dbc947034e5701c91b016bb15",
+    "track_segments.json": "743541b2a9c65d9d4d73fbcf7ad847a64391ec646bbfb0ff0202acce9c940332",
+    "oht_lot_schedule.json": "09807495a1cb48358192702ac804e89ed970478173aa1f36e7b336edf6f7ab39",
+    "oht_park_positions.json": "12b33714913bbc793de00171948e0933bad3e9022f830405d032cfc0e738427e"
+  }
+}

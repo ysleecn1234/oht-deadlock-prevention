@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-11-01T11:17:46+09:00",
+  "basis": "제공 버전 2",
+  "provided_file_sha256": {
+    "agv_fab_sim.py": "edded09d560d361d900db82171cbecd86c2ee3439ce835dee1b14af156c304de",
+    "agv_graph.json": "dfcc6c9b7ffd3cd3080a1fcef08a645d112bdb4e006527a1cee0d492cfc7e20b",
+    "equipment.json": "d07007f3ed42bd16df0a65c71d01a87b93b29c0bc64f64ad7edc4b17e6133d29",
+    "section_regions.json": "f6b717d7b92daef546a04f9b1006398b1f94b18dbc947034e5701c91b016bb15",
+    "track_segments.json": "743541b2a9c65d9d4d73fbcf7ad847a64391ec646bbfb0ff0202acce9c940332",
+    "oht_park_positions.json": "84c4d7f51d0659b6352527520bbb0841fd360f8bfa70baab86821b07e8fbb013",
+    "oht_lot_schedule.json": "9471a530db77d72fcd1655ea15af071ba5405eab3e3c507712d7c3b80728e0d0"
+  }
+}
