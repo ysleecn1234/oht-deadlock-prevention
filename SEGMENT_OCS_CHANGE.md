@@ -1,21 +1,47 @@
-# Segment OCS admission priority and observation
+## 수정 배경
+OCS에서 이미 통과 허가를 받은 차량이 segment 대기 순서 때문에 진입하지 못하는 상황을 확인했습니다.
 
-Base: version2, commit 21a4003f3e2936d1d38468af2102646c48dfe6cc.
+예를 들어 A는 OCS 허가를 받았지만 segment 순서상 B를 기다리고, B는 A의 OCS 허가가 해제되기를 기다리면서 서로 진행하지 못할 수 있습니다.
 
-## Problem and changes
+## 변경 사항
+### 1. OCS 허가 차량의 진입 우선순위 수정
+- OCS 모드에서는 segment 대기열 중 이미 OCS 허가를 받은 차량을 우선 선택합니다.
+- 허가받은 차량이 여러 대이면 기존 대기열 순서를 유지합니다.
+- FCFS 및 ADAPTIVE 모드의 선택 방식은 유지합니다.
+- 차간거리 1,150mm, 제동, 합류점 점유, 고리 정원 등 기존 이동 제약은 유지합니다.
 
-In OCS mode, segment queue order could block a vehicle already admitted by OCS behind another vehicle waiting for that admission to clear. Prefer admitted queue members, preserving their queue order. FCFS and ADAPTIVE selection remain unchanged; physical movement constraints remain enabled.
+### 2. 차단 원인 기록 수정
+- 전방 경로에서 먼저 발견한 차단 원인을 유지하도록 수정했습니다.
+- 뒤쪽의 upstream_gate 등으로 원인이 덮어써져 실제 차단 차량 정보가 사라지는 문제를 보완했습니다.
 
-Preserve the first blocking reason on the forward route instead of overwriting it with a downstream consequence. Record segment merge queues, control claims and ring reservations, and copy merge-holder/expiry mappings when taking snapshots. Label existing dependency-cycle candidates with control/physical class and unloaded-vehicle presence. These labels do not confirm deadlock. Add progress output and checkpoint snapshots.
+### 3. 정체 관측 정보 보강
+- 합류 대기열, 제어점 보호 점유, 고리 진입 예약 정보를 추가 기록합니다.
+- 기존 순환 대기 후보에 제어 의존 순환 여부와 미적재 차량 포함 여부를 표시합니다.
+- 진행 상황 출력과 중간 상태 저장을 보강했습니다.
+- 순환 후보를 곧바로 확정 교착으로 판정하지는 않습니다.
 
-## Validation already performed locally
+## 비교 결과
+동일 조건: OHT 1,000대, 로트 투입 간격 0.5초, seed 1.
+동일한 시뮬레이션 30분 구간을 비교했습니다.
 
-Local regression checks covered OCS priority, other merge modes, occupied-node constraints, route cleanup, reason preservation and candidate recovery. Those local test wrappers depend on a separate workspace and are not included here. No new simulation was run while preparing this branch.
+| 항목 | 수정 전 | 수정 후 |
+|---|---:|---:|
+| 완료 반송 | 18건 | 123건 |
+| 완료 로트 | 1개 | 3개 |
 
-For the same first 1800 simulated seconds (1000 OHT, 0.5-second lot interval, seed 1), baseline completed 18 transfers / 1 lot; the modified run completed 123 transfers / 3 lots. The modified run reported no safety-check failures. This is a single scenario, not proof of general safety or throughput.
+수정 후 실행에서 안전 검사 위반은 기록되지 않았습니다.
+단일 조건의 결과이므로 전체 조건에서의 안전성이나 성능을 보장하지는 않습니다.
 
-## Remaining limitations
+## 남은 문제
+- 처리량은 개선됐지만 심한 정체는 여전히 남아 있습니다.
+- 이전 제어점의 보호 점유를 유지한 차량들이 서로 다음 진입을 막는 사례는 추가 수정이 필요합니다.
+- 고리 만차 시 우회 동작의 기존 버전과의 동등성은 아직 확보하지 않았습니다.
 
-Severe waiting remains, including observed cycles retaining previous control-point claims while waiting for the next point. Ring-full detour parity is not restored. This change must not be described as a complete deadlock fix. Candidate counts are not confirmed-deadlock counts.
+이번 수정은 OCS와 segment의 특정 제어 충돌을 개선한 것으로,
+모든 교착 문제를 해결한 버전은 아닙니다.
 
-Only three source files and this note are included. Local launchers, simulation outputs, logs and copied input data are excluded.
+## 포함 범위
+- segment_motion.py
+- simulation_observer.py
+- integrated_deadlock_observer.py
+- SEGMENT_OCS_CHANGE.md
