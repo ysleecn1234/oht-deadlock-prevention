@@ -336,6 +336,14 @@ class SegmentMotion:
         ordered = sorted(waiters, key=lambda member: waiters[member][1])
         if not ordered:
             return None
+        # OCS owns admission. A separate FCFS choice must not hold an admitted
+        # vehicle behind a requester whose OCS permission depends on that
+        # vehicle clearing the merge. Physical gates are still checked below.
+        if self.simulator.MERGE_CONTROL_MODE == "OCS":
+            admitted = set().union(*self.simulator.MERGE_ADMITTED.get(node_id, {}).values())
+            for member in ordered:
+                if member in admitted:
+                    return member
         held_link = (self.simulator.merge_priority_link(node_id, now)
                      if self.simulator.MERGE_CONTROL_MODE == "ADAPTIVE" else None)
         return next((member for member in ordered if waiters[member][2] == held_link), ordered[0])
@@ -474,7 +482,8 @@ class SegmentMotion:
             constraints.append((remaining_start_mm, simulator.LINK_CAP[link_index]))
             if link_index in simulator.BLOCKED_LINKS and link_index != vehicle._motion_link_index:
                 constraints.append((max(0.0, distance_mm), 0.0))
-                reason = ("blocked_link", [], {"link_index": link_index})
+                if reason is None:
+                    reason = ("blocked_link", [], {"link_index": link_index})
             end_node = simulator.LINK_B[link_index]
             distance_mm += simulator.LINK_LEN[link_index]
             node_distance_mm = distance_mm
@@ -493,7 +502,8 @@ class SegmentMotion:
                     constraints.append((max(0.0, node_distance_mm - simulator.FOLLOW_CENTER_GAP_MM), 0.0))
                     members = set().union(*(simulator.RING_MEMBERS[ring_number] | self.ring_reservations[ring_number]
                                            for ring_number in simulator.NODE_RINGS.get(end_node, ())))
-                    reason = ("ring_capacity", list(members - {vehicle}), {"node": end_node})
+                    if reason is None:
+                        reason = ("ring_capacity", list(members - {vehicle}), {"node": end_node})
                     has_blocked_gate = True
                 elif node_distance_mm <= reservation_distance_mm and is_front_of_gate and not has_blocked_gate:
                     for ring_number in simulator.NODE_RINGS.get(end_node, ()):
@@ -548,7 +558,11 @@ class SegmentMotion:
                                 "outgoing_segment_full": self.is_outgoing_full(end_node)})
                 if gate_reason is not None:
                     constraints.append((max(0.0, node_distance_mm - simulator.FOLLOW_CENTER_GAP_MM), 0.0))
-                    reason = gate_reason
+                    # Keep the first blocking gate on the forward route.
+                    # A downstream 'upstream_gate' is only a consequence and
+                    # must not erase its blocker IDs or ring-wait semantics.
+                    if reason is None:
+                        reason = gate_reason
                     has_blocked_gate = True
                 elif distance_mm <= reservation_distance_mm:
                     if end_node in simulator.MERGE_POINT_NODES and holder is not vehicle:
@@ -568,7 +582,8 @@ class SegmentMotion:
                 # 좌표 앞 1,150mm에 고정 장벽을 남기면 안전하게 접근 중인
                 # 뒤차 뒤에 정지선이 갑자기 생길 수 있다.
                 constraints.append((max(0.0, distance_mm), 0.0))
-                reason = ("port_service", [holder], {"port_id": port["port_id"], "transfer_node": port["transfer_node"]})
+                if reason is None:
+                    reason = ("port_service", [holder], {"port_id": port["port_id"], "transfer_node": port["transfer_node"]})
             # 접근 예약은 실제 정차 자리 점유가 아니다. 선두가 T에서 정지한
             # 순간에만 점유한다. 뒤차 접근은 실제 앞차 위치로 제어한다.
         # 짧은 링크에서는 목적 G/T가 다음 합류점의 1,150mm 보호 구역

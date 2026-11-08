@@ -22,7 +22,7 @@ from simulation_observer import SimulationRecorder, strongly_connected_groups
 from segment_deadlock_proof import SegmentDeadlockProofInspector
 
 
-PROTOCOL_VERSION = "10가지자료_1~4번_최초정체기준_선행장면고정_20261106"
+PROTOCOL_VERSION = "segment_ocs_arbitration_v1_20261108"
 TARGET_TYPES = {"TYPE I", "TYPE II", "TYPE III", "TYPE IV"}
 
 
@@ -127,7 +127,12 @@ class CandidateTracker:
                            if second in component)
             key = "순환_" + digest([sorted((number, vehicles[number]["node"]) for number in group), edges])
             evidence = self.reviewer.type_evidence(group, waiting, vehicles, dependencies, directed, previous)
+            control_causes = {"merge_order", "merge_permission", "node_lock", "ring_capacity"}
             current[key] = {"vehicle_ids": sorted(group), "kind": "순환 대기 후보", "ppt_type_evidence": evidence,
+                "candidate_class": "control_dependency_cycle" if any(
+                    item.get("cause") in control_causes for item in dependencies) else "physical_dependency_cycle",
+                "includes_unloaded_vehicles": any(vehicles[number].get("job_state") != "carrying" for number in group),
+                "confirmation_limit": "순환은 후보. 예약 만료·취소·우회 등 해제 가능성은 별도 검증 필요",
                 "wait_dependencies": dependencies, "internal_wait_edges": edges,
                 "maximum_waiting_duration_seconds": max(vehicles[number]["waiting_duration_seconds"] for number in waiting)}
         # 폐쇄 고리가 생기기 전부터, 용량 포화와 연결된 같은 차량의 장기 정지를 추적한다.
@@ -464,6 +469,9 @@ class IntegratedDeadlockRecorder(SimulationRecorder):
                         record["vehicle_wait_seconds"] += now - self.last_second
         if now and int(now) % 60 == 0:
             self.flush_regions(now)
+            print(f"PROGRESS {now:.0f}/{self.sim_duration:.0f}s "
+                  f"lots={len(self.simulator.LOT_STATS)} transfers={len(self.simulator.JOB_STATS)} "
+                  f"waiting={len(waiting)} elapsed={time.monotonic()-self.wall_started:.1f}s", flush=True)
         if int(now) % 10 == 0:
             self.buffer.append(copy.deepcopy(state))
         self.latest_snapshot = state
@@ -485,6 +493,8 @@ class IntegratedDeadlockRecorder(SimulationRecorder):
             "maximum_resident_memory_bytes": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
             "storage_free_bytes": shutil.disk_usage(self.output_directory).free}
         write_json(self.output_directory / "중간집계" / "현재진행상태.json", progress)
+        if self.latest_snapshot is not None:
+            self.save_state(self.latest_snapshot)
         write_json(self.output_directory / "중간집계" / "유형후보현황.json", {
             "updated_at": current_timestamp(), "active_candidates": active, "confirmed": confirmed,
             "refutations": self.tracker.refutations, "scope": "시작부터 매초 검사. 충분조건 밖 사례는 후보이며 교착 부재 보장 아님"})

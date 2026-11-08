@@ -324,7 +324,19 @@ class SimulationRecorder:
             "occupancy_mode": "segment" if getattr(simulator, "ENABLE_SEGMENT_OCCUPANCY", False) else "node",
             "vehicles": vehicles, "wait_dependencies": dependencies,
             "NODE_HOLDER": {node: holder.oht_id for node, holder in simulator.NODE_HOLDER.items() if holder is not None},
-            "MERGE_HOLDER": simulator.MERGE_HOLDER, "MERGE_EXPIRE": simulator.MERGE_EXPIRE,
+            "MERGE_HOLDER": dict(simulator.MERGE_HOLDER), "MERGE_EXPIRE": dict(simulator.MERGE_EXPIRE),
+            "SEGMENT_MERGE_QUEUE": {node: [
+                {"oht_id": member.oht_id, "requested_second": entry[0],
+                 "sequence": entry[1], "incoming_link": entry[2]}
+                for member, entry in sorted(queue.items(), key=lambda item: item[1][1])]
+                for node, queue in controller.merge_waiters.items() if queue}
+                if getattr(simulator, "ENABLE_SEGMENT_OCCUPANCY", False) else {},
+            "SEGMENT_CONTROL_CLAIMS": {str(member.oht_id): dict(claims)
+                for member, claims in controller.control_claims.items() if claims}
+                if getattr(simulator, "ENABLE_SEGMENT_OCCUPANCY", False) else {},
+            "SEGMENT_RING_RESERVATIONS": {str(number): sorted(member.oht_id for member in members)
+                for number, members in controller.ring_reservations.items() if members}
+                if getattr(simulator, "ENABLE_SEGMENT_OCCUPANCY", False) else {},
             "MERGE_RESERVERS": {node: {str(side): [member.oht_id for member in members]
                                   for side, members in sides.items()}
                                   for node, sides in simulator.MERGE_RESERVERS.items()},
