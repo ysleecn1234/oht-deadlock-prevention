@@ -1,0 +1,24 @@
+{
+  "seed": 55,
+  "oht": 1500,
+  "seconds": 14400,
+  "interval": 0.5,
+  "candidate_seconds": 120,
+  "hashes": {
+    "agv_fab_sim.py": "edded09d560d361d900db82171cbecd86c2ee3439ce835dee1b14af156c304de",
+    "agv_graph.json": "dfcc6c9b7ffd3cd3080a1fcef08a645d112bdb4e006527a1cee0d492cfc7e20b",
+    "track_segments.json": "743541b2a9c65d9d4d73fbcf7ad847a64391ec646bbfb0ff0202acce9c940332",
+    "equipment.json": "d07007f3ed42bd16df0a65c71d01a87b93b29c0bc64f64ad7edc4b17e6133d29",
+    "section_regions.json": "f6b717d7b92daef546a04f9b1006398b1f94b18dbc947034e5701c91b016bb15",
+    "oht_park_positions.json": "afc83f5c0ffb7d8a3b9b38820ce965e714e3949dfb0cad825069d70aa36b531b",
+    "oht_lot_schedule.json": "5fa984f4c59c7a285a230ac663bac680d561f1244044c1ec93dcb01aebbd4e6a"
+  },
+  "stop_on_persistent_candidate": false,
+  "disable_stall_recovery": true,
+  "repair_initial_spacing": true,
+  "stop_on_verified_deadlock": true,
+  "lot_stall_seconds": 3600,
+  "gui": false,
+  "gui_on_capture": true,
+  "reference": null
+}

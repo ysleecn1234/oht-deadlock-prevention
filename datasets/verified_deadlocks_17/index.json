@@ -1,0 +1,138 @@
+[
+  {
+    "seed": 52,
+    "checked_t": 1053.0,
+    "last_sample": 1054,
+    "members": 60,
+    "status": "completed_on_verified_deadlock",
+    "state_archive_bytes": 180313380
+  },
+  {
+    "seed": 55,
+    "checked_t": 903.0,
+    "last_sample": 904,
+    "members": 71,
+    "status": "completed_on_verified_deadlock",
+    "state_archive_bytes": 147560494
+  },
+  {
+    "seed": 58,
+    "checked_t": 1464.0,
+    "last_sample": 1465,
+    "members": 61,
+    "status": "completed_on_verified_deadlock",
+    "state_archive_bytes": 207192157
+  },
+  {
+    "seed": 59,
+    "checked_t": 827.0,
+    "last_sample": 828,
+    "members": 93,
+    "status": "completed_on_verified_deadlock",
+    "state_archive_bytes": 150703331
+  },
+  {
+    "seed": 66,
+    "checked_t": 1068.0,
+    "last_sample": 1069,
+    "members": 90,
+    "status": "completed_on_verified_deadlock",
+    "state_archive_bytes": 161426146
+  },
+  {
+    "seed": 70,
+    "checked_t": 1099.0,
+    "last_sample": 1100,
+    "members": 98,
+    "status": "completed_on_verified_deadlock",
+    "state_archive_bytes": 183978473
+  },
+  {
+    "seed": 73,
+    "checked_t": 1356.0,
+    "last_sample": 1357,
+    "members": 55,
+    "status": "completed_on_verified_deadlock",
+    "state_archive_bytes": 186259833
+  },
+  {
+    "seed": 74,
+    "checked_t": 1066.0,
+    "last_sample": 1067,
+    "members": 50,
+    "status": "completed_on_verified_deadlock",
+    "state_archive_bytes": 168057842
+  },
+  {
+    "seed": 75,
+    "checked_t": 1542.0,
+    "last_sample": 1543,
+    "members": 66,
+    "status": "completed_on_verified_deadlock",
+    "state_archive_bytes": 234273609
+  },
+  {
+    "seed": 78,
+    "checked_t": 1085.0,
+    "last_sample": 1086,
+    "members": 125,
+    "status": "completed_on_verified_deadlock",
+    "state_archive_bytes": 155333080
+  },
+  {
+    "seed": 81,
+    "checked_t": 995.0,
+    "last_sample": 996,
+    "members": 119,
+    "status": "completed_on_verified_deadlock",
+    "state_archive_bytes": 175666353
+  },
+  {
+    "seed": 82,
+    "checked_t": 767.0,
+    "last_sample": 768,
+    "members": 48,
+    "status": "completed_on_verified_deadlock",
+    "state_archive_bytes": 138486179
+  },
+  {
+    "seed": 87,
+    "checked_t": 832.0,
+    "last_sample": 833,
+    "members": 65,
+    "status": "completed_on_verified_deadlock",
+    "state_archive_bytes": 139967789
+  },
+  {
+    "seed": 88,
+    "checked_t": 1040.0,
+    "last_sample": 1041,
+    "members": 61,
+    "status": "completed_on_verified_deadlock",
+    "state_archive_bytes": 173057027
+  },
+  {
+    "seed": 93,
+    "checked_t": 941.0,
+    "last_sample": 942,
+    "members": 59,
+    "status": "completed_on_verified_deadlock",
+    "state_archive_bytes": 163126013
+  },
+  {
+    "seed": 97,
+    "checked_t": 872.0,
+    "last_sample": 873,
+    "members": 47,
+    "status": "completed_on_verified_deadlock",
+    "state_archive_bytes": 151592691
+  },
+  {
+    "seed": 98,
+    "checked_t": 1283.0,
+    "last_sample": 1284,
+    "members": 39,
+    "status": "completed_on_verified_deadlock",
+    "state_archive_bytes": 236818063
+  }
+]

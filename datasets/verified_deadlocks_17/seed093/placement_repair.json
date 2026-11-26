@@ -1,0 +1,16 @@
+{
+  "algorithm": "retain_then_replace_dijkstra_v1",
+  "seed": 93,
+  "required_gap_mm": 1150.0,
+  "before_minimum_mm": 1152.0,
+  "before_closest_pair": [
+    "017920",
+    "017930"
+  ],
+  "changes": [],
+  "repaired": false,
+  "after_minimum_mm": 1152.0,
+  "original_sha256": "a08fc20ed6a177705d8f62b1bc4d9da9aed39d5c867bbb3bcfc724b1cc048af0",
+  "effective_sha256": "a08fc20ed6a177705d8f62b1bc4d9da9aed39d5c867bbb3bcfc724b1cc048af0",
+  "scope": "Initial placement spacing only; original generation manifest retained unchanged"
+}

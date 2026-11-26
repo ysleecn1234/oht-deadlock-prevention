@@ -1,0 +1,30 @@
+{
+  "basis": "제공 버전 2",
+  "seed_number": 55,
+  "created_at": "2026-11-22T03:14:02+0900",
+  "starting_position_random_seed": 155,
+  "lot_schedule_random_seed": 255,
+  "idle_jitter_random_seed": 2,
+  "park_position_count": 1500,
+  "lot_schedule_count": 50000,
+  "rejected_candidate_count": 35,
+  "safety_parameters": {
+    "OHT_LENGTH_MM": 850.0,
+    "OHT_STOP_GAP_MM": 300.0,
+    "FOLLOW_CENTER_GAP_MM": 1150.0
+  },
+  "prefix_rule": "대수별로 동일한 최대 배치의 앞 N개 사용",
+  "original_directory": "C:\\Users\\home\\Desktop\\OHT Simulator\\D&D_Fab_ver2",
+  "original_sha256": {
+    "agv_fab_sim.py": "edded09d560d361d900db82171cbecd86c2ee3439ce835dee1b14af156c304de",
+    "agv_graph.json": "dfcc6c9b7ffd3cd3080a1fcef08a645d112bdb4e006527a1cee0d492cfc7e20b",
+    "track_segments.json": "743541b2a9c65d9d4d73fbcf7ad847a64391ec646bbfb0ff0202acce9c940332",
+    "equipment.json": "d07007f3ed42bd16df0a65c71d01a87b93b29c0bc64f64ad7edc4b17e6133d29",
+    "section_regions.json": "f6b717d7b92daef546a04f9b1006398b1f94b18dbc947034e5701c91b016bb15"
+  },
+  "generated_file_sha256": {
+    "oht_park_positions.json": "afc83f5c0ffb7d8a3b9b38820ce965e714e3949dfb0cad825069d70aa36b531b",
+    "oht_lot_schedule.json": "5fa984f4c59c7a285a230ac663bac680d561f1244044c1ec93dcb01aebbd4e6a"
+  },
+  "note": "생성기가 결정론적이라 같은 시드 번호면 어느 기계에서 만들어도 같은 파일이 나온다. 사람끼리는 시드 번호 구간만 나누면 된다"
+}

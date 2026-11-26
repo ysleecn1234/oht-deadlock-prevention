@@ -1,0 +1,8 @@
+{
+  "minimum_distance_mm": 1154.0,
+  "closest_pair": [
+    "049678",
+    "053349"
+  ],
+  "scope": "independent undirected shortest-path center spacing; no initial deadlock guarantee"
+}

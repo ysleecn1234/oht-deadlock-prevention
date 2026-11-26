@@ -1,0 +1,2357 @@
+{
+  "samples": 1042,
+  "state_sha256": "e5671a843bb2624ffca8abe263dc10a4dd5a25ac93cae58afcbb5d156730644b",
+  "candidate_counts": {
+    "cycle_episodes": 1,
+    "persistent_cycles": 1
+  },
+  "active_candidates": {
+    "[[36, 894], [80, 393], [96, 328], [328, 1462], [393, 762], [447, 990], [584, 1118], [710, 1051], [762, 96], [809, 1010], [894, 710], [954, 1320], [990, 1098], [1008, 1021], [1010, 1008], [1021, 447], [1040, 1378], [1051, 1040], [1098, 1146], [1118, 80], [1146, 1436], [1320, 809], [1378, 584], [1436, 36], [1462, 954]]": {
+      "event_id": 1,
+      "T": 711.0,
+      "members": [
+        36,
+        80,
+        96,
+        328,
+        393,
+        447,
+        584,
+        710,
+        762,
+        809,
+        894,
+        954,
+        990,
+        1008,
+        1010,
+        1021,
+        1040,
+        1051,
+        1098,
+        1118,
+        1146,
+        1320,
+        1378,
+        1436,
+        1462
+      ],
+      "edges": [
+        [
+          36,
+          894
+        ],
+        [
+          80,
+          393
+        ],
+        [
+          96,
+          328
+        ],
+        [
+          328,
+          1462
+        ],
+        [
+          393,
+          762
+        ],
+        [
+          447,
+          990
+        ],
+        [
+          584,
+          1118
+        ],
+        [
+          710,
+          1051
+        ],
+        [
+          762,
+          96
+        ],
+        [
+          809,
+          1010
+        ],
+        [
+          894,
+          710
+        ],
+        [
+          954,
+          1320
+        ],
+        [
+          990,
+          1098
+        ],
+        [
+          1008,
+          1021
+        ],
+        [
+          1010,
+          1008
+        ],
+        [
+          1021,
+          447
+        ],
+        [
+          1040,
+          1378
+        ],
+        [
+          1051,
+          1040
+        ],
+        [
+          1098,
+          1146
+        ],
+        [
+          1118,
+          80
+        ],
+        [
+          1146,
+          1436
+        ],
+        [
+          1320,
+          809
+        ],
+        [
+          1378,
+          584
+        ],
+        [
+          1436,
+          36
+        ],
+        [
+          1462,
+          954
+        ]
+      ],
+      "t_confirm": 831.0,
+      "pre_start": 0,
+      "pre_end_exclusive": 711.0,
+      "available_pre_seconds": 711.0
+    }
+  },
+  "verified_deadlock": {
+    "verdict": "verified",
+    "type": "closed_mixed_wait_set",
+    "checked_t": 1040.0,
+    "members": [
+      55,
+      56,
+      116,
+      146,
+      162,
+      189,
+      194,
+      215,
+      218,
+      229,
+      263,
+      281,
+      292,
+      294,
+      316,
+      330,
+      337,
+      340,
+      349,
+      415,
+      427,
+      436,
+      486,
+      504,
+      522,
+      539,
+      575,
+      583,
+      593,
+      635,
+      638,
+      669,
+      671,
+      678,
+      683,
+      733,
+      782,
+      811,
+      844,
+      945,
+      959,
+      977,
+      999,
+      1053,
+      1060,
+      1084,
+      1089,
+      1135,
+      1152,
+      1182,
+      1218,
+      1258,
+      1292,
+      1363,
+      1376,
+      1380,
+      1417,
+      1427,
+      1444,
+      1480,
+      1481
+    ],
+    "evidence": [
+      {
+        "id": 55,
+        "node": "012125",
+        "state": "to_dest",
+        "job_id": 1154,
+        "job_state": "carrying",
+        "segment_start": 683.5376682425182,
+        "stationary_since": 685.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017265",
+            "blockers": [
+              678
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 56,
+        "node": "016802",
+        "state": "to_dest",
+        "job_id": 151,
+        "job_state": "carrying",
+        "segment_start": 913.6261714698379,
+        "stationary_since": 915.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017233",
+            "blockers": [
+              522
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 116,
+        "node": "017244",
+        "state": "idle",
+        "job_id": null,
+        "job_state": null,
+        "segment_start": 896.528094917211,
+        "stationary_since": 898.0,
+        "actions": [
+          {
+            "action": "any_route_or_yield",
+            "target": "015985",
+            "blockers": [
+              782
+            ],
+            "basis": "occupied_next_node"
+          }
+        ]
+      },
+      {
+        "id": 146,
+        "node": "015971",
+        "state": "to_dest",
+        "job_id": 216,
+        "job_state": "carrying",
+        "segment_start": 906.9330449158605,
+        "stationary_since": 909.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "016001",
+            "blockers": [
+              215
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 162,
+        "node": "012195",
+        "state": "to_pickup",
+        "job_id": 924,
+        "job_state": "assigned",
+        "segment_start": 692.9166339363185,
+        "stationary_since": 694.0,
+        "actions": [
+          {
+            "action": "any_route_or_yield",
+            "target": "017272",
+            "blockers": [
+              733
+            ],
+            "basis": "occupied_next_node"
+          }
+        ]
+      },
+      {
+        "id": 189,
+        "node": "016607",
+        "state": "to_dest",
+        "job_id": 1097,
+        "job_state": "carrying",
+        "segment_start": 632.7941668362994,
+        "stationary_since": 634.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "012003",
+            "blockers": [
+              593
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 194,
+        "node": "016784",
+        "state": "to_dest",
+        "job_id": 582,
+        "job_state": "carrying",
+        "segment_start": 900.1226335931062,
+        "stationary_since": 902.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017241",
+            "blockers": [
+              1363
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 215,
+        "node": "016001",
+        "state": "to_dest",
+        "job_id": 262,
+        "job_state": "carrying",
+        "segment_start": 905.5695934132393,
+        "stationary_since": 907.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "015995",
+            "blockers": [
+              683
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 218,
+        "node": "015989",
+        "state": "to_dest",
+        "job_id": 1131,
+        "job_state": "carrying",
+        "segment_start": 915.0799966709276,
+        "stationary_since": 917.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "015971",
+            "blockers": [
+              146
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 229,
+        "node": "017223",
+        "state": "to_dest",
+        "job_id": 1039,
+        "job_state": "carrying",
+        "segment_start": 914.8627630834457,
+        "stationary_since": 916.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017227",
+            "blockers": [
+              56
+            ],
+            "basis": [
+              "follow_distance"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 263,
+        "node": "017231",
+        "state": "to_dest",
+        "job_id": 802,
+        "job_state": "carrying",
+        "segment_start": 915.2927374443735,
+        "stationary_since": 917.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "016864",
+            "blockers": [
+              1053
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 281,
+        "node": "017222",
+        "state": "to_dest",
+        "job_id": 409,
+        "job_state": "carrying",
+        "segment_start": 917.1420229155397,
+        "stationary_since": 918.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017225",
+            "blockers": [
+              1182
+            ],
+            "basis": [
+              "follow_distance"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 292,
+        "node": "016608",
+        "state": "to_dest",
+        "job_id": 958,
+        "job_state": "carrying",
+        "segment_start": 591.3386377306899,
+        "stationary_since": 592.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "016837",
+            "blockers": [
+              1084
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 294,
+        "node": "017264",
+        "state": "to_dest",
+        "job_id": 1012,
+        "job_state": "carrying",
+        "segment_start": 640.4416096748178,
+        "stationary_since": 641.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "016607",
+            "blockers": [
+              189
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 316,
+        "node": "012002",
+        "state": "to_pickup",
+        "job_id": 1425,
+        "job_state": "assigned",
+        "segment_start": 628.2813022658817,
+        "stationary_since": 629.0,
+        "actions": [
+          {
+            "action": "any_route_or_yield",
+            "target": "011992",
+            "blockers": [
+              635
+            ],
+            "basis": "occupied_next_node"
+          }
+        ]
+      },
+      {
+        "id": 330,
+        "node": "017236",
+        "state": "to_dest",
+        "job_id": 1201,
+        "job_state": "carrying",
+        "segment_start": 562.560079609124,
+        "stationary_since": 564.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "016697",
+            "blockers": [
+              539
+            ],
+            "basis": [
+              "follow_distance"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 337,
+        "node": "016865",
+        "state": "to_dest",
+        "job_id": 603,
+        "job_state": "carrying",
+        "segment_start": 907.5588066399378,
+        "stationary_since": 909.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "016784",
+            "blockers": [
+              194
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 340,
+        "node": "016003",
+        "state": "idle",
+        "job_id": null,
+        "job_state": null,
+        "segment_start": 917.9084237956738,
+        "stationary_since": 920.0,
+        "actions": [
+          {
+            "action": "any_route_or_yield",
+            "target": "015999",
+            "blockers": [
+              349
+            ],
+            "basis": "occupied_next_node"
+          }
+        ]
+      },
+      {
+        "id": 349,
+        "node": "015999",
+        "state": "idle",
+        "job_id": null,
+        "job_state": null,
+        "segment_start": 916.4942102333007,
+        "stationary_since": 918.0,
+        "actions": [
+          {
+            "action": "any_route_or_yield",
+            "target": "015989",
+            "blockers": [
+              218
+            ],
+            "basis": "occupied_next_node"
+          }
+        ]
+      },
+      {
+        "id": 415,
+        "node": "015988",
+        "state": "to_dest",
+        "job_id": 300,
+        "job_state": "carrying",
+        "segment_start": 900.0578847154934,
+        "stationary_since": 902.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "016009",
+            "blockers": [
+              1060
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 427,
+        "node": "016006",
+        "state": "to_dest",
+        "job_id": 920,
+        "job_state": "carrying",
+        "segment_start": 901.4720982778665,
+        "stationary_since": 903.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "015988",
+            "blockers": [
+              415
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 436,
+        "node": "012079",
+        "state": "to_dest",
+        "job_id": 1602,
+        "job_state": "carrying",
+        "segment_start": 712.3187615691639,
+        "stationary_since": 714.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "012096",
+            "blockers": [
+              504
+            ],
+            "basis": [
+              "follow_distance"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 486,
+        "node": "017258",
+        "state": "to_dest",
+        "job_id": 1234,
+        "job_state": "carrying",
+        "segment_start": 658.2932696879816,
+        "stationary_since": 659.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017264",
+            "blockers": [
+              294
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 504,
+        "node": "012107",
+        "state": "to_pickup",
+        "job_id": 1475,
+        "job_state": "assigned",
+        "segment_start": 628.6675033028292,
+        "stationary_since": 630.0,
+        "actions": [
+          {
+            "action": "any_route_or_yield",
+            "target": "016607",
+            "blockers": [
+              189
+            ],
+            "basis": "occupied_next_node"
+          }
+        ]
+      },
+      {
+        "id": 522,
+        "node": "017233",
+        "state": "to_dest",
+        "job_id": 1036,
+        "job_state": "carrying",
+        "segment_start": 911.2091260994742,
+        "stationary_since": 913.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "016807",
+            "blockers": [
+              539
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 539,
+        "node": "016807",
+        "state": "to_dest",
+        "job_id": 764,
+        "job_state": "carrying",
+        "segment_start": 909.9762432988805,
+        "stationary_since": 912.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017235",
+            "blockers": [
+              1444
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 575,
+        "node": "012105",
+        "state": "to_dest",
+        "job_id": 1291,
+        "job_state": "carrying",
+        "segment_start": 686.4010243043138,
+        "stationary_since": 687.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "012125",
+            "blockers": [
+              55
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 583,
+        "node": "017239",
+        "state": "to_dest",
+        "job_id": 767,
+        "job_state": "carrying",
+        "segment_start": 613.3794385039854,
+        "stationary_since": 614.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "016608",
+            "blockers": [
+              292
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 593,
+        "node": "012003",
+        "state": "to_dest",
+        "job_id": 1057,
+        "job_state": "carrying",
+        "segment_start": 631.5991772965962,
+        "stationary_since": 633.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "012002",
+            "blockers": [
+              316
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 635,
+        "node": "011992",
+        "state": "to_dest",
+        "job_id": 1048,
+        "job_state": "carrying",
+        "segment_start": 616.1427182199185,
+        "stationary_since": 617.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017239",
+            "blockers": [
+              583
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 638,
+        "node": "017234",
+        "state": "to_dest",
+        "job_id": 1518,
+        "job_state": "carrying",
+        "segment_start": 708.5830825727392,
+        "stationary_since": 710.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "015921",
+            "blockers": [
+              1481
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 669,
+        "node": "017245",
+        "state": "to_dest",
+        "job_id": 1090,
+        "job_state": "carrying",
+        "segment_start": 914.3172508799415,
+        "stationary_since": 916.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017255",
+            "blockers": [
+              959
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 671,
+        "node": "015857",
+        "state": "idle",
+        "job_id": null,
+        "job_state": null,
+        "segment_start": 832.6887286680308,
+        "stationary_since": 835.0,
+        "actions": [
+          {
+            "action": "any_route_or_yield",
+            "target": "017228",
+            "blockers": [
+              945
+            ],
+            "basis": "occupied_next_node"
+          }
+        ]
+      },
+      {
+        "id": 678,
+        "node": "017265",
+        "state": "to_dest",
+        "job_id": 1239,
+        "job_state": "carrying",
+        "segment_start": 672.7135171771947,
+        "stationary_since": 674.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017258",
+            "blockers": [
+              486
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 683,
+        "node": "015995",
+        "state": "to_dest",
+        "job_id": 259,
+        "job_state": "carrying",
+        "segment_start": 904.2279526267395,
+        "stationary_since": 906.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "015998",
+            "blockers": [
+              844
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 733,
+        "node": "017272",
+        "state": "to_pickup",
+        "job_id": 1304,
+        "job_state": "assigned",
+        "segment_start": 688.9888161558093,
+        "stationary_since": 692.0,
+        "actions": [
+          {
+            "action": "any_route_or_yield",
+            "target": "012110",
+            "blockers": [
+              977
+            ],
+            "basis": "occupied_next_node"
+          }
+        ]
+      },
+      {
+        "id": 782,
+        "node": "015985",
+        "state": "to_dest",
+        "job_id": 547,
+        "job_state": "carrying",
+        "segment_start": 895.128094917211,
+        "stationary_since": 897.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017257",
+            "blockers": [
+              1480
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 811,
+        "node": "016806",
+        "state": "to_dest",
+        "job_id": 227,
+        "job_state": "carrying",
+        "segment_start": 888.7145618604588,
+        "stationary_since": 890.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "016696",
+            "blockers": [
+              1258
+            ],
+            "basis": [
+              "follow_distance"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 844,
+        "node": "015998",
+        "state": "to_dest",
+        "job_id": 297,
+        "job_state": "carrying",
+        "segment_start": 902.8863118402396,
+        "stationary_since": 905.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "016006",
+            "blockers": [
+              427
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 945,
+        "node": "017228",
+        "state": "idle",
+        "job_id": null,
+        "job_state": null,
+        "segment_start": 807.9881220242643,
+        "stationary_since": 809.0,
+        "actions": [
+          {
+            "action": "any_route_or_yield",
+            "target": "015922",
+            "blockers": [
+              1427
+            ],
+            "basis": "occupied_next_node"
+          }
+        ]
+      },
+      {
+        "id": 959,
+        "node": "017255",
+        "state": "idle",
+        "job_id": null,
+        "job_state": null,
+        "segment_start": 912.7177717980735,
+        "stationary_since": 915.0,
+        "actions": [
+          {
+            "action": "any_route_or_yield",
+            "target": "016866",
+            "blockers": [
+              1135
+            ],
+            "basis": "occupied_next_node"
+          }
+        ]
+      },
+      {
+        "id": 977,
+        "node": "012110",
+        "state": "to_dest",
+        "job_id": 967,
+        "job_state": "carrying",
+        "segment_start": 687.8184162755059,
+        "stationary_since": 689.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "012105",
+            "blockers": [
+              575
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 999,
+        "node": "017260",
+        "state": "idle",
+        "job_id": null,
+        "job_state": null,
+        "segment_start": 890.0651173017495,
+        "stationary_since": 891.0,
+        "actions": [
+          {
+            "action": "any_route_or_yield",
+            "target": "016806",
+            "blockers": [
+              811
+            ],
+            "basis": "occupied_next_node"
+          }
+        ]
+      },
+      {
+        "id": 1053,
+        "node": "016864",
+        "state": "to_dest",
+        "job_id": 911,
+        "job_state": "carrying",
+        "segment_start": 917.7420229155398,
+        "stationary_since": 920.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017224",
+            "blockers": [
+              281
+            ],
+            "basis": [
+              "follow_distance"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1060,
+        "node": "016009",
+        "state": "to_dest",
+        "job_id": 811,
+        "job_state": "carrying",
+        "segment_start": 894.2972054219575,
+        "stationary_since": 896.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "015985",
+            "blockers": [
+              782
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1084,
+        "node": "016837",
+        "state": "to_dest",
+        "job_id": 909,
+        "job_state": "carrying",
+        "segment_start": 576.8769300984784,
+        "stationary_since": 578.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017236",
+            "blockers": [
+              330
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1089,
+        "node": "016766",
+        "state": "to_dest",
+        "job_id": 873,
+        "job_state": "carrying",
+        "segment_start": 892.320776850529,
+        "stationary_since": 893.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "016866",
+            "blockers": [
+              1135
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1135,
+        "node": "016866",
+        "state": "to_dest",
+        "job_id": 1008,
+        "job_state": "carrying",
+        "segment_start": 891.1929470761393,
+        "stationary_since": 892.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017260",
+            "blockers": [
+              999
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1152,
+        "node": "015945",
+        "state": "idle",
+        "job_id": null,
+        "job_state": null,
+        "segment_start": 893.1660393624242,
+        "stationary_since": 895.0,
+        "actions": [
+          {
+            "action": "any_route_or_yield",
+            "target": "015921",
+            "blockers": [
+              1481
+            ],
+            "basis": "occupied_next_node"
+          }
+        ]
+      },
+      {
+        "id": 1182,
+        "node": "017221",
+        "state": "to_dest",
+        "job_id": 701,
+        "job_state": "carrying",
+        "segment_start": 915.9863342688974,
+        "stationary_since": 917.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017226",
+            "blockers": [
+              229
+            ],
+            "basis": [
+              "follow_distance"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1218,
+        "node": "015881",
+        "state": "idle",
+        "job_id": null,
+        "job_state": null,
+        "segment_start": 850.7257769844296,
+        "stationary_since": 853.0,
+        "actions": [
+          {
+            "action": "any_route_or_yield",
+            "target": "015857",
+            "blockers": [
+              671
+            ],
+            "basis": "occupied_next_node"
+          }
+        ]
+      },
+      {
+        "id": 1258,
+        "node": "053189",
+        "state": "to_dest",
+        "job_id": 898,
+        "job_state": "carrying",
+        "segment_start": 701.3150200931893,
+        "stationary_since": 703.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017264",
+            "blockers": [
+              294,
+              486
+            ],
+            "basis": [
+              "occupied_next_node",
+              "opposite_merge_admission"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1292,
+        "node": "017209",
+        "state": "to_dest",
+        "job_id": 1127,
+        "job_state": "carrying",
+        "segment_start": 916.5639573309392,
+        "stationary_since": 918.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017231",
+            "blockers": [
+              263
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1363,
+        "node": "017241",
+        "state": "idle",
+        "job_id": null,
+        "job_state": null,
+        "segment_start": 899.0253642551586,
+        "stationary_since": 901.0,
+        "actions": [
+          {
+            "action": "any_route_or_yield",
+            "target": "015986",
+            "blockers": [
+              1376
+            ],
+            "basis": "occupied_next_node"
+          }
+        ]
+      },
+      {
+        "id": 1376,
+        "node": "015986",
+        "state": "to_dest",
+        "job_id": 316,
+        "job_state": "carrying",
+        "segment_start": 897.928094917211,
+        "stationary_since": 900.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017244",
+            "blockers": [
+              116
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1380,
+        "node": "017210",
+        "state": "to_dest",
+        "job_id": 957,
+        "job_state": "carrying",
+        "segment_start": 917.8351772175048,
+        "stationary_since": 920.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017209",
+            "blockers": [
+              1292
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1417,
+        "node": "017240",
+        "state": "idle",
+        "job_id": null,
+        "job_state": null,
+        "segment_start": 889.797849317179,
+        "stationary_since": 892.0,
+        "actions": [
+          {
+            "action": "any_route_or_yield",
+            "target": "016784",
+            "blockers": [
+              194
+            ],
+            "basis": "occupied_next_node"
+          }
+        ]
+      },
+      {
+        "id": 1427,
+        "node": "015922",
+        "state": "to_dest",
+        "job_id": 1354,
+        "job_state": "carrying",
+        "segment_start": 728.6023964674741,
+        "stationary_since": 730.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "017234",
+            "blockers": [
+              638
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1444,
+        "node": "017235",
+        "state": "to_dest",
+        "job_id": 283,
+        "job_state": "carrying",
+        "segment_start": 908.7675249694091,
+        "stationary_since": 910.0,
+        "actions": [
+          {
+            "action": "fixed_carrying_route",
+            "target": "016865",
+            "blockers": [
+              337
+            ],
+            "basis": [
+              "occupied_next_node"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1480,
+        "node": "017257",
+        "state": "idle",
+        "job_id": null,
+        "job_state": null,
+        "segment_start": 894.2972054219575,
+        "stationary_since": 896.0,
+        "actions": [
+          {
+            "action": "any_route_or_yield",
+            "target": "016766",
+            "blockers": [
+              1089
+            ],
+            "basis": "occupied_next_node"
+          }
+        ]
+      },
+      {
+        "id": 1481,
+        "node": "015921",
+        "state": "idle",
+        "job_id": null,
+        "job_state": null,
+        "segment_start": 891.1896107909956,
+        "stationary_since": 894.0,
+        "actions": [
+          {
+            "action": "any_route_or_yield",
+            "target": "017240",
+            "blockers": [
+              1417
+            ],
+            "basis": "occupied_next_node"
+          }
+        ]
+      }
+    ],
+    "cycle_witnesses": [
+      [
+        116,
+        189,
+        194,
+        292,
+        294,
+        316,
+        330,
+        337,
+        539,
+        583,
+        593,
+        635,
+        782,
+        811,
+        999,
+        1084,
+        1089,
+        1135,
+        1258,
+        1363,
+        1376,
+        1444,
+        1480
+      ]
+    ],
+    "diagnostics": {
+      "eligible": 750,
+      "initial_blocked": 657,
+      "closed_count": 61,
+      "excluded": {
+        "0": "not_stationary_long_enough",
+        "1": "not_stationary_long_enough",
+        "2": "not_stationary_long_enough",
+        "3": "not_stationary_long_enough",
+        "4": "not_stationary_long_enough",
+        "5": "not_stationary_long_enough",
+        "7": "not_stationary_long_enough",
+        "9": "not_stationary_long_enough",
+        "10": "not_stationary_long_enough",
+        "11": "not_stationary_long_enough",
+        "14": "not_stationary_long_enough",
+        "16": "not_stationary_long_enough",
+        "17": "not_stationary_long_enough",
+        "18": "not_stationary_long_enough",
+        "19": "not_stationary_long_enough",
+        "21": "not_stationary_long_enough",
+        "23": "not_stationary_long_enough",
+        "25": "not_stationary_long_enough",
+        "29": "not_stationary_long_enough",
+        "30": "not_stationary_long_enough",
+        "32": "not_stationary_long_enough",
+        "33": "not_stationary_long_enough",
+        "39": "not_stationary_long_enough",
+        "41": "not_stationary_long_enough",
+        "42": "not_stationary_long_enough",
+        "44": "motion_or_unfinished_segment",
+        "45": "not_stationary_long_enough",
+        "51": "not_stationary_long_enough",
+        "52": "not_stationary_long_enough",
+        "53": "not_stationary_long_enough",
+        "60": "not_stationary_long_enough",
+        "61": "not_stationary_long_enough",
+        "63": "not_stationary_long_enough",
+        "64": "not_stationary_long_enough",
+        "65": "not_stationary_long_enough",
+        "67": "not_stationary_long_enough",
+        "68": "not_stationary_long_enough",
+        "69": "not_stationary_long_enough",
+        "70": "not_stationary_long_enough",
+        "72": "not_stationary_long_enough",
+        "73": "not_stationary_long_enough",
+        "74": "not_stationary_long_enough",
+        "77": "not_stationary_long_enough",
+        "79": "not_stationary_long_enough",
+        "81": "not_stationary_long_enough",
+        "82": "not_stationary_long_enough",
+        "83": "not_stationary_long_enough",
+        "84": "not_stationary_long_enough",
+        "85": "not_stationary_long_enough",
+        "90": "not_stationary_long_enough",
+        "91": "not_stationary_long_enough",
+        "92": "not_stationary_long_enough",
+        "94": "not_stationary_long_enough",
+        "95": "not_stationary_long_enough",
+        "98": "not_stationary_long_enough",
+        "101": "not_stationary_long_enough",
+        "103": "motion_or_unfinished_segment",
+        "104": "not_stationary_long_enough",
+        "105": "not_stationary_long_enough",
+        "108": "not_stationary_long_enough",
+        "109": "not_stationary_long_enough",
+        "110": "not_stationary_long_enough",
+        "111": "not_stationary_long_enough",
+        "112": "motion_or_unfinished_segment",
+        "113": "not_stationary_long_enough",
+        "115": "not_stationary_long_enough",
+        "119": "not_stationary_long_enough",
+        "120": "not_stationary_long_enough",
+        "122": "not_stationary_long_enough",
+        "124": "not_stationary_long_enough",
+        "126": "not_stationary_long_enough",
+        "128": "motion_or_unfinished_segment",
+        "129": "not_stationary_long_enough",
+        "131": "not_stationary_long_enough",
+        "132": "not_stationary_long_enough",
+        "133": "not_stationary_long_enough",
+        "134": "not_stationary_long_enough",
+        "135": "not_stationary_long_enough",
+        "136": "pending_state_transition",
+        "138": "not_stationary_long_enough",
+        "139": "not_stationary_long_enough",
+        "141": "not_stationary_long_enough",
+        "142": "not_stationary_long_enough",
+        "147": "not_stationary_long_enough",
+        "148": "not_stationary_long_enough",
+        "152": "not_stationary_long_enough",
+        "154": "not_stationary_long_enough",
+        "160": "not_stationary_long_enough",
+        "164": "not_stationary_long_enough",
+        "166": "not_stationary_long_enough",
+        "167": "not_stationary_long_enough",
+        "169": "not_stationary_long_enough",
+        "170": "not_stationary_long_enough",
+        "171": "not_stationary_long_enough",
+        "172": "not_stationary_long_enough",
+        "175": "not_stationary_long_enough",
+        "177": "not_stationary_long_enough",
+        "180": "not_stationary_long_enough",
+        "183": "not_stationary_long_enough",
+        "186": "not_stationary_long_enough",
+        "190": "not_stationary_long_enough",
+        "191": "not_stationary_long_enough",
+        "199": "not_stationary_long_enough",
+        "200": "not_stationary_long_enough",
+        "202": "not_stationary_long_enough",
+        "203": "not_stationary_long_enough",
+        "205": "not_stationary_long_enough",
+        "206": "not_stationary_long_enough",
+        "208": "not_stationary_long_enough",
+        "209": "not_stationary_long_enough",
+        "212": "not_stationary_long_enough",
+        "219": "not_stationary_long_enough",
+        "222": "not_stationary_long_enough",
+        "227": "not_stationary_long_enough",
+        "228": "not_stationary_long_enough",
+        "230": "not_stationary_long_enough",
+        "231": "not_stationary_long_enough",
+        "234": "not_stationary_long_enough",
+        "237": "not_stationary_long_enough",
+        "238": "not_stationary_long_enough",
+        "240": "not_stationary_long_enough",
+        "244": "not_stationary_long_enough",
+        "247": "not_stationary_long_enough",
+        "249": "not_stationary_long_enough",
+        "251": "not_stationary_long_enough",
+        "253": "not_stationary_long_enough",
+        "255": "not_stationary_long_enough",
+        "257": "not_stationary_long_enough",
+        "259": "not_stationary_long_enough",
+        "260": "not_stationary_long_enough",
+        "262": "not_stationary_long_enough",
+        "267": "not_stationary_long_enough",
+        "269": "not_stationary_long_enough",
+        "271": "not_stationary_long_enough",
+        "274": "not_stationary_long_enough",
+        "279": "not_stationary_long_enough",
+        "280": "not_stationary_long_enough",
+        "283": "not_stationary_long_enough",
+        "284": "not_stationary_long_enough",
+        "287": "not_stationary_long_enough",
+        "288": "not_stationary_long_enough",
+        "290": "not_stationary_long_enough",
+        "299": "not_stationary_long_enough",
+        "300": "not_stationary_long_enough",
+        "301": "not_stationary_long_enough",
+        "304": "not_stationary_long_enough",
+        "306": "not_stationary_long_enough",
+        "307": "not_stationary_long_enough",
+        "308": "not_stationary_long_enough",
+        "310": "not_stationary_long_enough",
+        "312": "not_stationary_long_enough",
+        "315": "not_stationary_long_enough",
+        "318": "not_stationary_long_enough",
+        "320": "not_stationary_long_enough",
+        "322": "not_stationary_long_enough",
+        "323": "not_stationary_long_enough",
+        "325": "not_stationary_long_enough",
+        "331": "not_stationary_long_enough",
+        "333": "motion_or_unfinished_segment",
+        "334": "not_stationary_long_enough",
+        "339": "not_stationary_long_enough",
+        "344": "not_stationary_long_enough",
+        "346": "not_stationary_long_enough",
+        "348": "not_stationary_long_enough",
+        "350": "not_stationary_long_enough",
+        "356": "not_stationary_long_enough",
+        "357": "not_stationary_long_enough",
+        "358": "not_stationary_long_enough",
+        "359": "not_stationary_long_enough",
+        "360": "not_stationary_long_enough",
+        "362": "not_stationary_long_enough",
+        "365": "not_stationary_long_enough",
+        "367": "not_stationary_long_enough",
+        "368": "not_stationary_long_enough",
+        "373": "not_stationary_long_enough",
+        "374": "not_stationary_long_enough",
+        "375": "not_stationary_long_enough",
+        "376": "not_stationary_long_enough",
+        "377": "not_stationary_long_enough",
+        "378": "not_stationary_long_enough",
+        "379": "not_stationary_long_enough",
+        "381": "not_stationary_long_enough",
+        "382": "not_stationary_long_enough",
+        "383": "not_stationary_long_enough",
+        "384": "not_stationary_long_enough",
+        "386": "not_stationary_long_enough",
+        "388": "not_stationary_long_enough",
+        "389": "not_stationary_long_enough",
+        "390": "not_stationary_long_enough",
+        "392": "not_stationary_long_enough",
+        "396": "not_stationary_long_enough",
+        "397": "not_stationary_long_enough",
+        "400": "not_stationary_long_enough",
+        "401": "not_stationary_long_enough",
+        "402": "not_stationary_long_enough",
+        "404": "not_stationary_long_enough",
+        "405": "not_stationary_long_enough",
+        "406": "not_stationary_long_enough",
+        "409": "not_stationary_long_enough",
+        "411": "not_stationary_long_enough",
+        "412": "not_stationary_long_enough",
+        "413": "not_stationary_long_enough",
+        "416": "not_stationary_long_enough",
+        "417": "not_stationary_long_enough",
+        "418": "not_stationary_long_enough",
+        "419": "not_stationary_long_enough",
+        "420": "not_stationary_long_enough",
+        "423": "not_stationary_long_enough",
+        "425": "not_stationary_long_enough",
+        "426": "not_stationary_long_enough",
+        "433": "not_stationary_long_enough",
+        "437": "not_stationary_long_enough",
+        "438": "not_stationary_long_enough",
+        "439": "not_stationary_long_enough",
+        "440": "not_stationary_long_enough",
+        "441": "not_stationary_long_enough",
+        "442": "not_stationary_long_enough",
+        "443": "not_stationary_long_enough",
+        "445": "not_stationary_long_enough",
+        "448": "not_stationary_long_enough",
+        "450": "not_stationary_long_enough",
+        "452": "not_stationary_long_enough",
+        "454": "not_stationary_long_enough",
+        "457": "not_stationary_long_enough",
+        "458": "not_stationary_long_enough",
+        "459": "not_stationary_long_enough",
+        "460": "not_stationary_long_enough",
+        "461": "not_stationary_long_enough",
+        "466": "not_stationary_long_enough",
+        "470": "not_stationary_long_enough",
+        "471": "not_stationary_long_enough",
+        "472": "not_stationary_long_enough",
+        "473": "not_stationary_long_enough",
+        "475": "not_stationary_long_enough",
+        "476": "not_stationary_long_enough",
+        "478": "not_stationary_long_enough",
+        "480": "not_stationary_long_enough",
+        "481": "not_stationary_long_enough",
+        "485": "not_stationary_long_enough",
+        "487": "not_stationary_long_enough",
+        "489": "not_stationary_long_enough",
+        "490": "not_stationary_long_enough",
+        "492": "not_stationary_long_enough",
+        "494": "not_stationary_long_enough",
+        "496": "not_stationary_long_enough",
+        "497": "not_stationary_long_enough",
+        "499": "not_stationary_long_enough",
+        "501": "not_stationary_long_enough",
+        "502": "not_stationary_long_enough",
+        "505": "not_stationary_long_enough",
+        "509": "not_stationary_long_enough",
+        "510": "not_stationary_long_enough",
+        "511": "not_stationary_long_enough",
+        "513": "not_stationary_long_enough",
+        "515": "not_stationary_long_enough",
+        "518": "not_stationary_long_enough",
+        "524": "not_stationary_long_enough",
+        "525": "not_stationary_long_enough",
+        "526": "not_stationary_long_enough",
+        "527": "not_stationary_long_enough",
+        "528": "not_stationary_long_enough",
+        "531": "not_stationary_long_enough",
+        "535": "not_stationary_long_enough",
+        "536": "not_stationary_long_enough",
+        "544": "not_stationary_long_enough",
+        "545": "not_stationary_long_enough",
+        "550": "not_stationary_long_enough",
+        "551": "not_stationary_long_enough",
+        "553": "not_stationary_long_enough",
+        "555": "not_stationary_long_enough",
+        "556": "not_stationary_long_enough",
+        "559": "not_stationary_long_enough",
+        "563": "not_stationary_long_enough",
+        "565": "not_stationary_long_enough",
+        "571": "not_stationary_long_enough",
+        "572": "not_stationary_long_enough",
+        "576": "not_stationary_long_enough",
+        "577": "not_stationary_long_enough",
+        "579": "not_stationary_long_enough",
+        "580": "not_stationary_long_enough",
+        "582": "not_stationary_long_enough",
+        "587": "not_stationary_long_enough",
+        "590": "not_stationary_long_enough",
+        "591": "not_stationary_long_enough",
+        "592": "not_stationary_long_enough",
+        "594": "not_stationary_long_enough",
+        "595": "not_stationary_long_enough",
+        "596": "not_stationary_long_enough",
+        "597": "not_stationary_long_enough",
+        "598": "not_stationary_long_enough",
+        "599": "not_stationary_long_enough",
+        "602": "not_stationary_long_enough",
+        "604": "not_stationary_long_enough",
+        "607": "not_stationary_long_enough",
+        "608": "not_stationary_long_enough",
+        "610": "not_stationary_long_enough",
+        "611": "not_stationary_long_enough",
+        "613": "not_stationary_long_enough",
+        "615": "not_stationary_long_enough",
+        "617": "not_stationary_long_enough",
+        "620": "not_stationary_long_enough",
+        "621": "not_stationary_long_enough",
+        "625": "not_stationary_long_enough",
+        "626": "not_stationary_long_enough",
+        "629": "not_stationary_long_enough",
+        "632": "not_stationary_long_enough",
+        "633": "not_stationary_long_enough",
+        "636": "not_stationary_long_enough",
+        "637": "not_stationary_long_enough",
+        "639": "not_stationary_long_enough",
+        "641": "not_stationary_long_enough",
+        "643": "not_stationary_long_enough",
+        "648": "not_stationary_long_enough",
+        "650": "not_stationary_long_enough",
+        "653": "not_stationary_long_enough",
+        "657": "not_stationary_long_enough",
+        "658": "not_stationary_long_enough",
+        "659": "not_stationary_long_enough",
+        "660": "not_stationary_long_enough",
+        "662": "not_stationary_long_enough",
+        "668": "not_stationary_long_enough",
+        "670": "not_stationary_long_enough",
+        "673": "not_stationary_long_enough",
+        "676": "not_stationary_long_enough",
+        "679": "not_stationary_long_enough",
+        "685": "not_stationary_long_enough",
+        "687": "not_stationary_long_enough",
+        "688": "not_stationary_long_enough",
+        "689": "not_stationary_long_enough",
+        "690": "not_stationary_long_enough",
+        "696": "not_stationary_long_enough",
+        "697": "not_stationary_long_enough",
+        "699": "not_stationary_long_enough",
+        "700": "not_stationary_long_enough",
+        "704": "not_stationary_long_enough",
+        "708": "not_stationary_long_enough",
+        "709": "not_stationary_long_enough",
+        "711": "not_stationary_long_enough",
+        "712": "not_stationary_long_enough",
+        "713": "not_stationary_long_enough",
+        "715": "not_stationary_long_enough",
+        "716": "not_stationary_long_enough",
+        "717": "not_stationary_long_enough",
+        "719": "not_stationary_long_enough",
+        "721": "not_stationary_long_enough",
+        "722": "not_stationary_long_enough",
+        "725": "not_stationary_long_enough",
+        "727": "not_stationary_long_enough",
+        "729": "not_stationary_long_enough",
+        "730": "not_stationary_long_enough",
+        "731": "not_stationary_long_enough",
+        "734": "not_stationary_long_enough",
+        "736": "motion_or_unfinished_segment",
+        "737": "not_stationary_long_enough",
+        "738": "not_stationary_long_enough",
+        "739": "not_stationary_long_enough",
+        "743": "not_stationary_long_enough",
+        "745": "not_stationary_long_enough",
+        "747": "not_stationary_long_enough",
+        "749": "not_stationary_long_enough",
+        "752": "not_stationary_long_enough",
+        "753": "not_stationary_long_enough",
+        "756": "not_stationary_long_enough",
+        "757": "not_stationary_long_enough",
+        "759": "not_stationary_long_enough",
+        "761": "not_stationary_long_enough",
+        "764": "not_stationary_long_enough",
+        "767": "not_stationary_long_enough",
+        "769": "not_stationary_long_enough",
+        "770": "not_stationary_long_enough",
+        "772": "not_stationary_long_enough",
+        "773": "not_stationary_long_enough",
+        "775": "not_stationary_long_enough",
+        "778": "not_stationary_long_enough",
+        "780": "not_stationary_long_enough",
+        "781": "not_stationary_long_enough",
+        "783": "not_stationary_long_enough",
+        "785": "not_stationary_long_enough",
+        "788": "not_stationary_long_enough",
+        "789": "not_stationary_long_enough",
+        "791": "not_stationary_long_enough",
+        "793": "not_stationary_long_enough",
+        "795": "not_stationary_long_enough",
+        "798": "not_stationary_long_enough",
+        "799": "not_stationary_long_enough",
+        "800": "not_stationary_long_enough",
+        "802": "not_stationary_long_enough",
+        "803": "not_stationary_long_enough",
+        "805": "not_stationary_long_enough",
+        "807": "not_stationary_long_enough",
+        "810": "not_stationary_long_enough",
+        "812": "not_stationary_long_enough",
+        "813": "not_stationary_long_enough",
+        "814": "not_stationary_long_enough",
+        "815": "not_stationary_long_enough",
+        "816": "not_stationary_long_enough",
+        "817": "not_stationary_long_enough",
+        "818": "not_stationary_long_enough",
+        "819": "not_stationary_long_enough",
+        "820": "not_stationary_long_enough",
+        "822": "not_stationary_long_enough",
+        "824": "not_stationary_long_enough",
+        "825": "not_stationary_long_enough",
+        "826": "not_stationary_long_enough",
+        "827": "not_stationary_long_enough",
+        "828": "not_stationary_long_enough",
+        "829": "not_stationary_long_enough",
+        "830": "not_stationary_long_enough",
+        "832": "not_stationary_long_enough",
+        "834": "not_stationary_long_enough",
+        "836": "not_stationary_long_enough",
+        "837": "not_stationary_long_enough",
+        "840": "not_stationary_long_enough",
+        "842": "not_stationary_long_enough",
+        "845": "not_stationary_long_enough",
+        "848": "not_stationary_long_enough",
+        "849": "not_stationary_long_enough",
+        "850": "not_stationary_long_enough",
+        "853": "not_stationary_long_enough",
+        "854": "not_stationary_long_enough",
+        "856": "not_stationary_long_enough",
+        "857": "not_stationary_long_enough",
+        "859": "not_stationary_long_enough",
+        "861": "not_stationary_long_enough",
+        "862": "not_stationary_long_enough",
+        "863": "not_stationary_long_enough",
+        "864": "not_stationary_long_enough",
+        "866": "not_stationary_long_enough",
+        "868": "not_stationary_long_enough",
+        "870": "not_stationary_long_enough",
+        "872": "not_stationary_long_enough",
+        "873": "not_stationary_long_enough",
+        "874": "not_stationary_long_enough",
+        "877": "not_stationary_long_enough",
+        "879": "not_stationary_long_enough",
+        "880": "not_stationary_long_enough",
+        "881": "not_stationary_long_enough",
+        "882": "not_stationary_long_enough",
+        "884": "not_stationary_long_enough",
+        "885": "not_stationary_long_enough",
+        "886": "not_stationary_long_enough",
+        "887": "not_stationary_long_enough",
+        "890": "not_stationary_long_enough",
+        "892": "not_stationary_long_enough",
+        "893": "not_stationary_long_enough",
+        "895": "not_stationary_long_enough",
+        "899": "not_stationary_long_enough",
+        "900": "not_stationary_long_enough",
+        "903": "not_stationary_long_enough",
+        "905": "not_stationary_long_enough",
+        "908": "not_stationary_long_enough",
+        "909": "not_stationary_long_enough",
+        "911": "not_stationary_long_enough",
+        "913": "not_stationary_long_enough",
+        "914": "not_stationary_long_enough",
+        "915": "not_stationary_long_enough",
+        "916": "not_stationary_long_enough",
+        "919": "not_stationary_long_enough",
+        "922": "not_stationary_long_enough",
+        "923": "not_stationary_long_enough",
+        "925": "not_stationary_long_enough",
+        "926": "not_stationary_long_enough",
+        "927": "not_stationary_long_enough",
+        "933": "not_stationary_long_enough",
+        "934": "not_stationary_long_enough",
+        "935": "not_stationary_long_enough",
+        "941": "not_stationary_long_enough",
+        "943": "not_stationary_long_enough",
+        "949": "not_stationary_long_enough",
+        "951": "not_stationary_long_enough",
+        "953": "not_stationary_long_enough",
+        "956": "not_stationary_long_enough",
+        "958": "not_stationary_long_enough",
+        "961": "not_stationary_long_enough",
+        "962": "not_stationary_long_enough",
+        "963": "not_stationary_long_enough",
+        "964": "not_stationary_long_enough",
+        "965": "motion_or_unfinished_segment",
+        "966": "not_stationary_long_enough",
+        "968": "not_stationary_long_enough",
+        "969": "not_stationary_long_enough",
+        "970": "not_stationary_long_enough",
+        "971": "not_stationary_long_enough",
+        "973": "not_stationary_long_enough",
+        "975": "not_stationary_long_enough",
+        "976": "not_stationary_long_enough",
+        "978": "not_stationary_long_enough",
+        "980": "motion_or_unfinished_segment",
+        "981": "not_stationary_long_enough",
+        "982": "not_stationary_long_enough",
+        "986": "not_stationary_long_enough",
+        "987": "not_stationary_long_enough",
+        "988": "not_stationary_long_enough",
+        "992": "not_stationary_long_enough",
+        "995": "not_stationary_long_enough",
+        "998": "not_stationary_long_enough",
+        "1000": "not_stationary_long_enough",
+        "1001": "not_stationary_long_enough",
+        "1002": "not_stationary_long_enough",
+        "1003": "not_stationary_long_enough",
+        "1011": "not_stationary_long_enough",
+        "1014": "not_stationary_long_enough",
+        "1015": "not_stationary_long_enough",
+        "1016": "not_stationary_long_enough",
+        "1018": "not_stationary_long_enough",
+        "1025": "not_stationary_long_enough",
+        "1026": "not_stationary_long_enough",
+        "1029": "not_stationary_long_enough",
+        "1030": "not_stationary_long_enough",
+        "1033": "not_stationary_long_enough",
+        "1034": "not_stationary_long_enough",
+        "1037": "not_stationary_long_enough",
+        "1038": "not_stationary_long_enough",
+        "1039": "not_stationary_long_enough",
+        "1042": "not_stationary_long_enough",
+        "1043": "not_stationary_long_enough",
+        "1045": "not_stationary_long_enough",
+        "1046": "motion_or_unfinished_segment",
+        "1047": "not_stationary_long_enough",
+        "1049": "not_stationary_long_enough",
+        "1052": "not_stationary_long_enough",
+        "1054": "not_stationary_long_enough",
+        "1055": "not_stationary_long_enough",
+        "1056": "not_stationary_long_enough",
+        "1057": "not_stationary_long_enough",
+        "1059": "not_stationary_long_enough",
+        "1063": "not_stationary_long_enough",
+        "1064": "not_stationary_long_enough",
+        "1065": "not_stationary_long_enough",
+        "1066": "not_stationary_long_enough",
+        "1067": "not_stationary_long_enough",
+        "1068": "not_stationary_long_enough",
+        "1069": "not_stationary_long_enough",
+        "1070": "not_stationary_long_enough",
+        "1071": "not_stationary_long_enough",
+        "1072": "not_stationary_long_enough",
+        "1073": "not_stationary_long_enough",
+        "1076": "not_stationary_long_enough",
+        "1081": "not_stationary_long_enough",
+        "1085": "not_stationary_long_enough",
+        "1086": "not_stationary_long_enough",
+        "1088": "not_stationary_long_enough",
+        "1091": "not_stationary_long_enough",
+        "1094": "not_stationary_long_enough",
+        "1095": "not_stationary_long_enough",
+        "1096": "pending_state_transition",
+        "1101": "not_stationary_long_enough",
+        "1106": "not_stationary_long_enough",
+        "1108": "not_stationary_long_enough",
+        "1109": "not_stationary_long_enough",
+        "1110": "not_stationary_long_enough",
+        "1111": "not_stationary_long_enough",
+        "1114": "not_stationary_long_enough",
+        "1119": "motion_or_unfinished_segment",
+        "1120": "not_stationary_long_enough",
+        "1122": "not_stationary_long_enough",
+        "1124": "not_stationary_long_enough",
+        "1125": "not_stationary_long_enough",
+        "1127": "not_stationary_long_enough",
+        "1128": "not_stationary_long_enough",
+        "1129": "not_stationary_long_enough",
+        "1130": "not_stationary_long_enough",
+        "1131": "not_stationary_long_enough",
+        "1132": "not_stationary_long_enough",
+        "1133": "not_stationary_long_enough",
+        "1134": "not_stationary_long_enough",
+        "1137": "not_stationary_long_enough",
+        "1138": "not_stationary_long_enough",
+        "1139": "not_stationary_long_enough",
+        "1141": "not_stationary_long_enough",
+        "1144": "not_stationary_long_enough",
+        "1145": "not_stationary_long_enough",
+        "1147": "not_stationary_long_enough",
+        "1148": "not_stationary_long_enough",
+        "1151": "not_stationary_long_enough",
+        "1153": "not_stationary_long_enough",
+        "1154": "not_stationary_long_enough",
+        "1155": "not_stationary_long_enough",
+        "1156": "not_stationary_long_enough",
+        "1159": "not_stationary_long_enough",
+        "1164": "not_stationary_long_enough",
+        "1165": "not_stationary_long_enough",
+        "1167": "not_stationary_long_enough",
+        "1173": "not_stationary_long_enough",
+        "1175": "not_stationary_long_enough",
+        "1176": "not_stationary_long_enough",
+        "1177": "not_stationary_long_enough",
+        "1180": "not_stationary_long_enough",
+        "1184": "not_stationary_long_enough",
+        "1185": "not_stationary_long_enough",
+        "1186": "not_stationary_long_enough",
+        "1192": "not_stationary_long_enough",
+        "1195": "not_stationary_long_enough",
+        "1200": "not_stationary_long_enough",
+        "1201": "not_stationary_long_enough",
+        "1203": "not_stationary_long_enough",
+        "1204": "not_stationary_long_enough",
+        "1205": "not_stationary_long_enough",
+        "1207": "not_stationary_long_enough",
+        "1208": "not_stationary_long_enough",
+        "1209": "not_stationary_long_enough",
+        "1212": "not_stationary_long_enough",
+        "1213": "not_stationary_long_enough",
+        "1214": "not_stationary_long_enough",
+        "1215": "not_stationary_long_enough",
+        "1217": "not_stationary_long_enough",
+        "1219": "not_stationary_long_enough",
+        "1220": "not_stationary_long_enough",
+        "1222": "not_stationary_long_enough",
+        "1223": "not_stationary_long_enough",
+        "1225": "not_stationary_long_enough",
+        "1226": "not_stationary_long_enough",
+        "1227": "not_stationary_long_enough",
+        "1228": "not_stationary_long_enough",
+        "1229": "not_stationary_long_enough",
+        "1231": "not_stationary_long_enough",
+        "1234": "not_stationary_long_enough",
+        "1236": "not_stationary_long_enough",
+        "1237": "not_stationary_long_enough",
+        "1238": "not_stationary_long_enough",
+        "1240": "not_stationary_long_enough",
+        "1241": "not_stationary_long_enough",
+        "1245": "not_stationary_long_enough",
+        "1246": "not_stationary_long_enough",
+        "1247": "not_stationary_long_enough",
+        "1250": "not_stationary_long_enough",
+        "1252": "not_stationary_long_enough",
+        "1253": "not_stationary_long_enough",
+        "1254": "not_stationary_long_enough",
+        "1256": "not_stationary_long_enough",
+        "1257": "not_stationary_long_enough",
+        "1259": "not_stationary_long_enough",
+        "1261": "not_stationary_long_enough",
+        "1265": "not_stationary_long_enough",
+        "1267": "not_stationary_long_enough",
+        "1268": "not_stationary_long_enough",
+        "1269": "not_stationary_long_enough",
+        "1270": "not_stationary_long_enough",
+        "1272": "not_stationary_long_enough",
+        "1273": "not_stationary_long_enough",
+        "1275": "not_stationary_long_enough",
+        "1276": "not_stationary_long_enough",
+        "1277": "not_stationary_long_enough",
+        "1280": "not_stationary_long_enough",
+        "1281": "not_stationary_long_enough",
+        "1282": "not_stationary_long_enough",
+        "1283": "not_stationary_long_enough",
+        "1284": "not_stationary_long_enough",
+        "1287": "not_stationary_long_enough",
+        "1293": "not_stationary_long_enough",
+        "1295": "not_stationary_long_enough",
+        "1296": "not_stationary_long_enough",
+        "1297": "not_stationary_long_enough",
+        "1299": "not_stationary_long_enough",
+        "1301": "not_stationary_long_enough",
+        "1302": "not_stationary_long_enough",
+        "1304": "not_stationary_long_enough",
+        "1310": "not_stationary_long_enough",
+        "1312": "not_stationary_long_enough",
+        "1313": "not_stationary_long_enough",
+        "1315": "not_stationary_long_enough",
+        "1316": "not_stationary_long_enough",
+        "1317": "not_stationary_long_enough",
+        "1318": "not_stationary_long_enough",
+        "1319": "not_stationary_long_enough",
+        "1321": "not_stationary_long_enough",
+        "1322": "not_stationary_long_enough",
+        "1323": "not_stationary_long_enough",
+        "1326": "not_stationary_long_enough",
+        "1328": "not_stationary_long_enough",
+        "1329": "not_stationary_long_enough",
+        "1332": "not_stationary_long_enough",
+        "1333": "not_stationary_long_enough",
+        "1334": "not_stationary_long_enough",
+        "1335": "not_stationary_long_enough",
+        "1336": "not_stationary_long_enough",
+        "1338": "not_stationary_long_enough",
+        "1339": "not_stationary_long_enough",
+        "1340": "not_stationary_long_enough",
+        "1341": "not_stationary_long_enough",
+        "1342": "not_stationary_long_enough",
+        "1344": "not_stationary_long_enough",
+        "1345": "not_stationary_long_enough",
+        "1346": "not_stationary_long_enough",
+        "1347": "not_stationary_long_enough",
+        "1349": "not_stationary_long_enough",
+        "1350": "not_stationary_long_enough",
+        "1355": "not_stationary_long_enough",
+        "1360": "not_stationary_long_enough",
+        "1364": "not_stationary_long_enough",
+        "1365": "not_stationary_long_enough",
+        "1371": "not_stationary_long_enough",
+        "1373": "not_stationary_long_enough",
+        "1375": "not_stationary_long_enough",
+        "1377": "not_stationary_long_enough",
+        "1379": "not_stationary_long_enough",
+        "1381": "not_stationary_long_enough",
+        "1384": "not_stationary_long_enough",
+        "1387": "not_stationary_long_enough",
+        "1388": "not_stationary_long_enough",
+        "1390": "not_stationary_long_enough",
+        "1392": "not_stationary_long_enough",
+        "1393": "not_stationary_long_enough",
+        "1397": "not_stationary_long_enough",
+        "1398": "not_stationary_long_enough",
+        "1399": "not_stationary_long_enough",
+        "1400": "not_stationary_long_enough",
+        "1401": "not_stationary_long_enough",
+        "1402": "not_stationary_long_enough",
+        "1408": "not_stationary_long_enough",
+        "1409": "not_stationary_long_enough",
+        "1411": "not_stationary_long_enough",
+        "1412": "not_stationary_long_enough",
+        "1414": "not_stationary_long_enough",
+        "1418": "not_stationary_long_enough",
+        "1419": "not_stationary_long_enough",
+        "1421": "not_stationary_long_enough",
+        "1424": "not_stationary_long_enough",
+        "1429": "not_stationary_long_enough",
+        "1431": "not_stationary_long_enough",
+        "1432": "not_stationary_long_enough",
+        "1434": "not_stationary_long_enough",
+        "1437": "not_stationary_long_enough",
+        "1441": "not_stationary_long_enough",
+        "1445": "not_stationary_long_enough",
+        "1447": "not_stationary_long_enough",
+        "1449": "not_stationary_long_enough",
+        "1451": "not_stationary_long_enough",
+        "1452": "not_stationary_long_enough",
+        "1453": "not_stationary_long_enough",
+        "1454": "not_stationary_long_enough",
+        "1455": "not_stationary_long_enough",
+        "1458": "not_stationary_long_enough",
+        "1464": "not_stationary_long_enough",
+        "1467": "not_stationary_long_enough",
+        "1468": "not_stationary_long_enough",
+        "1469": "not_stationary_long_enough",
+        "1470": "not_stationary_long_enough",
+        "1471": "not_stationary_long_enough",
+        "1472": "not_stationary_long_enough",
+        "1474": "not_stationary_long_enough",
+        "1477": "not_stationary_long_enough",
+        "1479": "not_stationary_long_enough",
+        "1482": "not_stationary_long_enough",
+        "1489": "not_stationary_long_enough",
+        "1490": "not_stationary_long_enough",
+        "1493": "not_stationary_long_enough",
+        "1494": "not_stationary_long_enough",
+        "1496": "not_stationary_long_enough",
+        "1499": "not_stationary_long_enough"
+      },
+      "unresolved_actions": {
+        "6": "escape_or_unmodelled_action",
+        "24": "escape_or_unmodelled_action",
+        "35": "escape_or_unmodelled_action",
+        "43": "escape_or_unmodelled_action",
+        "47": "escape_or_unmodelled_action",
+        "114": "escape_or_unmodelled_action",
+        "150": "escape_or_unmodelled_action",
+        "151": "escape_or_unmodelled_action",
+        "159": "escape_or_unmodelled_action",
+        "174": "escape_or_unmodelled_action",
+        "176": "escape_or_unmodelled_action",
+        "236": "escape_or_unmodelled_action",
+        "241": "escape_or_unmodelled_action",
+        "327": "escape_or_unmodelled_action",
+        "343": "escape_or_unmodelled_action",
+        "352": "escape_or_unmodelled_action",
+        "355": "escape_or_unmodelled_action",
+        "372": "escape_or_unmodelled_action",
+        "387": "escape_or_unmodelled_action",
+        "435": "escape_or_unmodelled_action",
+        "464": "escape_or_unmodelled_action",
+        "469": "escape_or_unmodelled_action",
+        "488": "escape_or_unmodelled_action",
+        "503": "escape_or_unmodelled_action",
+        "506": "escape_or_unmodelled_action",
+        "516": "escape_or_unmodelled_action",
+        "517": "escape_or_unmodelled_action",
+        "534": "escape_or_unmodelled_action",
+        "543": "escape_or_unmodelled_action",
+        "554": "escape_or_unmodelled_action",
+        "558": "escape_or_unmodelled_action",
+        "562": "escape_or_unmodelled_action",
+        "574": "escape_or_unmodelled_action",
+        "614": "escape_or_unmodelled_action",
+        "623": "escape_or_unmodelled_action",
+        "627": "escape_or_unmodelled_action",
+        "631": "escape_or_unmodelled_action",
+        "644": "escape_or_unmodelled_action",
+        "664": "escape_or_unmodelled_action",
+        "681": "escape_or_unmodelled_action",
+        "682": "escape_or_unmodelled_action",
+        "695": "escape_or_unmodelled_action",
+        "702": "escape_or_unmodelled_action",
+        "718": "escape_or_unmodelled_action",
+        "728": "escape_or_unmodelled_action",
+        "750": "escape_or_unmodelled_action",
+        "766": "escape_or_unmodelled_action",
+        "787": "escape_or_unmodelled_action",
+        "790": "escape_or_unmodelled_action",
+        "804": "escape_or_unmodelled_action",
+        "821": "escape_or_unmodelled_action",
+        "847": "escape_or_unmodelled_action",
+        "871": "escape_or_unmodelled_action",
+        "876": "escape_or_unmodelled_action",
+        "889": "escape_or_unmodelled_action",
+        "891": "escape_or_unmodelled_action",
+        "910": "escape_or_unmodelled_action",
+        "912": "escape_or_unmodelled_action",
+        "929": "escape_or_unmodelled_action",
+        "930": "escape_or_unmodelled_action",
+        "939": "escape_or_unmodelled_action",
+        "940": "escape_or_unmodelled_action",
+        "946": "escape_or_unmodelled_action",
+        "954": "escape_or_unmodelled_action",
+        "960": "escape_or_unmodelled_action",
+        "1005": "escape_or_unmodelled_action",
+        "1006": "escape_or_unmodelled_action",
+        "1012": "escape_or_unmodelled_action",
+        "1087": "escape_or_unmodelled_action",
+        "1100": "escape_or_unmodelled_action",
+        "1113": "escape_or_unmodelled_action",
+        "1117": "escape_or_unmodelled_action",
+        "1118": "escape_or_unmodelled_action",
+        "1140": "escape_or_unmodelled_action",
+        "1196": "escape_or_unmodelled_action",
+        "1202": "escape_or_unmodelled_action",
+        "1211": "escape_or_unmodelled_action",
+        "1224": "escape_or_unmodelled_action",
+        "1239": "escape_or_unmodelled_action",
+        "1243": "escape_or_unmodelled_action",
+        "1248": "escape_or_unmodelled_action",
+        "1249": "escape_or_unmodelled_action",
+        "1279": "escape_or_unmodelled_action",
+        "1362": "escape_or_unmodelled_action",
+        "1366": "escape_or_unmodelled_action",
+        "1383": "escape_or_unmodelled_action",
+        "1386": "escape_or_unmodelled_action",
+        "1391": "escape_or_unmodelled_action",
+        "1404": "escape_or_unmodelled_action",
+        "1423": "escape_or_unmodelled_action",
+        "1435": "escape_or_unmodelled_action",
+        "1463": "escape_or_unmodelled_action",
+        "1498": "escape_or_unmodelled_action"
+      }
+    },
+    "assumptions": "Pinned headless V2, four switches OFF, no StallWatchdog or external interventions.",
+    "proof": "Every movement alternative requires at least one stationary member to release a node or stable merge admission first. Mutable/idle vehicles include every outgoing edge. Thus no member can be first to move under the modelled transitions.",
+    "received_t": 1041,
+    "submitted_t": 1040,
+    "revalidated": true
+  },
+  "limitations": [
+    "Cycle episode log is occupancy/follow only; mixed-set proofs are in verification.jsonl.",
+    "Mutable vehicles with an unproved escape remain unresolved; no claim of complete detection.",
+    "T is first sampled cycle state, t_confirm is persistence threshold, neither proves deadlock.",
+    "One-second sampled state, not restartable engine state or a complete event trace.",
+    "Active episodes at end are right-censored; dependency loss is not proof of recovery."
+  ]
+}

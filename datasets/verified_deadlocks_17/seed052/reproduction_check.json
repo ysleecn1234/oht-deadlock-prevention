@@ -1,0 +1,9 @@
+{
+  "target_t": 1054,
+  "reference_folder": "C:\\Users\\home\\Documents\\ChatGPT\\OHT Deadlock 이상 탐지\\seed_collection_v2\\runs\\mixed_052_lotstop_v1\\seed052",
+  "source_and_inputs_matched": true,
+  "full_sampled_state_hash_matches": true,
+  "reference_proof_revalidated": true,
+  "observed_state_sha256": "610c755b61467fcf77a4b7ad068b141a99dda2e2af2d318391a47f5dd9f8dc0a",
+  "expected_state_sha256": "610c755b61467fcf77a4b7ad068b141a99dda2e2af2d318391a47f5dd9f8dc0a"
+}

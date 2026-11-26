@@ -1,0 +1,9182 @@
+[
+  {
+    "seed": 52,
+    "location": "full_verified_set",
+    "feature": "vehicle_count",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      4,
+      31,
+      60
+    ],
+    "trailing60s_medians": [
+      4.0,
+      32.5,
+      60.0
+    ],
+    "change_10min_to_T": 56
+  },
+  {
+    "seed": 52,
+    "location": "full_verified_set",
+    "feature": "waiting_count",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      1,
+      29,
+      60
+    ],
+    "trailing60s_medians": [
+      1.0,
+      32.0,
+      60.0
+    ],
+    "change_10min_to_T": 59
+  },
+  {
+    "seed": 52,
+    "location": "full_verified_set",
+    "feature": "wait_age_mean",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      0.3788496990954968,
+      87.11412890336348,
+      166.49551444144407
+    ],
+    "trailing60s_medians": [
+      0.8261387555987199,
+      161.37999138743157,
+      141.4955144414441
+    ],
+    "change_10min_to_T": 166.11666474234858
+  },
+  {
+    "seed": 52,
+    "location": "full_verified_set",
+    "feature": "wait_age_max",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      0.3788496990954968,
+      239.89927327133762,
+      472.0574172629033
+    ],
+    "trailing60s_medians": [
+      0.9719937855683156,
+      232.08919415245535,
+      447.0574172629033
+    ],
+    "change_10min_to_T": 471.6785675638078
+  },
+  {
+    "seed": 52,
+    "location": "full_verified_set",
+    "feature": "stationary30_count",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      0,
+      13,
+      60
+    ],
+    "trailing60s_medians": [
+      0.0,
+      31.0,
+      60.0
+    ],
+    "change_10min_to_T": 60
+  },
+  {
+    "seed": 52,
+    "location": "full_verified_set",
+    "feature": "holder_ratio",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      0.11666666666666667,
+      0.5833333333333334,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.11666666666666667,
+      0.5583333333333333,
+      1.0
+    ],
+    "change_10min_to_T": 0.8833333333333333
+  },
+  {
+    "seed": 52,
+    "location": "full_verified_set",
+    "feature": "entries60",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      30,
+      6,
+      0
+    ],
+    "trailing60s_medians": [
+      30.0,
+      4.0,
+      0.0
+    ],
+    "change_10min_to_T": -30
+  },
+  {
+    "seed": 52,
+    "location": "full_verified_set",
+    "feature": "exits60",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      31,
+      9,
+      0
+    ],
+    "trailing60s_medians": [
+      31.5,
+      4.0,
+      0.0
+    ],
+    "change_10min_to_T": -31
+  },
+  {
+    "seed": 52,
+    "location": "full_verified_set",
+    "feature": "follow_wait_count",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      0,
+      3,
+      5
+    ],
+    "trailing60s_medians": [
+      0.0,
+      4.0,
+      5.0
+    ],
+    "change_10min_to_T": 5
+  },
+  {
+    "seed": 52,
+    "location": "full_verified_set",
+    "feature": "merge_wait_count",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      1,
+      2,
+      7
+    ],
+    "trailing60s_medians": [
+      0.5,
+      3.5,
+      7.0
+    ],
+    "change_10min_to_T": 6
+  },
+  {
+    "seed": 52,
+    "location": "core_1",
+    "feature": "vehicle_count",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      3,
+      15,
+      25
+    ],
+    "trailing60s_medians": [
+      2.0,
+      14.0,
+      25.0
+    ],
+    "change_10min_to_T": 22
+  },
+  {
+    "seed": 52,
+    "location": "core_1",
+    "feature": "waiting_count",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      1,
+      14,
+      25
+    ],
+    "trailing60s_medians": [
+      0.5,
+      14.0,
+      25.0
+    ],
+    "change_10min_to_T": 24
+  },
+  {
+    "seed": 52,
+    "location": "core_1",
+    "feature": "wait_age_mean",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      0.3788496990954968,
+      68.03753695290723,
+      192.80537215779634
+    ],
+    "trailing60s_medians": [
+      0.1894248495477484,
+      177.4353397637628,
+      167.8053721577963
+    ],
+    "change_10min_to_T": 192.42652245870084
+  },
+  {
+    "seed": 52,
+    "location": "core_1",
+    "feature": "wait_age_max",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      0.3788496990954968,
+      224.2337266481427,
+      472.0574172629033
+    ],
+    "trailing60s_medians": [
+      0.1894248495477484,
+      226.57268851123706,
+      447.0574172629033
+    ],
+    "change_10min_to_T": 471.6785675638078
+  },
+  {
+    "seed": 52,
+    "location": "core_1",
+    "feature": "stationary30_count",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      0,
+      4,
+      25
+    ],
+    "trailing60s_medians": [
+      0.0,
+      12.0,
+      25.0
+    ],
+    "change_10min_to_T": 25
+  },
+  {
+    "seed": 52,
+    "location": "core_1",
+    "feature": "holder_ratio",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      0.2,
+      0.64,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.14,
+      0.56,
+      1.0
+    ],
+    "change_10min_to_T": 0.8
+  },
+  {
+    "seed": 52,
+    "location": "core_1",
+    "feature": "entries60",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      22,
+      5,
+      0
+    ],
+    "trailing60s_medians": [
+      15.5,
+      3.5,
+      0.0
+    ],
+    "change_10min_to_T": -22
+  },
+  {
+    "seed": 52,
+    "location": "core_1",
+    "feature": "exits60",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      19,
+      5,
+      0
+    ],
+    "trailing60s_medians": [
+      14.5,
+      4.0,
+      0.0
+    ],
+    "change_10min_to_T": -19
+  },
+  {
+    "seed": 52,
+    "location": "core_1",
+    "feature": "follow_wait_count",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      0,
+      1,
+      2
+    ],
+    "trailing60s_medians": [
+      0.0,
+      1.0,
+      2.0
+    ],
+    "change_10min_to_T": 2
+  },
+  {
+    "seed": 52,
+    "location": "core_1",
+    "feature": "merge_wait_count",
+    "checked_t": 1053.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      450.0,
+      750.0,
+      1050.0
+    ],
+    "values": [
+      1,
+      1,
+      1
+    ],
+    "trailing60s_medians": [
+      0.5,
+      1.0,
+      1.0
+    ],
+    "change_10min_to_T": 0
+  },
+  {
+    "seed": 55,
+    "location": "full_verified_set",
+    "feature": "vehicle_count",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      23,
+      62,
+      71
+    ],
+    "trailing60s_medians": [
+      13.5,
+      62.0,
+      71.0
+    ],
+    "change_10min_to_T": 48
+  },
+  {
+    "seed": 55,
+    "location": "full_verified_set",
+    "feature": "waiting_count",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      19,
+      62,
+      69
+    ],
+    "trailing60s_medians": [
+      8.5,
+      62.0,
+      69.0
+    ],
+    "change_10min_to_T": 50
+  },
+  {
+    "seed": 55,
+    "location": "full_verified_set",
+    "feature": "wait_age_mean",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      2.9900053262519615,
+      91.81544815381167,
+      166.30577622054778
+    ],
+    "trailing60s_medians": [
+      2.386089952501807,
+      68.09184735392546,
+      144.16006928143608
+    ],
+    "change_10min_to_T": 163.3157708942958
+  },
+  {
+    "seed": 55,
+    "location": "full_verified_set",
+    "feature": "wait_age_max",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      9.02155453460847,
+      130.010371859548,
+      202.14995582546908
+    ],
+    "trailing60s_medians": [
+      5.40360820181148,
+      105.010371859548,
+      177.14995582546908
+    ],
+    "change_10min_to_T": 193.1284012908606
+  },
+  {
+    "seed": 55,
+    "location": "full_verified_set",
+    "feature": "stationary30_count",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      0,
+      62,
+      71
+    ],
+    "trailing60s_medians": [
+      0.0,
+      60.5,
+      71.0
+    ],
+    "change_10min_to_T": 71
+  },
+  {
+    "seed": 55,
+    "location": "full_verified_set",
+    "feature": "holder_ratio",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      0.39436619718309857,
+      0.8732394366197183,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.27464788732394363,
+      0.8732394366197183,
+      1.0
+    ],
+    "change_10min_to_T": 0.6056338028169015
+  },
+  {
+    "seed": 55,
+    "location": "full_verified_set",
+    "feature": "entries60",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      81,
+      1,
+      0
+    ],
+    "trailing60s_medians": [
+      78.5,
+      4.0,
+      0.0
+    ],
+    "change_10min_to_T": -81
+  },
+  {
+    "seed": 55,
+    "location": "full_verified_set",
+    "feature": "exits60",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      75,
+      0,
+      0
+    ],
+    "trailing60s_medians": [
+      77.0,
+      3.0,
+      0.0
+    ],
+    "change_10min_to_T": -75
+  },
+  {
+    "seed": 55,
+    "location": "full_verified_set",
+    "feature": "follow_wait_count",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      4,
+      6,
+      9
+    ],
+    "trailing60s_medians": [
+      1.0,
+      6.0,
+      9.0
+    ],
+    "change_10min_to_T": 5
+  },
+  {
+    "seed": 55,
+    "location": "full_verified_set",
+    "feature": "merge_wait_count",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      6,
+      4,
+      3
+    ],
+    "trailing60s_medians": [
+      3.5,
+      4.0,
+      2.0
+    ],
+    "change_10min_to_T": -3
+  },
+  {
+    "seed": 55,
+    "location": "core_1",
+    "feature": "vehicle_count",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      16,
+      36,
+      42
+    ],
+    "trailing60s_medians": [
+      7.5,
+      36.0,
+      42.0
+    ],
+    "change_10min_to_T": 26
+  },
+  {
+    "seed": 55,
+    "location": "core_1",
+    "feature": "waiting_count",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      14,
+      36,
+      41
+    ],
+    "trailing60s_medians": [
+      4.0,
+      36.0,
+      41.0
+    ],
+    "change_10min_to_T": 27
+  },
+  {
+    "seed": 55,
+    "location": "core_1",
+    "feature": "wait_age_mean",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      3.2120010629565536,
+      89.4733034189559,
+      168.67532766900268
+    ],
+    "trailing60s_medians": [
+      1.6811456523559358,
+      66.67154648581851,
+      148.47889403976598
+    ],
+    "change_10min_to_T": 165.46332660604614
+  },
+  {
+    "seed": 55,
+    "location": "core_1",
+    "feature": "wait_age_max",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      9.02155453460847,
+      130.010371859548,
+      202.14995582546908
+    ],
+    "trailing60s_medians": [
+      3.0691598066211014,
+      105.010371859548,
+      177.14995582546908
+    ],
+    "change_10min_to_T": 193.1284012908606
+  },
+  {
+    "seed": 55,
+    "location": "core_1",
+    "feature": "stationary30_count",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      0,
+      36,
+      42
+    ],
+    "trailing60s_medians": [
+      0.0,
+      36.0,
+      42.0
+    ],
+    "change_10min_to_T": 42
+  },
+  {
+    "seed": 55,
+    "location": "core_1",
+    "feature": "holder_ratio",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      0.42857142857142855,
+      0.8571428571428571,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.2857142857142857,
+      0.8571428571428571,
+      1.0
+    ],
+    "change_10min_to_T": 0.5714285714285714
+  },
+  {
+    "seed": 55,
+    "location": "core_1",
+    "feature": "entries60",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      54,
+      0,
+      0
+    ],
+    "trailing60s_medians": [
+      52.5,
+      1.5,
+      0.0
+    ],
+    "change_10min_to_T": -54
+  },
+  {
+    "seed": 55,
+    "location": "core_1",
+    "feature": "exits60",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      49,
+      0,
+      0
+    ],
+    "trailing60s_medians": [
+      51.0,
+      2.0,
+      0.0
+    ],
+    "change_10min_to_T": -49
+  },
+  {
+    "seed": 55,
+    "location": "core_1",
+    "feature": "follow_wait_count",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      2,
+      5,
+      7
+    ],
+    "trailing60s_medians": [
+      0.5,
+      5.0,
+      7.0
+    ],
+    "change_10min_to_T": 5
+  },
+  {
+    "seed": 55,
+    "location": "core_1",
+    "feature": "merge_wait_count",
+    "checked_t": 903.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      300.0,
+      600.0,
+      900.0
+    ],
+    "values": [
+      3,
+      1,
+      1
+    ],
+    "trailing60s_medians": [
+      1.0,
+      1.0,
+      0.0
+    ],
+    "change_10min_to_T": -2
+  },
+  {
+    "seed": 58,
+    "location": "full_verified_set",
+    "feature": "vehicle_count",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      46,
+      55,
+      61
+    ],
+    "trailing60s_medians": [
+      46.0,
+      52.5,
+      61.0
+    ],
+    "change_10min_to_T": 15
+  },
+  {
+    "seed": 58,
+    "location": "full_verified_set",
+    "feature": "waiting_count",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      46,
+      55,
+      59
+    ],
+    "trailing60s_medians": [
+      46.0,
+      52.0,
+      59.0
+    ],
+    "change_10min_to_T": 13
+  },
+  {
+    "seed": 58,
+    "location": "full_verified_set",
+    "feature": "wait_age_mean",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      166.84358937879367,
+      184.4267311662427,
+      165.99206248635423
+    ],
+    "trailing60s_medians": [
+      179.56912177733267,
+      174.8032869586683,
+      140.99206248635426
+    ],
+    "change_10min_to_T": -0.8515268924394377
+  },
+  {
+    "seed": 58,
+    "location": "full_verified_set",
+    "feature": "wait_age_max",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      506.0942032957896,
+      806.0942032957896,
+      211.48943996861522
+    ],
+    "trailing60s_medians": [
+      481.0942032957896,
+      781.0942032957896,
+      186.48943996861522
+    ],
+    "change_10min_to_T": -294.6047633271744
+  },
+  {
+    "seed": 58,
+    "location": "full_verified_set",
+    "feature": "stationary30_count",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      36,
+      52,
+      61
+    ],
+    "trailing60s_medians": [
+      37.0,
+      42.5,
+      61.0
+    ],
+    "change_10min_to_T": 25
+  },
+  {
+    "seed": 58,
+    "location": "full_verified_set",
+    "feature": "holder_ratio",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      0.7540983606557377,
+      0.9016393442622951,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.7540983606557377,
+      0.8688524590163934,
+      1.0
+    ],
+    "change_10min_to_T": 0.24590163934426235
+  },
+  {
+    "seed": 58,
+    "location": "full_verified_set",
+    "feature": "entries60",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      3,
+      20,
+      0
+    ],
+    "trailing60s_medians": [
+      2.0,
+      19.0,
+      0.0
+    ],
+    "change_10min_to_T": -3
+  },
+  {
+    "seed": 58,
+    "location": "full_verified_set",
+    "feature": "exits60",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      2,
+      7,
+      0
+    ],
+    "trailing60s_medians": [
+      2.0,
+      7.5,
+      0.0
+    ],
+    "change_10min_to_T": -2
+  },
+  {
+    "seed": 58,
+    "location": "full_verified_set",
+    "feature": "follow_wait_count",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      2,
+      4,
+      4
+    ],
+    "trailing60s_medians": [
+      2.0,
+      4.0,
+      4.0
+    ],
+    "change_10min_to_T": 2
+  },
+  {
+    "seed": 58,
+    "location": "full_verified_set",
+    "feature": "merge_wait_count",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      5,
+      3,
+      6
+    ],
+    "trailing60s_medians": [
+      4.0,
+      3.0,
+      6.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 58,
+    "location": "core_1",
+    "feature": "vehicle_count",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      19,
+      20,
+      23
+    ],
+    "trailing60s_medians": [
+      19.0,
+      20.0,
+      23.0
+    ],
+    "change_10min_to_T": 4
+  },
+  {
+    "seed": 58,
+    "location": "core_1",
+    "feature": "waiting_count",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      19,
+      20,
+      23
+    ],
+    "trailing60s_medians": [
+      19.0,
+      20.0,
+      23.0
+    ],
+    "change_10min_to_T": 4
+  },
+  {
+    "seed": 58,
+    "location": "core_1",
+    "feature": "wait_age_mean",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      193.45536967435743,
+      212.4454665591357,
+      174.59856959011427
+    ],
+    "trailing60s_medians": [
+      203.87582642773708,
+      187.4454665591357,
+      149.59856959011427
+    ],
+    "change_10min_to_T": -18.85680008424316
+  },
+  {
+    "seed": 58,
+    "location": "core_1",
+    "feature": "wait_age_max",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      419.9807816714903,
+      227.3163468690433,
+      211.48943996861522
+    ],
+    "trailing60s_medians": [
+      394.9807816714903,
+      202.3163468690433,
+      186.48943996861522
+    ],
+    "change_10min_to_T": -208.4913417028751
+  },
+  {
+    "seed": 58,
+    "location": "core_1",
+    "feature": "stationary30_count",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      15,
+      20,
+      23
+    ],
+    "trailing60s_medians": [
+      15.0,
+      20.0,
+      23.0
+    ],
+    "change_10min_to_T": 8
+  },
+  {
+    "seed": 58,
+    "location": "core_1",
+    "feature": "holder_ratio",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      0.8260869565217391,
+      0.8695652173913043,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.8260869565217391,
+      0.8695652173913043,
+      1.0
+    ],
+    "change_10min_to_T": 0.17391304347826086
+  },
+  {
+    "seed": 58,
+    "location": "core_1",
+    "feature": "entries60",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      3,
+      0,
+      0
+    ],
+    "trailing60s_medians": [
+      2.0,
+      0.0,
+      0.0
+    ],
+    "change_10min_to_T": -3
+  },
+  {
+    "seed": 58,
+    "location": "core_1",
+    "feature": "exits60",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      2,
+      0,
+      0
+    ],
+    "trailing60s_medians": [
+      2.0,
+      0.0,
+      0.0
+    ],
+    "change_10min_to_T": -2
+  },
+  {
+    "seed": 58,
+    "location": "core_1",
+    "feature": "follow_wait_count",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      1,
+      3,
+      4
+    ],
+    "trailing60s_medians": [
+      1.0,
+      3.0,
+      4.0
+    ],
+    "change_10min_to_T": 3
+  },
+  {
+    "seed": 58,
+    "location": "core_1",
+    "feature": "merge_wait_count",
+    "checked_t": 1464.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      860.0,
+      1160.0,
+      1460.0
+    ],
+    "values": [
+      2,
+      2,
+      1
+    ],
+    "trailing60s_medians": [
+      1.0,
+      2.0,
+      1.0
+    ],
+    "change_10min_to_T": -1
+  },
+  {
+    "seed": 59,
+    "location": "full_verified_set",
+    "feature": "vehicle_count",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      13,
+      40,
+      93
+    ],
+    "trailing60s_medians": [
+      13.0,
+      28.5,
+      93.0
+    ],
+    "change_10min_to_T": 80
+  },
+  {
+    "seed": 59,
+    "location": "full_verified_set",
+    "feature": "waiting_count",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      6,
+      34,
+      92
+    ],
+    "trailing60s_medians": [
+      4.5,
+      23.5,
+      93.0
+    ],
+    "change_10min_to_T": 86
+  },
+  {
+    "seed": 59,
+    "location": "full_verified_set",
+    "feature": "wait_age_mean",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      2.281593369072757,
+      29.812292375910214,
+      142.6662639774245
+    ],
+    "trailing60s_medians": [
+      2.193989790673624,
+      15.438824059692358,
+      116.45479877336615
+    ],
+    "change_10min_to_T": 140.38467060835174
+  },
+  {
+    "seed": 59,
+    "location": "full_verified_set",
+    "feature": "wait_age_max",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      4.42723996442615,
+      67.26609042332348,
+      172.7189467048164
+    ],
+    "trailing60s_medians": [
+      4.156083997877317,
+      42.266090423323476,
+      147.7189467048164
+    ],
+    "change_10min_to_T": 168.29170674039025
+  },
+  {
+    "seed": 59,
+    "location": "full_verified_set",
+    "feature": "stationary30_count",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      0,
+      17,
+      93
+    ],
+    "trailing60s_medians": [
+      0.0,
+      4.5,
+      93.0
+    ],
+    "change_10min_to_T": 93
+  },
+  {
+    "seed": 59,
+    "location": "full_verified_set",
+    "feature": "holder_ratio",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      0.20430107526881722,
+      0.4946236559139785,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.1989247311827957,
+      0.3924731182795699,
+      1.0
+    ],
+    "change_10min_to_T": 0.7956989247311828
+  },
+  {
+    "seed": 59,
+    "location": "full_verified_set",
+    "feature": "entries60",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      63,
+      64,
+      0
+    ],
+    "trailing60s_medians": [
+      60.0,
+      65.0,
+      0.0
+    ],
+    "change_10min_to_T": -63
+  },
+  {
+    "seed": 59,
+    "location": "full_verified_set",
+    "feature": "exits60",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      56,
+      35,
+      0
+    ],
+    "trailing60s_medians": [
+      53.0,
+      45.5,
+      0.0
+    ],
+    "change_10min_to_T": -56
+  },
+  {
+    "seed": 59,
+    "location": "full_verified_set",
+    "feature": "follow_wait_count",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      0,
+      2,
+      3
+    ],
+    "trailing60s_medians": [
+      0.5,
+      2.0,
+      3.0
+    ],
+    "change_10min_to_T": 3
+  },
+  {
+    "seed": 59,
+    "location": "full_verified_set",
+    "feature": "merge_wait_count",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      3,
+      3,
+      10
+    ],
+    "trailing60s_medians": [
+      2.0,
+      3.0,
+      10.0
+    ],
+    "change_10min_to_T": 7
+  },
+  {
+    "seed": 59,
+    "location": "core_1",
+    "feature": "vehicle_count",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      5,
+      17,
+      26
+    ],
+    "trailing60s_medians": [
+      3.5,
+      14.0,
+      26.0
+    ],
+    "change_10min_to_T": 21
+  },
+  {
+    "seed": 59,
+    "location": "core_1",
+    "feature": "waiting_count",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      2,
+      15,
+      26
+    ],
+    "trailing60s_medians": [
+      1.0,
+      13.5,
+      26.0
+    ],
+    "change_10min_to_T": 24
+  },
+  {
+    "seed": 59,
+    "location": "core_1",
+    "feature": "wait_age_mean",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      1.014760511193714,
+      42.178437040857276,
+      150.98133331736156
+    ],
+    "trailing60s_medians": [
+      0.5195937755062374,
+      20.763084456621286,
+      125.98133331736156
+    ],
+    "change_10min_to_T": 149.96657280616785
+  },
+  {
+    "seed": 59,
+    "location": "core_1",
+    "feature": "wait_age_max",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      1.6392603110335529,
+      67.26609042332348,
+      165.19131730111155
+    ],
+    "trailing60s_medians": [
+      0.5195937755062374,
+      42.266090423323476,
+      140.19131730111155
+    ],
+    "change_10min_to_T": 163.552056990078
+  },
+  {
+    "seed": 59,
+    "location": "core_1",
+    "feature": "stationary30_count",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      0,
+      13,
+      26
+    ],
+    "trailing60s_medians": [
+      0.0,
+      3.5,
+      26.0
+    ],
+    "change_10min_to_T": 26
+  },
+  {
+    "seed": 59,
+    "location": "core_1",
+    "feature": "holder_ratio",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      0.3076923076923077,
+      0.7307692307692307,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.17307692307692307,
+      0.5384615384615384,
+      1.0
+    ],
+    "change_10min_to_T": 0.6923076923076923
+  },
+  {
+    "seed": 59,
+    "location": "core_1",
+    "feature": "entries60",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      29,
+      17,
+      0
+    ],
+    "trailing60s_medians": [
+      19.5,
+      21.0,
+      0.0
+    ],
+    "change_10min_to_T": -29
+  },
+  {
+    "seed": 59,
+    "location": "core_1",
+    "feature": "exits60",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      24,
+      3,
+      0
+    ],
+    "trailing60s_medians": [
+      16.5,
+      9.5,
+      0.0
+    ],
+    "change_10min_to_T": -24
+  },
+  {
+    "seed": 59,
+    "location": "core_1",
+    "feature": "follow_wait_count",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      0,
+      1,
+      2
+    ],
+    "trailing60s_medians": [
+      0.0,
+      1.0,
+      2.0
+    ],
+    "change_10min_to_T": 2
+  },
+  {
+    "seed": 59,
+    "location": "core_1",
+    "feature": "merge_wait_count",
+    "checked_t": 827.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      220.0,
+      520.0,
+      820.0
+    ],
+    "values": [
+      0,
+      0,
+      1
+    ],
+    "trailing60s_medians": [
+      1.0,
+      0.0,
+      1.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 66,
+    "location": "full_verified_set",
+    "feature": "vehicle_count",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      54,
+      85,
+      90
+    ],
+    "trailing60s_medians": [
+      53.0,
+      85.0,
+      90.0
+    ],
+    "change_10min_to_T": 36
+  },
+  {
+    "seed": 66,
+    "location": "full_verified_set",
+    "feature": "waiting_count",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      48,
+      83,
+      86
+    ],
+    "trailing60s_medians": [
+      47.0,
+      83.0,
+      86.0
+    ],
+    "change_10min_to_T": 38
+  },
+  {
+    "seed": 66,
+    "location": "full_verified_set",
+    "feature": "wait_age_mean",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      73.97139349767622,
+      184.13886156933285,
+      339.63156023718216
+    ],
+    "trailing60s_medians": [
+      51.41357483294285,
+      159.13886156933285,
+      314.63156023718216
+    ],
+    "change_10min_to_T": 265.66016673950594
+  },
+  {
+    "seed": 66,
+    "location": "full_verified_set",
+    "feature": "wait_age_max",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      189.61472059067336,
+      342.15387741067264,
+      642.1538774106726
+    ],
+    "trailing60s_medians": [
+      164.61472059067336,
+      317.15387741067264,
+      617.1538774106726
+    ],
+    "change_10min_to_T": 452.5391568199993
+  },
+  {
+    "seed": 66,
+    "location": "full_verified_set",
+    "feature": "stationary30_count",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      45,
+      85,
+      90
+    ],
+    "trailing60s_medians": [
+      35.5,
+      85.0,
+      90.0
+    ],
+    "change_10min_to_T": 45
+  },
+  {
+    "seed": 66,
+    "location": "full_verified_set",
+    "feature": "holder_ratio",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      0.6222222222222222,
+      0.9444444444444444,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.6222222222222222,
+      0.9444444444444444,
+      1.0
+    ],
+    "change_10min_to_T": 0.37777777777777777
+  },
+  {
+    "seed": 66,
+    "location": "full_verified_set",
+    "feature": "entries60",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      28,
+      0,
+      0
+    ],
+    "trailing60s_medians": [
+      30.5,
+      1.5,
+      0.0
+    ],
+    "change_10min_to_T": -28
+  },
+  {
+    "seed": 66,
+    "location": "full_verified_set",
+    "feature": "exits60",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      20,
+      0,
+      0
+    ],
+    "trailing60s_medians": [
+      25.0,
+      0.0,
+      0.0
+    ],
+    "change_10min_to_T": -20
+  },
+  {
+    "seed": 66,
+    "location": "full_verified_set",
+    "feature": "follow_wait_count",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      7,
+      10,
+      10
+    ],
+    "trailing60s_medians": [
+      7.0,
+      10.0,
+      10.0
+    ],
+    "change_10min_to_T": 3
+  },
+  {
+    "seed": 66,
+    "location": "full_verified_set",
+    "feature": "merge_wait_count",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      4,
+      7,
+      7
+    ],
+    "trailing60s_medians": [
+      4.0,
+      7.0,
+      7.0
+    ],
+    "change_10min_to_T": 3
+  },
+  {
+    "seed": 66,
+    "location": "core_1",
+    "feature": "vehicle_count",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      14,
+      25,
+      25
+    ],
+    "trailing60s_medians": [
+      14.0,
+      25.0,
+      25.0
+    ],
+    "change_10min_to_T": 11
+  },
+  {
+    "seed": 66,
+    "location": "core_1",
+    "feature": "waiting_count",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      14,
+      25,
+      25
+    ],
+    "trailing60s_medians": [
+      14.0,
+      25.0,
+      25.0
+    ],
+    "change_10min_to_T": 11
+  },
+  {
+    "seed": 66,
+    "location": "core_1",
+    "feature": "wait_age_mean",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      64.80749937209188,
+      213.90737824206514,
+      318.3131696838338
+    ],
+    "trailing60s_medians": [
+      39.8074993720919,
+      188.90737824206514,
+      293.3131696838338
+    ],
+    "change_10min_to_T": 253.5056703117419
+  },
+  {
+    "seed": 66,
+    "location": "core_1",
+    "feature": "wait_age_max",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      74.38748942105127,
+      342.15387741067264,
+      642.1538774106726
+    ],
+    "trailing60s_medians": [
+      49.38748942105127,
+      317.15387741067264,
+      617.1538774106726
+    ],
+    "change_10min_to_T": 567.7663879896213
+  },
+  {
+    "seed": 66,
+    "location": "core_1",
+    "feature": "stationary30_count",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      14,
+      25,
+      25
+    ],
+    "trailing60s_medians": [
+      12.5,
+      25.0,
+      25.0
+    ],
+    "change_10min_to_T": 11
+  },
+  {
+    "seed": 66,
+    "location": "core_1",
+    "feature": "holder_ratio",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      0.56,
+      1.0,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.56,
+      1.0,
+      1.0
+    ],
+    "change_10min_to_T": 0.43999999999999995
+  },
+  {
+    "seed": 66,
+    "location": "core_1",
+    "feature": "entries60",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      2,
+      0,
+      0
+    ],
+    "trailing60s_medians": [
+      3.5,
+      0.0,
+      0.0
+    ],
+    "change_10min_to_T": -2
+  },
+  {
+    "seed": 66,
+    "location": "core_1",
+    "feature": "exits60",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      0,
+      0,
+      0
+    ],
+    "trailing60s_medians": [
+      2.5,
+      0.0,
+      0.0
+    ],
+    "change_10min_to_T": 0
+  },
+  {
+    "seed": 66,
+    "location": "core_1",
+    "feature": "follow_wait_count",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      1,
+      1,
+      2
+    ],
+    "trailing60s_medians": [
+      1.0,
+      1.0,
+      2.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 66,
+    "location": "core_1",
+    "feature": "merge_wait_count",
+    "checked_t": 1068.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      0,
+      1,
+      1
+    ],
+    "trailing60s_medians": [
+      0.0,
+      1.0,
+      1.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 70,
+    "location": "full_verified_set",
+    "feature": "vehicle_count",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      46,
+      76,
+      98
+    ],
+    "trailing60s_medians": [
+      37.0,
+      75.0,
+      98.0
+    ],
+    "change_10min_to_T": 52
+  },
+  {
+    "seed": 70,
+    "location": "full_verified_set",
+    "feature": "waiting_count",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      36,
+      74,
+      98
+    ],
+    "trailing60s_medians": [
+      29.5,
+      67.5,
+      98.0
+    ],
+    "change_10min_to_T": 62
+  },
+  {
+    "seed": 70,
+    "location": "full_verified_set",
+    "feature": "wait_age_mean",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      13.422328848670066,
+      33.61776231462341,
+      290.37105019238
+    ],
+    "trailing60s_medians": [
+      19.695058956760576,
+      23.95799937684065,
+      265.37105019238
+    ],
+    "change_10min_to_T": 276.9487213437099
+  },
+  {
+    "seed": 70,
+    "location": "full_verified_set",
+    "feature": "wait_age_max",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      53.02622312579791,
+      75.54680049188903,
+      375.54680049188903
+    ],
+    "trailing60s_medians": [
+      82.79575784406396,
+      73.51381969620337,
+      350.54680049188903
+    ],
+    "change_10min_to_T": 322.5205773660911
+  },
+  {
+    "seed": 70,
+    "location": "full_verified_set",
+    "feature": "stationary30_count",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      4,
+      40,
+      98
+    ],
+    "trailing60s_medians": [
+      7.5,
+      21.5,
+      98.0
+    ],
+    "change_10min_to_T": 94
+  },
+  {
+    "seed": 70,
+    "location": "full_verified_set",
+    "feature": "holder_ratio",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      0.5510204081632653,
+      0.7959183673469388,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.4285714285714286,
+      0.8061224489795918,
+      1.0
+    ],
+    "change_10min_to_T": 0.44897959183673475
+  },
+  {
+    "seed": 70,
+    "location": "full_verified_set",
+    "feature": "entries60",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      63,
+      48,
+      0
+    ],
+    "trailing60s_medians": [
+      52.0,
+      56.5,
+      0.0
+    ],
+    "change_10min_to_T": -63
+  },
+  {
+    "seed": 70,
+    "location": "full_verified_set",
+    "feature": "exits60",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      42,
+      47,
+      0
+    ],
+    "trailing60s_medians": [
+      38.5,
+      49.5,
+      0.0
+    ],
+    "change_10min_to_T": -42
+  },
+  {
+    "seed": 70,
+    "location": "full_verified_set",
+    "feature": "follow_wait_count",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      7,
+      5,
+      8
+    ],
+    "trailing60s_medians": [
+      4.0,
+      5.0,
+      8.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 70,
+    "location": "full_verified_set",
+    "feature": "merge_wait_count",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      2,
+      8,
+      7
+    ],
+    "trailing60s_medians": [
+      2.0,
+      5.5,
+      7.0
+    ],
+    "change_10min_to_T": 5
+  },
+  {
+    "seed": 70,
+    "location": "core_1",
+    "feature": "vehicle_count",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      21,
+      44,
+      44
+    ],
+    "trailing60s_medians": [
+      13.0,
+      42.0,
+      44.0
+    ],
+    "change_10min_to_T": 23
+  },
+  {
+    "seed": 70,
+    "location": "core_1",
+    "feature": "waiting_count",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      17,
+      44,
+      44
+    ],
+    "trailing60s_medians": [
+      12.5,
+      41.0,
+      44.0
+    ],
+    "change_10min_to_T": 27
+  },
+  {
+    "seed": 70,
+    "location": "core_1",
+    "feature": "wait_age_mean",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      13.040458531882647,
+      40.794850647411664,
+      340.7948506474117
+    ],
+    "trailing60s_medians": [
+      29.144016347009767,
+      29.23640435507889,
+      315.7948506474117
+    ],
+    "change_10min_to_T": 327.7543921155291
+  },
+  {
+    "seed": 70,
+    "location": "core_1",
+    "feature": "wait_age_max",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      33.535293161163736,
+      75.54680049188903,
+      375.54680049188903
+    ],
+    "trailing60s_medians": [
+      67.68632290599669,
+      73.51381969620337,
+      350.54680049188903
+    ],
+    "change_10min_to_T": 342.0115073307253
+  },
+  {
+    "seed": 70,
+    "location": "core_1",
+    "feature": "stationary30_count",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      2,
+      28,
+      44
+    ],
+    "trailing60s_medians": [
+      5.5,
+      18.5,
+      44.0
+    ],
+    "change_10min_to_T": 42
+  },
+  {
+    "seed": 70,
+    "location": "core_1",
+    "feature": "holder_ratio",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      0.5454545454545454,
+      1.0,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.3295454545454546,
+      0.9886363636363636,
+      1.0
+    ],
+    "change_10min_to_T": 0.4545454545454546
+  },
+  {
+    "seed": 70,
+    "location": "core_1",
+    "feature": "entries60",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      24,
+      17,
+      0
+    ],
+    "trailing60s_medians": [
+      18.0,
+      29.0,
+      0.0
+    ],
+    "change_10min_to_T": -24
+  },
+  {
+    "seed": 70,
+    "location": "core_1",
+    "feature": "exits60",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      14,
+      10,
+      0
+    ],
+    "trailing60s_medians": [
+      14.0,
+      19.0,
+      0.0
+    ],
+    "change_10min_to_T": -14
+  },
+  {
+    "seed": 70,
+    "location": "core_1",
+    "feature": "follow_wait_count",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      4,
+      4,
+      4
+    ],
+    "trailing60s_medians": [
+      1.5,
+      4.0,
+      4.0
+    ],
+    "change_10min_to_T": 0
+  },
+  {
+    "seed": 70,
+    "location": "core_1",
+    "feature": "merge_wait_count",
+    "checked_t": 1099.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      490.0,
+      790.0,
+      1090.0
+    ],
+    "values": [
+      1,
+      3,
+      3
+    ],
+    "trailing60s_medians": [
+      1.0,
+      3.0,
+      3.0
+    ],
+    "change_10min_to_T": 2
+  },
+  {
+    "seed": 73,
+    "location": "full_verified_set",
+    "feature": "vehicle_count",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      32,
+      52,
+      55
+    ],
+    "trailing60s_medians": [
+      31.0,
+      51.0,
+      55.0
+    ],
+    "change_10min_to_T": 23
+  },
+  {
+    "seed": 73,
+    "location": "full_verified_set",
+    "feature": "waiting_count",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      27,
+      48,
+      48
+    ],
+    "trailing60s_medians": [
+      26.0,
+      46.5,
+      48.0
+    ],
+    "change_10min_to_T": 21
+  },
+  {
+    "seed": 73,
+    "location": "full_verified_set",
+    "feature": "wait_age_mean",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      61.32962026616266,
+      132.3520459773591,
+      236.16495481271124
+    ],
+    "trailing60s_medians": [
+      59.81312185167939,
+      119.98871420909157,
+      211.16495481271124
+    ],
+    "change_10min_to_T": 174.83533454654858
+  },
+  {
+    "seed": 73,
+    "location": "full_verified_set",
+    "feature": "wait_age_max",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      118.12562564262214,
+      348.0962579089388,
+      648.0962579089388
+    ],
+    "trailing60s_medians": [
+      93.12562564262214,
+      323.0962579089388,
+      623.0962579089388
+    ],
+    "change_10min_to_T": 529.9706322663167
+  },
+  {
+    "seed": 73,
+    "location": "full_verified_set",
+    "feature": "stationary30_count",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      19,
+      47,
+      55
+    ],
+    "trailing60s_medians": [
+      23.0,
+      36.0,
+      55.0
+    ],
+    "change_10min_to_T": 36
+  },
+  {
+    "seed": 73,
+    "location": "full_verified_set",
+    "feature": "holder_ratio",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      0.6363636363636364,
+      0.9454545454545454,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.5909090909090908,
+      0.9363636363636363,
+      1.0
+    ],
+    "change_10min_to_T": 0.36363636363636365
+  },
+  {
+    "seed": 73,
+    "location": "full_verified_set",
+    "feature": "entries60",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      15,
+      5,
+      0
+    ],
+    "trailing60s_medians": [
+      18.0,
+      9.0,
+      0.0
+    ],
+    "change_10min_to_T": -15
+  },
+  {
+    "seed": 73,
+    "location": "full_verified_set",
+    "feature": "exits60",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      14,
+      3,
+      0
+    ],
+    "trailing60s_medians": [
+      19.0,
+      4.0,
+      0.0
+    ],
+    "change_10min_to_T": -14
+  },
+  {
+    "seed": 73,
+    "location": "full_verified_set",
+    "feature": "follow_wait_count",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      1,
+      1,
+      2
+    ],
+    "trailing60s_medians": [
+      1.0,
+      1.0,
+      2.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 73,
+    "location": "full_verified_set",
+    "feature": "merge_wait_count",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      3,
+      3,
+      4
+    ],
+    "trailing60s_medians": [
+      3.0,
+      3.0,
+      4.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 73,
+    "location": "core_1",
+    "feature": "vehicle_count",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      15,
+      23,
+      24
+    ],
+    "trailing60s_medians": [
+      14.0,
+      23.0,
+      24.0
+    ],
+    "change_10min_to_T": 9
+  },
+  {
+    "seed": 73,
+    "location": "core_1",
+    "feature": "waiting_count",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      14,
+      22,
+      22
+    ],
+    "trailing60s_medians": [
+      14.0,
+      22.5,
+      22.0
+    ],
+    "change_10min_to_T": 8
+  },
+  {
+    "seed": 73,
+    "location": "core_1",
+    "feature": "wait_age_mean",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      79.9403303185196,
+      106.7465460225034,
+      231.71379881838385
+    ],
+    "trailing60s_medians": [
+      69.35747731986801,
+      95.77737769115424,
+      206.71379881838385
+    ],
+    "change_10min_to_T": 151.77346849986424
+  },
+  {
+    "seed": 73,
+    "location": "core_1",
+    "feature": "wait_age_max",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      118.12562564262214,
+      267.98852020589595,
+      350.37025139901993
+    ],
+    "trailing60s_medians": [
+      93.12562564262214,
+      242.98852020589595,
+      325.37025139901993
+    ],
+    "change_10min_to_T": 232.2446257563978
+  },
+  {
+    "seed": 73,
+    "location": "core_1",
+    "feature": "stationary30_count",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      11,
+      22,
+      24
+    ],
+    "trailing60s_medians": [
+      12.0,
+      13.5,
+      24.0
+    ],
+    "change_10min_to_T": 13
+  },
+  {
+    "seed": 73,
+    "location": "core_1",
+    "feature": "holder_ratio",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      0.7083333333333334,
+      0.9583333333333334,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.625,
+      0.9583333333333334,
+      1.0
+    ],
+    "change_10min_to_T": 0.29166666666666663
+  },
+  {
+    "seed": 73,
+    "location": "core_1",
+    "feature": "entries60",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      7,
+      4,
+      0
+    ],
+    "trailing60s_medians": [
+      7.5,
+      6.0,
+      0.0
+    ],
+    "change_10min_to_T": -7
+  },
+  {
+    "seed": 73,
+    "location": "core_1",
+    "feature": "exits60",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      5,
+      3,
+      0
+    ],
+    "trailing60s_medians": [
+      8.0,
+      6.0,
+      0.0
+    ],
+    "change_10min_to_T": -5
+  },
+  {
+    "seed": 73,
+    "location": "core_1",
+    "feature": "follow_wait_count",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      1,
+      1,
+      2
+    ],
+    "trailing60s_medians": [
+      1.0,
+      1.0,
+      2.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 73,
+    "location": "core_1",
+    "feature": "merge_wait_count",
+    "checked_t": 1356.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      750.0,
+      1050.0,
+      1350.0
+    ],
+    "values": [
+      0,
+      0,
+      2
+    ],
+    "trailing60s_medians": [
+      1.0,
+      0.0,
+      2.0
+    ],
+    "change_10min_to_T": 2
+  },
+  {
+    "seed": 74,
+    "location": "full_verified_set",
+    "feature": "vehicle_count",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      22,
+      48,
+      50
+    ],
+    "trailing60s_medians": [
+      16.5,
+      44.0,
+      50.0
+    ],
+    "change_10min_to_T": 28
+  },
+  {
+    "seed": 74,
+    "location": "full_verified_set",
+    "feature": "waiting_count",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      17,
+      47,
+      49
+    ],
+    "trailing60s_medians": [
+      11.5,
+      42.0,
+      49.0
+    ],
+    "change_10min_to_T": 32
+  },
+  {
+    "seed": 74,
+    "location": "full_verified_set",
+    "feature": "wait_age_mean",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      43.523440698965004,
+      46.852285180509334,
+      277.9508240051051
+    ],
+    "trailing60s_medians": [
+      33.802626433014204,
+      32.0231177607314,
+      252.95082400510512
+    ],
+    "change_10min_to_T": 234.42738330614011
+  },
+  {
+    "seed": 74,
+    "location": "full_verified_set",
+    "feature": "wait_age_max",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      82.30590469692231,
+      113.05102103133709,
+      413.0510210313371
+    ],
+    "trailing60s_medians": [
+      57.30590469692231,
+      98.05102103133709,
+      388.0510210313371
+    ],
+    "change_10min_to_T": 330.7451163344148
+  },
+  {
+    "seed": 74,
+    "location": "full_verified_set",
+    "feature": "stationary30_count",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      9,
+      39,
+      50
+    ],
+    "trailing60s_medians": [
+      8.0,
+      20.0,
+      50.0
+    ],
+    "change_10min_to_T": 41
+  },
+  {
+    "seed": 74,
+    "location": "full_verified_set",
+    "feature": "holder_ratio",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      0.5,
+      0.98,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.41000000000000003,
+      0.89,
+      1.0
+    ],
+    "change_10min_to_T": 0.5
+  },
+  {
+    "seed": 74,
+    "location": "full_verified_set",
+    "feature": "entries60",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      27,
+      27,
+      0
+    ],
+    "trailing60s_medians": [
+      33.0,
+      24.0,
+      0.0
+    ],
+    "change_10min_to_T": -27
+  },
+  {
+    "seed": 74,
+    "location": "full_verified_set",
+    "feature": "exits60",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      20,
+      13,
+      0
+    ],
+    "trailing60s_medians": [
+      24.0,
+      14.5,
+      0.0
+    ],
+    "change_10min_to_T": -20
+  },
+  {
+    "seed": 74,
+    "location": "full_verified_set",
+    "feature": "follow_wait_count",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      0,
+      3,
+      4
+    ],
+    "trailing60s_medians": [
+      0.0,
+      2.0,
+      4.0
+    ],
+    "change_10min_to_T": 4
+  },
+  {
+    "seed": 74,
+    "location": "full_verified_set",
+    "feature": "merge_wait_count",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      1,
+      6,
+      5
+    ],
+    "trailing60s_medians": [
+      1.0,
+      4.0,
+      5.0
+    ],
+    "change_10min_to_T": 4
+  },
+  {
+    "seed": 74,
+    "location": "core_1",
+    "feature": "vehicle_count",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      7,
+      23,
+      23
+    ],
+    "trailing60s_medians": [
+      4.0,
+      23.0,
+      23.0
+    ],
+    "change_10min_to_T": 16
+  },
+  {
+    "seed": 74,
+    "location": "core_1",
+    "feature": "waiting_count",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      6,
+      23,
+      23
+    ],
+    "trailing60s_medians": [
+      2.5,
+      23.0,
+      23.0
+    ],
+    "change_10min_to_T": 17
+  },
+  {
+    "seed": 74,
+    "location": "core_1",
+    "feature": "wait_age_mean",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      19.644279582954482,
+      54.68667360137463,
+      326.920378344014
+    ],
+    "trailing60s_medians": [
+      6.997852368945765,
+      36.27355457932769,
+      301.920378344014
+    ],
+    "change_10min_to_T": 307.27609876105953
+  },
+  {
+    "seed": 74,
+    "location": "core_1",
+    "feature": "wait_age_max",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      37.30641077176438,
+      113.05102103133709,
+      413.0510210313371
+    ],
+    "trailing60s_medians": [
+      12.306410771764376,
+      98.05102103133709,
+      388.0510210313371
+    ],
+    "change_10min_to_T": 375.7446102595727
+  },
+  {
+    "seed": 74,
+    "location": "core_1",
+    "feature": "stationary30_count",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      1,
+      23,
+      23
+    ],
+    "trailing60s_medians": [
+      0.0,
+      11.0,
+      23.0
+    ],
+    "change_10min_to_T": 22
+  },
+  {
+    "seed": 74,
+    "location": "core_1",
+    "feature": "holder_ratio",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      0.34782608695652173,
+      1.0,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.28260869565217395,
+      1.0,
+      1.0
+    ],
+    "change_10min_to_T": 0.6521739130434783
+  },
+  {
+    "seed": 74,
+    "location": "core_1",
+    "feature": "entries60",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      16,
+      8,
+      0
+    ],
+    "trailing60s_medians": [
+      17.5,
+      8.5,
+      0.0
+    ],
+    "change_10min_to_T": -16
+  },
+  {
+    "seed": 74,
+    "location": "core_1",
+    "feature": "exits60",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      12,
+      2,
+      0
+    ],
+    "trailing60s_medians": [
+      14.5,
+      3.5,
+      0.0
+    ],
+    "change_10min_to_T": -12
+  },
+  {
+    "seed": 74,
+    "location": "core_1",
+    "feature": "follow_wait_count",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      0,
+      1,
+      1
+    ],
+    "trailing60s_medians": [
+      0.0,
+      1.0,
+      1.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 74,
+    "location": "core_1",
+    "feature": "merge_wait_count",
+    "checked_t": 1066.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      460.0,
+      760.0,
+      1060.0
+    ],
+    "values": [
+      0,
+      2,
+      2
+    ],
+    "trailing60s_medians": [
+      0.0,
+      2.0,
+      2.0
+    ],
+    "change_10min_to_T": 2
+  },
+  {
+    "seed": 75,
+    "location": "full_verified_set",
+    "feature": "vehicle_count",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      58,
+      59,
+      66
+    ],
+    "trailing60s_medians": [
+      57.5,
+      62.0,
+      66.0
+    ],
+    "change_10min_to_T": 8
+  },
+  {
+    "seed": 75,
+    "location": "full_verified_set",
+    "feature": "waiting_count",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      56,
+      55,
+      64
+    ],
+    "trailing60s_medians": [
+      56.0,
+      61.0,
+      64.0
+    ],
+    "change_10min_to_T": 8
+  },
+  {
+    "seed": 75,
+    "location": "full_verified_set",
+    "feature": "wait_age_mean",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      87.2627605826973,
+      352.18572001964947,
+      514.1740346221508
+    ],
+    "trailing60s_medians": [
+      63.41083568653294,
+      346.5460338000555,
+      489.17403462215066
+    ],
+    "change_10min_to_T": 426.9112740394535
+  },
+  {
+    "seed": 75,
+    "location": "full_verified_set",
+    "feature": "wait_age_max",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      218.22036580034978,
+      518.2203658003498,
+      769.7715356914575
+    ],
+    "trailing60s_medians": [
+      193.22036580034978,
+      493.2203658003498,
+      744.7715356914575
+    ],
+    "change_10min_to_T": 551.5511698911077
+  },
+  {
+    "seed": 75,
+    "location": "full_verified_set",
+    "feature": "stationary30_count",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      56,
+      54,
+      66
+    ],
+    "trailing60s_medians": [
+      44.0,
+      62.0,
+      66.0
+    ],
+    "change_10min_to_T": 10
+  },
+  {
+    "seed": 75,
+    "location": "full_verified_set",
+    "feature": "holder_ratio",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      0.8787878787878788,
+      0.9242424242424242,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.8787878787878788,
+      0.9393939393939394,
+      1.0
+    ],
+    "change_10min_to_T": 0.12121212121212122
+  },
+  {
+    "seed": 75,
+    "location": "full_verified_set",
+    "feature": "entries60",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      12,
+      3,
+      0
+    ],
+    "trailing60s_medians": [
+      18.5,
+      0.0,
+      0.0
+    ],
+    "change_10min_to_T": -12
+  },
+  {
+    "seed": 75,
+    "location": "full_verified_set",
+    "feature": "exits60",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      7,
+      6,
+      0
+    ],
+    "trailing60s_medians": [
+      8.5,
+      0.0,
+      0.0
+    ],
+    "change_10min_to_T": -7
+  },
+  {
+    "seed": 75,
+    "location": "full_verified_set",
+    "feature": "follow_wait_count",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      6,
+      7,
+      7
+    ],
+    "trailing60s_medians": [
+      6.0,
+      7.0,
+      7.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 75,
+    "location": "full_verified_set",
+    "feature": "merge_wait_count",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      10,
+      9,
+      9
+    ],
+    "trailing60s_medians": [
+      9.0,
+      10.0,
+      9.0
+    ],
+    "change_10min_to_T": -1
+  },
+  {
+    "seed": 75,
+    "location": "core_1",
+    "feature": "vehicle_count",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      25,
+      25,
+      25
+    ],
+    "trailing60s_medians": [
+      25.0,
+      25.0,
+      25.0
+    ],
+    "change_10min_to_T": 0
+  },
+  {
+    "seed": 75,
+    "location": "core_1",
+    "feature": "waiting_count",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      24,
+      24,
+      24
+    ],
+    "trailing60s_medians": [
+      25.0,
+      24.0,
+      24.0
+    ],
+    "change_10min_to_T": 0
+  },
+  {
+    "seed": 75,
+    "location": "core_1",
+    "feature": "wait_age_mean",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      95.17735686198448,
+      395.1773568619845,
+      561.1300595107377
+    ],
+    "trailing60s_medians": [
+      70.77026258750507,
+      370.1773568619845,
+      536.1300595107377
+    ],
+    "change_10min_to_T": 465.95270264875325
+  },
+  {
+    "seed": 75,
+    "location": "core_1",
+    "feature": "wait_age_max",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      169.77153569145753,
+      469.77153569145753,
+      769.7715356914575
+    ],
+    "trailing60s_medians": [
+      144.77153569145753,
+      444.77153569145753,
+      744.7715356914575
+    ],
+    "change_10min_to_T": 600.0
+  },
+  {
+    "seed": 75,
+    "location": "core_1",
+    "feature": "stationary30_count",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      25,
+      25,
+      25
+    ],
+    "trailing60s_medians": [
+      22.0,
+      25.0,
+      25.0
+    ],
+    "change_10min_to_T": 0
+  },
+  {
+    "seed": 75,
+    "location": "core_1",
+    "feature": "holder_ratio",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "trailing60s_medians": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "change_10min_to_T": 0.0
+  },
+  {
+    "seed": 75,
+    "location": "core_1",
+    "feature": "entries60",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      2,
+      0,
+      0
+    ],
+    "trailing60s_medians": [
+      5.0,
+      0.0,
+      0.0
+    ],
+    "change_10min_to_T": -2
+  },
+  {
+    "seed": 75,
+    "location": "core_1",
+    "feature": "exits60",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      0,
+      0,
+      0
+    ],
+    "trailing60s_medians": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "change_10min_to_T": 0
+  },
+  {
+    "seed": 75,
+    "location": "core_1",
+    "feature": "follow_wait_count",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      2,
+      2,
+      2
+    ],
+    "trailing60s_medians": [
+      2.0,
+      2.0,
+      2.0
+    ],
+    "change_10min_to_T": 0
+  },
+  {
+    "seed": 75,
+    "location": "core_1",
+    "feature": "merge_wait_count",
+    "checked_t": 1542.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      940.0,
+      1240.0,
+      1540.0
+    ],
+    "values": [
+      4,
+      4,
+      2
+    ],
+    "trailing60s_medians": [
+      4.0,
+      4.0,
+      2.0
+    ],
+    "change_10min_to_T": -2
+  },
+  {
+    "seed": 78,
+    "location": "full_verified_set",
+    "feature": "vehicle_count",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      61,
+      106,
+      125
+    ],
+    "trailing60s_medians": [
+      69.5,
+      95.5,
+      125.0
+    ],
+    "change_10min_to_T": 64
+  },
+  {
+    "seed": 78,
+    "location": "full_verified_set",
+    "feature": "waiting_count",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      54,
+      101,
+      118
+    ],
+    "trailing60s_medians": [
+      56.0,
+      82.5,
+      119.5
+    ],
+    "change_10min_to_T": 64
+  },
+  {
+    "seed": 78,
+    "location": "full_verified_set",
+    "feature": "wait_age_mean",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      77.53000838698418,
+      30.619234279082267,
+      198.94884857740595
+    ],
+    "trailing60s_medians": [
+      54.756112755491074,
+      26.672885277149213,
+      175.60544365751372
+    ],
+    "change_10min_to_T": 121.41884019042178
+  },
+  {
+    "seed": 78,
+    "location": "full_verified_set",
+    "feature": "wait_age_max",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      148.91209639798245,
+      98.63590343044984,
+      398.63590343044984
+    ],
+    "trailing60s_medians": [
+      123.91209639798245,
+      129.09592010634714,
+      373.63590343044984
+    ],
+    "change_10min_to_T": 249.7238070324674
+  },
+  {
+    "seed": 78,
+    "location": "full_verified_set",
+    "feature": "stationary30_count",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      43,
+      50,
+      125
+    ],
+    "trailing60s_medians": [
+      44.5,
+      16.5,
+      125.0
+    ],
+    "change_10min_to_T": 82
+  },
+  {
+    "seed": 78,
+    "location": "full_verified_set",
+    "feature": "holder_ratio",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      0.504,
+      0.872,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.576,
+      0.828,
+      1.0
+    ],
+    "change_10min_to_T": 0.496
+  },
+  {
+    "seed": 78,
+    "location": "full_verified_set",
+    "feature": "entries60",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      50,
+      80,
+      0
+    ],
+    "trailing60s_medians": [
+      53.0,
+      81.5,
+      0.0
+    ],
+    "change_10min_to_T": -50
+  },
+  {
+    "seed": 78,
+    "location": "full_verified_set",
+    "feature": "exits60",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      55,
+      58,
+      0
+    ],
+    "trailing60s_medians": [
+      47.0,
+      70.0,
+      0.0
+    ],
+    "change_10min_to_T": -55
+  },
+  {
+    "seed": 78,
+    "location": "full_verified_set",
+    "feature": "follow_wait_count",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      6,
+      9,
+      10
+    ],
+    "trailing60s_medians": [
+      6.5,
+      8.0,
+      10.0
+    ],
+    "change_10min_to_T": 4
+  },
+  {
+    "seed": 78,
+    "location": "full_verified_set",
+    "feature": "merge_wait_count",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      7,
+      12,
+      13
+    ],
+    "trailing60s_medians": [
+      6.0,
+      11.5,
+      13.0
+    ],
+    "change_10min_to_T": 6
+  },
+  {
+    "seed": 78,
+    "location": "core_1",
+    "feature": "vehicle_count",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      25,
+      26,
+      26
+    ],
+    "trailing60s_medians": [
+      25.0,
+      26.0,
+      26.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 78,
+    "location": "core_1",
+    "feature": "waiting_count",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      25,
+      26,
+      26
+    ],
+    "trailing60s_medians": [
+      25.0,
+      26.0,
+      26.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 78,
+    "location": "core_1",
+    "feature": "wait_age_mean",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      109.10142260215511,
+      45.931639832824835,
+      164.24809976434238
+    ],
+    "trailing60s_medians": [
+      84.10142260215508,
+      31.44984174976112,
+      139.24809976434238
+    ],
+    "change_10min_to_T": 55.146677162187274
+  },
+  {
+    "seed": 78,
+    "location": "core_1",
+    "feature": "wait_age_max",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      148.91209639798245,
+      94.4218089262406,
+      333.64076762440175
+    ],
+    "trailing60s_medians": [
+      123.91209639798245,
+      89.4218089262406,
+      308.64076762440175
+    ],
+    "change_10min_to_T": 184.7286712264193
+  },
+  {
+    "seed": 78,
+    "location": "core_1",
+    "feature": "stationary30_count",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      25,
+      26,
+      26
+    ],
+    "trailing60s_medians": [
+      25.0,
+      8.0,
+      26.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 78,
+    "location": "core_1",
+    "feature": "holder_ratio",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      0.9615384615384616,
+      1.0,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.9615384615384616,
+      1.0,
+      1.0
+    ],
+    "change_10min_to_T": 0.038461538461538436
+  },
+  {
+    "seed": 78,
+    "location": "core_1",
+    "feature": "entries60",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      0,
+      10,
+      0
+    ],
+    "trailing60s_medians": [
+      1.0,
+      14.0,
+      0.0
+    ],
+    "change_10min_to_T": 0
+  },
+  {
+    "seed": 78,
+    "location": "core_1",
+    "feature": "exits60",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      0,
+      7,
+      0
+    ],
+    "trailing60s_medians": [
+      0.0,
+      12.5,
+      0.0
+    ],
+    "change_10min_to_T": 0
+  },
+  {
+    "seed": 78,
+    "location": "core_1",
+    "feature": "follow_wait_count",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      2,
+      1,
+      1
+    ],
+    "trailing60s_medians": [
+      2.0,
+      1.0,
+      1.0
+    ],
+    "change_10min_to_T": -1
+  },
+  {
+    "seed": 78,
+    "location": "core_1",
+    "feature": "merge_wait_count",
+    "checked_t": 1085.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      480.0,
+      780.0,
+      1080.0
+    ],
+    "values": [
+      1,
+      4,
+      4
+    ],
+    "trailing60s_medians": [
+      1.0,
+      4.0,
+      4.0
+    ],
+    "change_10min_to_T": 3
+  },
+  {
+    "seed": 81,
+    "location": "full_verified_set",
+    "feature": "vehicle_count",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      48,
+      107,
+      119
+    ],
+    "trailing60s_medians": [
+      44.0,
+      101.5,
+      119.0
+    ],
+    "change_10min_to_T": 71
+  },
+  {
+    "seed": 81,
+    "location": "full_verified_set",
+    "feature": "waiting_count",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      43,
+      102,
+      119
+    ],
+    "trailing60s_medians": [
+      36.5,
+      96.5,
+      119.0
+    ],
+    "change_10min_to_T": 76
+  },
+  {
+    "seed": 81,
+    "location": "full_verified_set",
+    "feature": "wait_age_mean",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      45.091680625243384,
+      71.20851481840663,
+      175.4754160679917
+    ],
+    "trailing60s_medians": [
+      32.804052709000274,
+      69.36721799401315,
+      150.47541606799163
+    ],
+    "change_10min_to_T": 130.3837354427483
+  },
+  {
+    "seed": 81,
+    "location": "full_verified_set",
+    "feature": "wait_age_max",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      101.11591044250162,
+      401.1159104425016,
+      402.0707766333469
+    ],
+    "trailing60s_medians": [
+      76.11591044250162,
+      376.1159104425016,
+      377.0707766333469
+    ],
+    "change_10min_to_T": 300.9548661908453
+  },
+  {
+    "seed": 81,
+    "location": "full_verified_set",
+    "feature": "stationary30_count",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      29,
+      74,
+      119
+    ],
+    "trailing60s_medians": [
+      21.5,
+      76.5,
+      119.0
+    ],
+    "change_10min_to_T": 90
+  },
+  {
+    "seed": 81,
+    "location": "full_verified_set",
+    "feature": "holder_ratio",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      0.4117647058823529,
+      0.907563025210084,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.4201680672268907,
+      0.8739495798319328,
+      1.0
+    ],
+    "change_10min_to_T": 0.5882352941176471
+  },
+  {
+    "seed": 81,
+    "location": "full_verified_set",
+    "feature": "entries60",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      79,
+      25,
+      0
+    ],
+    "trailing60s_medians": [
+      101.0,
+      38.5,
+      0.0
+    ],
+    "change_10min_to_T": -79
+  },
+  {
+    "seed": 81,
+    "location": "full_verified_set",
+    "feature": "exits60",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      77,
+      13,
+      0
+    ],
+    "trailing60s_medians": [
+      106.5,
+      21.5,
+      0.0
+    ],
+    "change_10min_to_T": -77
+  },
+  {
+    "seed": 81,
+    "location": "full_verified_set",
+    "feature": "follow_wait_count",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      8,
+      17,
+      17
+    ],
+    "trailing60s_medians": [
+      7.0,
+      15.5,
+      17.0
+    ],
+    "change_10min_to_T": 9
+  },
+  {
+    "seed": 81,
+    "location": "full_verified_set",
+    "feature": "merge_wait_count",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      2,
+      6,
+      7
+    ],
+    "trailing60s_medians": [
+      2.0,
+      6.0,
+      7.0
+    ],
+    "change_10min_to_T": 5
+  },
+  {
+    "seed": 81,
+    "location": "core_1",
+    "feature": "vehicle_count",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      18,
+      36,
+      37
+    ],
+    "trailing60s_medians": [
+      17.0,
+      36.0,
+      37.0
+    ],
+    "change_10min_to_T": 19
+  },
+  {
+    "seed": 81,
+    "location": "core_1",
+    "feature": "waiting_count",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      18,
+      34,
+      37
+    ],
+    "trailing60s_medians": [
+      14.5,
+      33.5,
+      37.0
+    ],
+    "change_10min_to_T": 19
+  },
+  {
+    "seed": 81,
+    "location": "core_1",
+    "feature": "wait_age_mean",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      53.73264229671234,
+      47.4077327657648,
+      173.53924015389632
+    ],
+    "trailing60s_medians": [
+      44.07799199525576,
+      52.45829855334287,
+      148.53924015389632
+    ],
+    "change_10min_to_T": 119.80659785718397
+  },
+  {
+    "seed": 81,
+    "location": "core_1",
+    "feature": "wait_age_max",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      81.81801051965601,
+      102.0707766333469,
+      402.0707766333469
+    ],
+    "trailing60s_medians": [
+      56.81801051965601,
+      170.7132096264172,
+      377.0707766333469
+    ],
+    "change_10min_to_T": 320.2527661136909
+  },
+  {
+    "seed": 81,
+    "location": "core_1",
+    "feature": "stationary30_count",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      12,
+      16,
+      37
+    ],
+    "trailing60s_medians": [
+      12.0,
+      28.0,
+      37.0
+    ],
+    "change_10min_to_T": 25
+  },
+  {
+    "seed": 81,
+    "location": "core_1",
+    "feature": "holder_ratio",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      0.4864864864864865,
+      0.972972972972973,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.5135135135135136,
+      0.972972972972973,
+      1.0
+    ],
+    "change_10min_to_T": 0.5135135135135135
+  },
+  {
+    "seed": 81,
+    "location": "core_1",
+    "feature": "entries60",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      55,
+      8,
+      0
+    ],
+    "trailing60s_medians": [
+      73.5,
+      9.5,
+      0.0
+    ],
+    "change_10min_to_T": -55
+  },
+  {
+    "seed": 81,
+    "location": "core_1",
+    "feature": "exits60",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      57,
+      7,
+      0
+    ],
+    "trailing60s_medians": [
+      72.5,
+      7.0,
+      0.0
+    ],
+    "change_10min_to_T": -57
+  },
+  {
+    "seed": 81,
+    "location": "core_1",
+    "feature": "follow_wait_count",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      3,
+      11,
+      11
+    ],
+    "trailing60s_medians": [
+      2.0,
+      9.5,
+      11.0
+    ],
+    "change_10min_to_T": 8
+  },
+  {
+    "seed": 81,
+    "location": "core_1",
+    "feature": "merge_wait_count",
+    "checked_t": 995.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      390.0,
+      690.0,
+      990.0
+    ],
+    "values": [
+      2,
+      2,
+      3
+    ],
+    "trailing60s_medians": [
+      2.0,
+      1.5,
+      3.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 82,
+    "location": "full_verified_set",
+    "feature": "vehicle_count",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      5,
+      31,
+      48
+    ],
+    "trailing60s_medians": [
+      null,
+      32.5,
+      48.0
+    ],
+    "change_10min_to_T": 43
+  },
+  {
+    "seed": 82,
+    "location": "full_verified_set",
+    "feature": "waiting_count",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      0,
+      27,
+      48
+    ],
+    "trailing60s_medians": [
+      null,
+      31.0,
+      48.0
+    ],
+    "change_10min_to_T": 48
+  },
+  {
+    "seed": 82,
+    "location": "full_verified_set",
+    "feature": "wait_age_mean",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      0,
+      84.54972262686151,
+      151.1738502339754
+    ],
+    "trailing60s_medians": [
+      null,
+      73.818997540915,
+      126.1738502339754
+    ],
+    "change_10min_to_T": 151.1738502339754
+  },
+  {
+    "seed": 82,
+    "location": "full_verified_set",
+    "feature": "wait_age_max",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      0,
+      150.49986539665457,
+      269.40227016786844
+    ],
+    "trailing60s_medians": [
+      null,
+      130.054256074354,
+      244.40227016786844
+    ],
+    "change_10min_to_T": 269.40227016786844
+  },
+  {
+    "seed": 82,
+    "location": "full_verified_set",
+    "feature": "stationary30_count",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      0,
+      27,
+      48
+    ],
+    "trailing60s_medians": [
+      null,
+      26.5,
+      48.0
+    ],
+    "change_10min_to_T": 48
+  },
+  {
+    "seed": 82,
+    "location": "full_verified_set",
+    "feature": "holder_ratio",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      0.20833333333333334,
+      0.6875,
+      1.0
+    ],
+    "trailing60s_medians": [
+      null,
+      0.6875,
+      1.0
+    ],
+    "change_10min_to_T": 0.7916666666666666
+  },
+  {
+    "seed": 82,
+    "location": "full_verified_set",
+    "feature": "entries60",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      21,
+      4,
+      0
+    ],
+    "trailing60s_medians": [
+      null,
+      12.0,
+      0.0
+    ],
+    "change_10min_to_T": -21
+  },
+  {
+    "seed": 82,
+    "location": "full_verified_set",
+    "feature": "exits60",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      17,
+      3,
+      0
+    ],
+    "trailing60s_medians": [
+      null,
+      3.0,
+      0.0
+    ],
+    "change_10min_to_T": -17
+  },
+  {
+    "seed": 82,
+    "location": "full_verified_set",
+    "feature": "follow_wait_count",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      0,
+      3,
+      1
+    ],
+    "trailing60s_medians": [
+      null,
+      2.0,
+      1.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 82,
+    "location": "full_verified_set",
+    "feature": "merge_wait_count",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      0,
+      3,
+      5
+    ],
+    "trailing60s_medians": [
+      null,
+      4.0,
+      5.0
+    ],
+    "change_10min_to_T": 5
+  },
+  {
+    "seed": 82,
+    "location": "core_1",
+    "feature": "vehicle_count",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      1,
+      15,
+      19
+    ],
+    "trailing60s_medians": [
+      null,
+      17.0,
+      19.0
+    ],
+    "change_10min_to_T": 18
+  },
+  {
+    "seed": 82,
+    "location": "core_1",
+    "feature": "waiting_count",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      0,
+      12,
+      19
+    ],
+    "trailing60s_medians": [
+      null,
+      16.5,
+      19.0
+    ],
+    "change_10min_to_T": 19
+  },
+  {
+    "seed": 82,
+    "location": "core_1",
+    "feature": "wait_age_mean",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      0,
+      67.40264224637191,
+      169.44835912827077
+    ],
+    "trailing60s_medians": [
+      null,
+      68.35417751555309,
+      144.44835912827077
+    ],
+    "change_10min_to_T": 169.44835912827077
+  },
+  {
+    "seed": 82,
+    "location": "core_1",
+    "feature": "wait_age_max",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      0,
+      116.04922879836255,
+      269.40227016786844
+    ],
+    "trailing60s_medians": [
+      null,
+      120.55174243635827,
+      244.40227016786844
+    ],
+    "change_10min_to_T": 269.40227016786844
+  },
+  {
+    "seed": 82,
+    "location": "core_1",
+    "feature": "stationary30_count",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      0,
+      11,
+      19
+    ],
+    "trailing60s_medians": [
+      null,
+      13.0,
+      19.0
+    ],
+    "change_10min_to_T": 19
+  },
+  {
+    "seed": 82,
+    "location": "core_1",
+    "feature": "holder_ratio",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      0.10526315789473684,
+      0.8947368421052632,
+      1.0
+    ],
+    "trailing60s_medians": [
+      null,
+      0.8947368421052632,
+      1.0
+    ],
+    "change_10min_to_T": 0.8947368421052632
+  },
+  {
+    "seed": 82,
+    "location": "core_1",
+    "feature": "entries60",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      13,
+      4,
+      0
+    ],
+    "trailing60s_medians": [
+      null,
+      7.5,
+      0.0
+    ],
+    "change_10min_to_T": -13
+  },
+  {
+    "seed": 82,
+    "location": "core_1",
+    "feature": "exits60",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      13,
+      3,
+      0
+    ],
+    "trailing60s_medians": [
+      null,
+      3.0,
+      0.0
+    ],
+    "change_10min_to_T": -13
+  },
+  {
+    "seed": 82,
+    "location": "core_1",
+    "feature": "follow_wait_count",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      0,
+      2,
+      1
+    ],
+    "trailing60s_medians": [
+      null,
+      1.0,
+      1.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 82,
+    "location": "core_1",
+    "feature": "merge_wait_count",
+    "checked_t": 767.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      160.0,
+      460.0,
+      760.0
+    ],
+    "values": [
+      0,
+      1,
+      1
+    ],
+    "trailing60s_medians": [
+      null,
+      2.0,
+      1.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 87,
+    "location": "full_verified_set",
+    "feature": "vehicle_count",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      15,
+      54,
+      65
+    ],
+    "trailing60s_medians": [
+      16.5,
+      58.0,
+      65.0
+    ],
+    "change_10min_to_T": 50
+  },
+  {
+    "seed": 87,
+    "location": "full_verified_set",
+    "feature": "waiting_count",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      6,
+      48,
+      62
+    ],
+    "trailing60s_medians": [
+      7.5,
+      53.5,
+      62.0
+    ],
+    "change_10min_to_T": 56
+  },
+  {
+    "seed": 87,
+    "location": "full_verified_set",
+    "feature": "wait_age_mean",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      2.1129555675688465,
+      56.892477726380015,
+      233.82956047421473
+    ],
+    "trailing60s_medians": [
+      3.23298382264396,
+      89.7809562133352,
+      208.82956047421476
+    ],
+    "change_10min_to_T": 231.7166049066459
+  },
+  {
+    "seed": 87,
+    "location": "full_verified_set",
+    "feature": "wait_age_max",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      3.9470561388955048,
+      155.0362517534802,
+      293.3050732615152
+    ],
+    "trailing60s_medians": [
+      7.724621733866655,
+      181.4890766742769,
+      268.3050732615152
+    ],
+    "change_10min_to_T": 289.3580171226197
+  },
+  {
+    "seed": 87,
+    "location": "full_verified_set",
+    "feature": "stationary30_count",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      0,
+      29,
+      65
+    ],
+    "trailing60s_medians": [
+      0.0,
+      48.5,
+      65.0
+    ],
+    "change_10min_to_T": 65
+  },
+  {
+    "seed": 87,
+    "location": "full_verified_set",
+    "feature": "holder_ratio",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      0.3384615384615385,
+      0.8923076923076924,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.3615384615384616,
+      0.9153846153846155,
+      1.0
+    ],
+    "change_10min_to_T": 0.6615384615384615
+  },
+  {
+    "seed": 87,
+    "location": "full_verified_set",
+    "feature": "entries60",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      83,
+      8,
+      0
+    ],
+    "trailing60s_medians": [
+      78.0,
+      14.5,
+      0.0
+    ],
+    "change_10min_to_T": -83
+  },
+  {
+    "seed": 87,
+    "location": "full_verified_set",
+    "feature": "exits60",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      82,
+      10,
+      0
+    ],
+    "trailing60s_medians": [
+      75.0,
+      5.0,
+      0.0
+    ],
+    "change_10min_to_T": -82
+  },
+  {
+    "seed": 87,
+    "location": "full_verified_set",
+    "feature": "follow_wait_count",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      0,
+      3,
+      5
+    ],
+    "trailing60s_medians": [
+      1.5,
+      5.0,
+      5.0
+    ],
+    "change_10min_to_T": 5
+  },
+  {
+    "seed": 87,
+    "location": "full_verified_set",
+    "feature": "merge_wait_count",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      0,
+      7,
+      8
+    ],
+    "trailing60s_medians": [
+      2.5,
+      5.0,
+      8.0
+    ],
+    "change_10min_to_T": 8
+  },
+  {
+    "seed": 87,
+    "location": "core_1",
+    "feature": "vehicle_count",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      7,
+      21,
+      24
+    ],
+    "trailing60s_medians": [
+      5.0,
+      23.0,
+      24.0
+    ],
+    "change_10min_to_T": 17
+  },
+  {
+    "seed": 87,
+    "location": "core_1",
+    "feature": "waiting_count",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      3,
+      20,
+      24
+    ],
+    "trailing60s_medians": [
+      1.0,
+      21.0,
+      24.0
+    ],
+    "change_10min_to_T": 21
+  },
+  {
+    "seed": 87,
+    "location": "core_1",
+    "feature": "wait_age_mean",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      1.6898923435282427,
+      59.72664302089081,
+      240.19239390712175
+    ],
+    "trailing60s_medians": [
+      0.6190610593176018,
+      116.53085324995754,
+      215.19239390712175
+    ],
+    "change_10min_to_T": 238.5025015635935
+  },
+  {
+    "seed": 87,
+    "location": "core_1",
+    "feature": "wait_age_max",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      3.126089121726949,
+      155.0362517534802,
+      293.3050732615152
+    ],
+    "trailing60s_medians": [
+      0.6190610593176018,
+      180.59138098248945,
+      268.3050732615152
+    ],
+    "change_10min_to_T": 290.1789841397882
+  },
+  {
+    "seed": 87,
+    "location": "core_1",
+    "feature": "stationary30_count",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      0,
+      9,
+      24
+    ],
+    "trailing60s_medians": [
+      0.0,
+      21.0,
+      24.0
+    ],
+    "change_10min_to_T": 24
+  },
+  {
+    "seed": 87,
+    "location": "core_1",
+    "feature": "holder_ratio",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      0.4583333333333333,
+      0.9583333333333334,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.3541666666666667,
+      0.9583333333333334,
+      1.0
+    ],
+    "change_10min_to_T": 0.5416666666666667
+  },
+  {
+    "seed": 87,
+    "location": "core_1",
+    "feature": "entries60",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      41,
+      7,
+      0
+    ],
+    "trailing60s_medians": [
+      40.0,
+      3.0,
+      0.0
+    ],
+    "change_10min_to_T": -41
+  },
+  {
+    "seed": 87,
+    "location": "core_1",
+    "feature": "exits60",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      38,
+      9,
+      0
+    ],
+    "trailing60s_medians": [
+      38.5,
+      2.0,
+      0.0
+    ],
+    "change_10min_to_T": -38
+  },
+  {
+    "seed": 87,
+    "location": "core_1",
+    "feature": "follow_wait_count",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      0,
+      1,
+      1
+    ],
+    "trailing60s_medians": [
+      0.0,
+      1.0,
+      1.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 87,
+    "location": "core_1",
+    "feature": "merge_wait_count",
+    "checked_t": 832.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      230.0,
+      530.0,
+      830.0
+    ],
+    "values": [
+      0,
+      4,
+      2
+    ],
+    "trailing60s_medians": [
+      0.0,
+      1.0,
+      2.0
+    ],
+    "change_10min_to_T": 2
+  },
+  {
+    "seed": 88,
+    "location": "full_verified_set",
+    "feature": "vehicle_count",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      12,
+      56,
+      61
+    ],
+    "trailing60s_medians": [
+      10.0,
+      53.5,
+      61.0
+    ],
+    "change_10min_to_T": 49
+  },
+  {
+    "seed": 88,
+    "location": "full_verified_set",
+    "feature": "waiting_count",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      7,
+      54,
+      54
+    ],
+    "trailing60s_medians": [
+      4.0,
+      51.0,
+      55.0
+    ],
+    "change_10min_to_T": 47
+  },
+  {
+    "seed": 88,
+    "location": "full_verified_set",
+    "feature": "wait_age_mean",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      5.318512468420173,
+      50.61575744247887,
+      220.97718930530175
+    ],
+    "trailing60s_medians": [
+      5.2096757222737775,
+      105.69870316742204,
+      197.58558564045083
+    ],
+    "change_10min_to_T": 215.65867683688157
+  },
+  {
+    "seed": 88,
+    "location": "full_verified_set",
+    "feature": "wait_age_max",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      19.745113776358608,
+      236.76754365680307,
+      476.8921407268091
+    ],
+    "trailing60s_medians": [
+      13.008596456642351,
+      246.8833731420513,
+      451.8921407268091
+    ],
+    "change_10min_to_T": 457.1470269504505
+  },
+  {
+    "seed": 88,
+    "location": "full_verified_set",
+    "feature": "stationary30_count",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      0,
+      24,
+      61
+    ],
+    "trailing60s_medians": [
+      0.0,
+      35.0,
+      61.0
+    ],
+    "change_10min_to_T": 61
+  },
+  {
+    "seed": 88,
+    "location": "full_verified_set",
+    "feature": "holder_ratio",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      0.22950819672131148,
+      0.9180327868852459,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.2459016393442623,
+      0.9098360655737705,
+      1.0
+    ],
+    "change_10min_to_T": 0.7704918032786885
+  },
+  {
+    "seed": 88,
+    "location": "full_verified_set",
+    "feature": "entries60",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      51,
+      15,
+      0
+    ],
+    "trailing60s_medians": [
+      48.0,
+      13.0,
+      0.0
+    ],
+    "change_10min_to_T": -51
+  },
+  {
+    "seed": 88,
+    "location": "full_verified_set",
+    "feature": "exits60",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      52,
+      12,
+      0
+    ],
+    "trailing60s_medians": [
+      49.5,
+      10.5,
+      0.0
+    ],
+    "change_10min_to_T": -52
+  },
+  {
+    "seed": 88,
+    "location": "full_verified_set",
+    "feature": "follow_wait_count",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      0,
+      6,
+      7
+    ],
+    "trailing60s_medians": [
+      0.0,
+      5.0,
+      7.0
+    ],
+    "change_10min_to_T": 7
+  },
+  {
+    "seed": 88,
+    "location": "full_verified_set",
+    "feature": "merge_wait_count",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      2,
+      7,
+      3
+    ],
+    "trailing60s_medians": [
+      1.5,
+      5.0,
+      4.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 88,
+    "location": "core_1",
+    "feature": "vehicle_count",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      4,
+      23,
+      23
+    ],
+    "trailing60s_medians": [
+      3.0,
+      22.0,
+      23.0
+    ],
+    "change_10min_to_T": 19
+  },
+  {
+    "seed": 88,
+    "location": "core_1",
+    "feature": "waiting_count",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      4,
+      21,
+      19
+    ],
+    "trailing60s_medians": [
+      1.0,
+      20.5,
+      20.0
+    ],
+    "change_10min_to_T": 15
+  },
+  {
+    "seed": 88,
+    "location": "core_1",
+    "feature": "wait_age_mean",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      8.04296361198898,
+      65.60912510392157,
+      276.7207631423024
+    ],
+    "trailing60s_medians": [
+      1.0112237118567293,
+      84.90004811860689,
+      245.35667437211058
+    ],
+    "change_10min_to_T": 268.67779953031345
+  },
+  {
+    "seed": 88,
+    "location": "core_1",
+    "feature": "wait_age_max",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      19.745113776358608,
+      176.8921407268091,
+      476.8921407268091
+    ],
+    "trailing60s_medians": [
+      1.6091399320715993,
+      210.20545241748096,
+      451.8921407268091
+    ],
+    "change_10min_to_T": 457.1470269504505
+  },
+  {
+    "seed": 88,
+    "location": "core_1",
+    "feature": "stationary30_count",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      0,
+      12,
+      23
+    ],
+    "trailing60s_medians": [
+      0.0,
+      14.0,
+      23.0
+    ],
+    "change_10min_to_T": 23
+  },
+  {
+    "seed": 88,
+    "location": "core_1",
+    "feature": "holder_ratio",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      0.21739130434782608,
+      1.0,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.21739130434782608,
+      1.0,
+      1.0
+    ],
+    "change_10min_to_T": 0.782608695652174
+  },
+  {
+    "seed": 88,
+    "location": "core_1",
+    "feature": "entries60",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      26,
+      6,
+      0
+    ],
+    "trailing60s_medians": [
+      27.0,
+      4.0,
+      0.0
+    ],
+    "change_10min_to_T": -26
+  },
+  {
+    "seed": 88,
+    "location": "core_1",
+    "feature": "exits60",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      28,
+      5,
+      0
+    ],
+    "trailing60s_medians": [
+      29.5,
+      4.5,
+      0.0
+    ],
+    "change_10min_to_T": -28
+  },
+  {
+    "seed": 88,
+    "location": "core_1",
+    "feature": "follow_wait_count",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      0,
+      1,
+      2
+    ],
+    "trailing60s_medians": [
+      0.0,
+      1.0,
+      2.0
+    ],
+    "change_10min_to_T": 2
+  },
+  {
+    "seed": 88,
+    "location": "core_1",
+    "feature": "merge_wait_count",
+    "checked_t": 1040.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      440.0,
+      740.0,
+      1040.0
+    ],
+    "values": [
+      0,
+      3,
+      1
+    ],
+    "trailing60s_medians": [
+      0.0,
+      2.0,
+      1.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 93,
+    "location": "full_verified_set",
+    "feature": "vehicle_count",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      13,
+      31,
+      59
+    ],
+    "trailing60s_medians": [
+      15.0,
+      26.5,
+      59.0
+    ],
+    "change_10min_to_T": 46
+  },
+  {
+    "seed": 93,
+    "location": "full_verified_set",
+    "feature": "waiting_count",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      11,
+      29,
+      58
+    ],
+    "trailing60s_medians": [
+      12.5,
+      26.0,
+      58.0
+    ],
+    "change_10min_to_T": 47
+  },
+  {
+    "seed": 93,
+    "location": "full_verified_set",
+    "feature": "wait_age_mean",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      21.34054880835631,
+      102.08666886541617,
+      148.85350935481233
+    ],
+    "trailing60s_medians": [
+      11.993507946039438,
+      87.82964688015795,
+      123.85350935481227
+    ],
+    "change_10min_to_T": 127.51296054645601
+  },
+  {
+    "seed": 93,
+    "location": "full_verified_set",
+    "feature": "wait_age_max",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      38.92350363645505,
+      195.80141763774554,
+      169.05414841698757
+    ],
+    "trailing60s_medians": [
+      20.99455183539601,
+      170.80141763774554,
+      144.05414841698757
+    ],
+    "change_10min_to_T": 130.13064478053252
+  },
+  {
+    "seed": 93,
+    "location": "full_verified_set",
+    "feature": "stationary30_count",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      5,
+      26,
+      59
+    ],
+    "trailing60s_medians": [
+      0.0,
+      21.5,
+      59.0
+    ],
+    "change_10min_to_T": 54
+  },
+  {
+    "seed": 93,
+    "location": "full_verified_set",
+    "feature": "holder_ratio",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      0.288135593220339,
+      0.5423728813559322,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.3220338983050848,
+      0.4661016949152542,
+      1.0
+    ],
+    "change_10min_to_T": 0.711864406779661
+  },
+  {
+    "seed": 93,
+    "location": "full_verified_set",
+    "feature": "entries60",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      53,
+      17,
+      0
+    ],
+    "trailing60s_medians": [
+      71.5,
+      21.5,
+      0.0
+    ],
+    "change_10min_to_T": -53
+  },
+  {
+    "seed": 93,
+    "location": "full_verified_set",
+    "feature": "exits60",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      58,
+      9,
+      0
+    ],
+    "trailing60s_medians": [
+      69.0,
+      13.5,
+      0.0
+    ],
+    "change_10min_to_T": -58
+  },
+  {
+    "seed": 93,
+    "location": "full_verified_set",
+    "feature": "follow_wait_count",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      4,
+      3,
+      6
+    ],
+    "trailing60s_medians": [
+      1.5,
+      3.0,
+      6.0
+    ],
+    "change_10min_to_T": 2
+  },
+  {
+    "seed": 93,
+    "location": "full_verified_set",
+    "feature": "merge_wait_count",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      1,
+      3,
+      5
+    ],
+    "trailing60s_medians": [
+      1.0,
+      2.5,
+      5.0
+    ],
+    "change_10min_to_T": 4
+  },
+  {
+    "seed": 93,
+    "location": "core_1",
+    "feature": "vehicle_count",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      9,
+      22,
+      42
+    ],
+    "trailing60s_medians": [
+      10.5,
+      20.5,
+      42.0
+    ],
+    "change_10min_to_T": 33
+  },
+  {
+    "seed": 93,
+    "location": "core_1",
+    "feature": "waiting_count",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      9,
+      21,
+      42
+    ],
+    "trailing60s_medians": [
+      9.0,
+      20.0,
+      42.0
+    ],
+    "change_10min_to_T": 33
+  },
+  {
+    "seed": 93,
+    "location": "core_1",
+    "feature": "wait_age_mean",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      22.045834418927612,
+      94.4561886551299,
+      149.44341510472321
+    ],
+    "trailing60s_medians": [
+      13.892882329433052,
+      74.1789980878864,
+      124.44341510472321
+    ],
+    "change_10min_to_T": 127.3975806857956
+  },
+  {
+    "seed": 93,
+    "location": "core_1",
+    "feature": "wait_age_max",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      38.92350363645505,
+      175.19332133807842,
+      169.05414841698757
+    ],
+    "trailing60s_medians": [
+      20.99455183539601,
+      150.19332133807842,
+      144.05414841698757
+    ],
+    "change_10min_to_T": 130.13064478053252
+  },
+  {
+    "seed": 93,
+    "location": "core_1",
+    "feature": "stationary30_count",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      4,
+      20,
+      42
+    ],
+    "trailing60s_medians": [
+      0.0,
+      15.5,
+      42.0
+    ],
+    "change_10min_to_T": 38
+  },
+  {
+    "seed": 93,
+    "location": "core_1",
+    "feature": "holder_ratio",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      0.2619047619047619,
+      0.5238095238095238,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.30952380952380953,
+      0.4880952380952381,
+      1.0
+    ],
+    "change_10min_to_T": 0.7380952380952381
+  },
+  {
+    "seed": 93,
+    "location": "core_1",
+    "feature": "entries60",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      46,
+      12,
+      0
+    ],
+    "trailing60s_medians": [
+      60.5,
+      16.0,
+      0.0
+    ],
+    "change_10min_to_T": -46
+  },
+  {
+    "seed": 93,
+    "location": "core_1",
+    "feature": "exits60",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      49,
+      7,
+      0
+    ],
+    "trailing60s_medians": [
+      60.0,
+      8.5,
+      0.0
+    ],
+    "change_10min_to_T": -49
+  },
+  {
+    "seed": 93,
+    "location": "core_1",
+    "feature": "follow_wait_count",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      4,
+      2,
+      6
+    ],
+    "trailing60s_medians": [
+      1.5,
+      2.0,
+      6.0
+    ],
+    "change_10min_to_T": 2
+  },
+  {
+    "seed": 93,
+    "location": "core_1",
+    "feature": "merge_wait_count",
+    "checked_t": 941.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      340.0,
+      640.0,
+      940.0
+    ],
+    "values": [
+      1,
+      2,
+      2
+    ],
+    "trailing60s_medians": [
+      0.0,
+      2.0,
+      2.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 97,
+    "location": "full_verified_set",
+    "feature": "vehicle_count",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      13,
+      22,
+      47
+    ],
+    "trailing60s_medians": [
+      12.0,
+      22.0,
+      47.0
+    ],
+    "change_10min_to_T": 34
+  },
+  {
+    "seed": 97,
+    "location": "full_verified_set",
+    "feature": "waiting_count",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      6,
+      20,
+      47
+    ],
+    "trailing60s_medians": [
+      5.5,
+      18.5,
+      47.0
+    ],
+    "change_10min_to_T": 41
+  },
+  {
+    "seed": 97,
+    "location": "full_verified_set",
+    "feature": "wait_age_mean",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      2.531953250012284,
+      90.24260264219738,
+      150.60247975542788
+    ],
+    "trailing60s_medians": [
+      3.761348545335249,
+      72.56064389290566,
+      125.60247975542785
+    ],
+    "change_10min_to_T": 148.0705265054156
+  },
+  {
+    "seed": 97,
+    "location": "full_verified_set",
+    "feature": "wait_age_max",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      7.984319950866848,
+      167.4260445095219,
+      212.31575746915405
+    ],
+    "trailing60s_medians": [
+      9.34400270107571,
+      142.4260445095219,
+      187.31575746915405
+    ],
+    "change_10min_to_T": 204.3314375182872
+  },
+  {
+    "seed": 97,
+    "location": "full_verified_set",
+    "feature": "stationary30_count",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      0,
+      19,
+      47
+    ],
+    "trailing60s_medians": [
+      0.0,
+      14.0,
+      47.0
+    ],
+    "change_10min_to_T": 47
+  },
+  {
+    "seed": 97,
+    "location": "full_verified_set",
+    "feature": "holder_ratio",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      0.425531914893617,
+      0.46808510638297873,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.3723404255319149,
+      0.46808510638297873,
+      1.0
+    ],
+    "change_10min_to_T": 0.574468085106383
+  },
+  {
+    "seed": 97,
+    "location": "full_verified_set",
+    "feature": "entries60",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      53,
+      10,
+      0
+    ],
+    "trailing60s_medians": [
+      43.5,
+      12.5,
+      0.0
+    ],
+    "change_10min_to_T": -53
+  },
+  {
+    "seed": 97,
+    "location": "full_verified_set",
+    "feature": "exits60",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      52,
+      8,
+      0
+    ],
+    "trailing60s_medians": [
+      42.5,
+      9.0,
+      0.0
+    ],
+    "change_10min_to_T": -52
+  },
+  {
+    "seed": 97,
+    "location": "full_verified_set",
+    "feature": "follow_wait_count",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      0,
+      0,
+      5
+    ],
+    "trailing60s_medians": [
+      0.0,
+      0.0,
+      5.0
+    ],
+    "change_10min_to_T": 5
+  },
+  {
+    "seed": 97,
+    "location": "full_verified_set",
+    "feature": "merge_wait_count",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      4,
+      4,
+      8
+    ],
+    "trailing60s_medians": [
+      2.0,
+      3.5,
+      8.0
+    ],
+    "change_10min_to_T": 4
+  },
+  {
+    "seed": 97,
+    "location": "core_1",
+    "feature": "vehicle_count",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      6,
+      13,
+      24
+    ],
+    "trailing60s_medians": [
+      5.5,
+      13.0,
+      24.0
+    ],
+    "change_10min_to_T": 18
+  },
+  {
+    "seed": 97,
+    "location": "core_1",
+    "feature": "waiting_count",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      3,
+      13,
+      24
+    ],
+    "trailing60s_medians": [
+      2.5,
+      13.0,
+      24.0
+    ],
+    "change_10min_to_T": 21
+  },
+  {
+    "seed": 97,
+    "location": "core_1",
+    "feature": "wait_age_mean",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      0.6921037025584459,
+      97.53618992167883,
+      159.9299052587161
+    ],
+    "trailing60s_medians": [
+      1.5344229463919632,
+      77.06351935294819,
+      134.92990525871605
+    ],
+    "change_10min_to_T": 159.23780155615765
+  },
+  {
+    "seed": 97,
+    "location": "core_1",
+    "feature": "wait_age_max",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      0.931269234014394,
+      146.2974879091674,
+      212.31575746915405
+    ],
+    "trailing60s_medians": [
+      1.9354668338986016,
+      121.29748790916739,
+      187.31575746915405
+    ],
+    "change_10min_to_T": 211.38448823513966
+  },
+  {
+    "seed": 97,
+    "location": "core_1",
+    "feature": "stationary30_count",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      0,
+      13,
+      24
+    ],
+    "trailing60s_medians": [
+      0.0,
+      10.0,
+      24.0
+    ],
+    "change_10min_to_T": 24
+  },
+  {
+    "seed": 97,
+    "location": "core_1",
+    "feature": "holder_ratio",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      0.3333333333333333,
+      0.5416666666666666,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.35416666666666663,
+      0.5416666666666666,
+      1.0
+    ],
+    "change_10min_to_T": 0.6666666666666667
+  },
+  {
+    "seed": 97,
+    "location": "core_1",
+    "feature": "entries60",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      38,
+      9,
+      0
+    ],
+    "trailing60s_medians": [
+      31.0,
+      13.0,
+      0.0
+    ],
+    "change_10min_to_T": -38
+  },
+  {
+    "seed": 97,
+    "location": "core_1",
+    "feature": "exits60",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      36,
+      8,
+      0
+    ],
+    "trailing60s_medians": [
+      30.5,
+      9.0,
+      0.0
+    ],
+    "change_10min_to_T": -36
+  },
+  {
+    "seed": 97,
+    "location": "core_1",
+    "feature": "follow_wait_count",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      0,
+      0,
+      1
+    ],
+    "trailing60s_medians": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 97,
+    "location": "core_1",
+    "feature": "merge_wait_count",
+    "checked_t": 872.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      270.0,
+      570.0,
+      870.0
+    ],
+    "values": [
+      2,
+      2,
+      1
+    ],
+    "trailing60s_medians": [
+      1.0,
+      2.0,
+      1.0
+    ],
+    "change_10min_to_T": -1
+  },
+  {
+    "seed": 98,
+    "location": "full_verified_set",
+    "feature": "vehicle_count",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      9,
+      24,
+      39
+    ],
+    "trailing60s_medians": [
+      10.5,
+      16.0,
+      39.0
+    ],
+    "change_10min_to_T": 30
+  },
+  {
+    "seed": 98,
+    "location": "full_verified_set",
+    "feature": "waiting_count",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      4,
+      22,
+      39
+    ],
+    "trailing60s_medians": [
+      4.0,
+      13.5,
+      39.0
+    ],
+    "change_10min_to_T": 35
+  },
+  {
+    "seed": 98,
+    "location": "full_verified_set",
+    "feature": "wait_age_mean",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      4.495214125792842,
+      28.972532233610483,
+      178.35317465099442
+    ],
+    "trailing60s_medians": [
+      3.297652093715148,
+      18.68816306379432,
+      154.88753950682656
+    ],
+    "change_10min_to_T": 173.85796052520158
+  },
+  {
+    "seed": 98,
+    "location": "full_verified_set",
+    "feature": "wait_age_max",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      12.334884411819985,
+      62.251891875678666,
+      246.94710367235575
+    ],
+    "trailing60s_medians": [
+      6.05667987031859,
+      37.251891875678666,
+      221.94710367235575
+    ],
+    "change_10min_to_T": 234.61221926053577
+  },
+  {
+    "seed": 98,
+    "location": "full_verified_set",
+    "feature": "stationary30_count",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      0,
+      10,
+      39
+    ],
+    "trailing60s_medians": [
+      0.0,
+      2.5,
+      39.0
+    ],
+    "change_10min_to_T": 39
+  },
+  {
+    "seed": 98,
+    "location": "full_verified_set",
+    "feature": "holder_ratio",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      0.3333333333333333,
+      0.6410256410256411,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.39743589743589747,
+      0.5256410256410257,
+      1.0
+    ],
+    "change_10min_to_T": 0.6666666666666667
+  },
+  {
+    "seed": 98,
+    "location": "full_verified_set",
+    "feature": "entries60",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      55,
+      27,
+      0
+    ],
+    "trailing60s_medians": [
+      56.0,
+      33.5,
+      0.0
+    ],
+    "change_10min_to_T": -55
+  },
+  {
+    "seed": 98,
+    "location": "full_verified_set",
+    "feature": "exits60",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      61,
+      16,
+      0
+    ],
+    "trailing60s_medians": [
+      55.0,
+      29.5,
+      0.0
+    ],
+    "change_10min_to_T": -61
+  },
+  {
+    "seed": 98,
+    "location": "full_verified_set",
+    "feature": "follow_wait_count",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      0,
+      0,
+      1
+    ],
+    "trailing60s_medians": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 98,
+    "location": "full_verified_set",
+    "feature": "merge_wait_count",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      1,
+      2,
+      6
+    ],
+    "trailing60s_medians": [
+      1.0,
+      2.0,
+      6.0
+    ],
+    "change_10min_to_T": 5
+  },
+  {
+    "seed": 98,
+    "location": "core_1",
+    "feature": "vehicle_count",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      4,
+      17,
+      26
+    ],
+    "trailing60s_medians": [
+      5.5,
+      12.0,
+      26.0
+    ],
+    "change_10min_to_T": 22
+  },
+  {
+    "seed": 98,
+    "location": "core_1",
+    "feature": "waiting_count",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      1,
+      16,
+      26
+    ],
+    "trailing60s_medians": [
+      1.5,
+      11.5,
+      26.0
+    ],
+    "change_10min_to_T": 25
+  },
+  {
+    "seed": 98,
+    "location": "core_1",
+    "feature": "wait_age_mean",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      1.0715506225326408,
+      35.68530501671127,
+      188.33645713302212
+    ],
+    "trailing60s_medians": [
+      2.530060438746176,
+      20.827453550927444,
+      163.33645713302212
+    ],
+    "change_10min_to_T": 187.26490651048948
+  },
+  {
+    "seed": 98,
+    "location": "core_1",
+    "feature": "wait_age_max",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      1.0715506225326408,
+      62.251891875678666,
+      246.94710367235575
+    ],
+    "trailing60s_medians": [
+      3.1121970851222613,
+      37.251891875678666,
+      221.94710367235575
+    ],
+    "change_10min_to_T": 245.8755530498231
+  },
+  {
+    "seed": 98,
+    "location": "core_1",
+    "feature": "stationary30_count",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      0,
+      10,
+      26
+    ],
+    "trailing60s_medians": [
+      0.0,
+      2.5,
+      26.0
+    ],
+    "change_10min_to_T": 26
+  },
+  {
+    "seed": 98,
+    "location": "core_1",
+    "feature": "holder_ratio",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      0.2692307692307692,
+      0.6923076923076923,
+      1.0
+    ],
+    "trailing60s_medians": [
+      0.34615384615384615,
+      0.5384615384615384,
+      1.0
+    ],
+    "change_10min_to_T": 0.7307692307692308
+  },
+  {
+    "seed": 98,
+    "location": "core_1",
+    "feature": "entries60",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      45,
+      18,
+      0
+    ],
+    "trailing60s_medians": [
+      45.5,
+      27.0,
+      0.0
+    ],
+    "change_10min_to_T": -45
+  },
+  {
+    "seed": 98,
+    "location": "core_1",
+    "feature": "exits60",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      50,
+      9,
+      0
+    ],
+    "trailing60s_medians": [
+      45.0,
+      20.5,
+      0.0
+    ],
+    "change_10min_to_T": -50
+  },
+  {
+    "seed": 98,
+    "location": "core_1",
+    "feature": "follow_wait_count",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      0,
+      0,
+      1
+    ],
+    "trailing60s_medians": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "change_10min_to_T": 1
+  },
+  {
+    "seed": 98,
+    "location": "core_1",
+    "feature": "merge_wait_count",
+    "checked_t": 1283.0,
+    "offsets_seconds": [
+      -600,
+      -300,
+      0
+    ],
+    "sample_t": [
+      680.0,
+      980.0,
+      1280.0
+    ],
+    "values": [
+      1,
+      2,
+      4
+    ],
+    "trailing60s_medians": [
+      1.0,
+      2.0,
+      4.0
+    ],
+    "change_10min_to_T": 3
+  }
+]

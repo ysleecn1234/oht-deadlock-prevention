@@ -1,0 +1,17 @@
+{
+  "seed": 97,
+  "simulated_seconds": 840,
+  "target_seconds": 14400,
+  "wall_seconds": 368.06299999996554,
+  "completed_legs": 437,
+  "counts": {
+    "cycle_episodes": 1,
+    "persistent_cycles": 1
+  },
+  "completed_lots": 13,
+  "lot_stagnant_seconds": 20,
+  "stopped_candidates": 392,
+  "checks_completed": 23,
+  "check_running": false,
+  "archive_bytes": 147721334
+}

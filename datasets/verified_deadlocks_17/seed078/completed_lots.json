@@ -1,0 +1,128 @@
+[
+  {
+    "lot_id": 167,
+    "cycle": 429.889861138528,
+    "n_legs": 2,
+    "pattern": "NONE",
+    "t_end": 512.889861138528
+  },
+  {
+    "lot_id": 31,
+    "cycle": 552.2096254854947,
+    "n_legs": 3,
+    "pattern": "AFTER",
+    "t_end": 567.2096254854947
+  },
+  {
+    "lot_id": 81,
+    "cycle": 559.3921141519462,
+    "n_legs": 3,
+    "pattern": "AFTER",
+    "t_end": 599.3921141519462
+  },
+  {
+    "lot_id": 13,
+    "cycle": 616.217444974797,
+    "n_legs": 3,
+    "pattern": "AFTER",
+    "t_end": 622.217444974797
+  },
+  {
+    "lot_id": 67,
+    "cycle": 608.2393432761907,
+    "n_legs": 2,
+    "pattern": "NONE",
+    "t_end": 641.2393432761907
+  },
+  {
+    "lot_id": 14,
+    "cycle": 643.3078568029578,
+    "n_legs": 3,
+    "pattern": "BEFORE",
+    "t_end": 649.8078568029578
+  },
+  {
+    "lot_id": 96,
+    "cycle": 624.8161509112601,
+    "n_legs": 3,
+    "pattern": "BEFORE",
+    "t_end": 672.3161509112601
+  },
+  {
+    "lot_id": 670,
+    "cycle": 351.9500271191515,
+    "n_legs": 3,
+    "pattern": "BEFORE",
+    "t_end": 686.4500271191515
+  },
+  {
+    "lot_id": 110,
+    "cycle": 643.4141287342892,
+    "n_legs": 3,
+    "pattern": "BEFORE",
+    "t_end": 697.9141287342892
+  },
+  {
+    "lot_id": 279,
+    "cycle": 569.7572414960869,
+    "n_legs": 3,
+    "pattern": "AFTER",
+    "t_end": 708.7572414960869
+  },
+  {
+    "lot_id": 232,
+    "cycle": 708.9888765410866,
+    "n_legs": 2,
+    "pattern": "NONE",
+    "t_end": 824.4888765410866
+  },
+  {
+    "lot_id": 373,
+    "cycle": 694.4025528021117,
+    "n_legs": 3,
+    "pattern": "BEFORE",
+    "t_end": 880.4025528021117
+  },
+  {
+    "lot_id": 139,
+    "cycle": 843.8455160462846,
+    "n_legs": 3,
+    "pattern": "BEFORE",
+    "t_end": 912.8455160462846
+  },
+  {
+    "lot_id": 222,
+    "cycle": 849.8364082498391,
+    "n_legs": 2,
+    "pattern": "NONE",
+    "t_end": 960.3364082498391
+  },
+  {
+    "lot_id": 292,
+    "cycle": 835.2448329212082,
+    "n_legs": 3,
+    "pattern": "BEFORE",
+    "t_end": 980.7448329212082
+  },
+  {
+    "lot_id": 339,
+    "cycle": 816.4597116935598,
+    "n_legs": 3,
+    "pattern": "AFTER",
+    "t_end": 985.4597116935598
+  },
+  {
+    "lot_id": 170,
+    "cycle": 965.773072082236,
+    "n_legs": 3,
+    "pattern": "AFTER",
+    "t_end": 1050.273072082236
+  },
+  {
+    "lot_id": 194,
+    "cycle": 978.3026540777078,
+    "n_legs": 3,
+    "pattern": "BEFORE",
+    "t_end": 1074.8026540777078
+  }
+]
